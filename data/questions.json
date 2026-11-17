@@ -1,0 +1,7163 @@
+{
+  "meta": {
+    "title": "WahliQuiz",
+    "version": 4,
+    "description": "Banque de questions WahliQuiz — 4 formats, 347 questions."
+  },
+  "petitBac": {
+    "categories": [
+      "Pays",
+      "Animal",
+      "Métier",
+      "Célébrité"
+    ],
+    "categoryHints": {
+      "Pays": "Un pays",
+      "Animal": "Un animal",
+      "Métier": "Un métier",
+      "Célébrité": "Une célébrité"
+    },
+    "letterPool": [
+      "B",
+      "C",
+      "D",
+      "F",
+      "G",
+      "M",
+      "P",
+      "R",
+      "S",
+      "T",
+      "V"
+    ]
+  },
+  "questions": [
+    {
+      "id": "open-canberra",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Australie ?",
+      "expected": "Canberra",
+      "accepted": [
+        "canberra"
+      ]
+    },
+    {
+      "id": "open-joconde",
+      "type": "open",
+      "prompt": "Qui a peint « La Joconde » ?",
+      "expected": "Léonard de Vinci",
+      "accepted": [
+        "leonard de vinci",
+        "léonard de vinci",
+        "leonardo da vinci",
+        "de vinci",
+        "vinci"
+      ]
+    },
+    {
+      "id": "open-loire",
+      "type": "open",
+      "prompt": "Quel est le plus long fleuve de France ?",
+      "expected": "La Loire",
+      "accepted": [
+        "loire",
+        "la loire"
+      ]
+    },
+    {
+      "id": "mcq-ocean",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand océan du monde ?",
+      "choices": [
+        "Océan Pacifique",
+        "Océan Atlantique",
+        "Océan Indien",
+        "Océan Arctique"
+      ],
+      "correct": "Océan Pacifique"
+    },
+    {
+      "id": "mcq-miserables",
+      "type": "mcq",
+      "prompt": "Qui a écrit « Les Misérables » ?",
+      "choices": [
+        "Victor Hugo",
+        "Émile Zola",
+        "Honoré de Balzac",
+        "Gustave Flaubert"
+      ],
+      "correct": "Victor Hugo"
+    },
+    {
+      "id": "mcq-langue",
+      "type": "mcq",
+      "prompt": "Quelle est la langue maternelle la plus parlée au monde ?",
+      "choices": [
+        "Le mandarin",
+        "L'espagnol",
+        "L'anglais",
+        "L'hindi"
+      ],
+      "correct": "Le mandarin"
+    },
+    {
+      "id": "mcq-animal-rapide",
+      "type": "mcq",
+      "prompt": "Quel est l'animal terrestre le plus rapide ?",
+      "choices": [
+        "Le guépard",
+        "Le lion",
+        "L'antilope",
+        "Le cheval"
+      ],
+      "correct": "Le guépard"
+    },
+    {
+      "id": "bac-1",
+      "type": "petitbac",
+      "prompt": "Petit Bac"
+    },
+    {
+      "id": "img-eiffel",
+      "type": "image",
+      "prompt": "Quel monument est représenté sur cette illustration ?",
+      "image": "/assets/images/monument-eiffel.svg",
+      "expected": "La tour Eiffel",
+      "accepted": [
+        "tour eiffel",
+        "la tour eiffel",
+        "eiffel"
+      ]
+    },
+    {
+      "id": "img-apple",
+      "type": "image",
+      "prompt": "Quelle marque ce logo représente-t-il ?",
+      "image": "/assets/images/logo-apple.svg",
+      "expected": "Apple",
+      "accepted": [
+        "apple",
+        "la pomme",
+        "pomme"
+      ]
+    },
+    {
+      "id": "open-01",
+      "type": "open",
+      "prompt": "Quel est le plus grand désert chaud du monde ?",
+      "expected": "Le Sahara",
+      "accepted": [
+        "sahara",
+        "le sahara",
+        "désert du sahara",
+        "desert du sahara"
+      ]
+    },
+    {
+      "id": "open-02",
+      "type": "open",
+      "prompt": "Quelle planète est la plus proche du Soleil ?",
+      "expected": "Mercure",
+      "accepted": [
+        "mercure"
+      ]
+    },
+    {
+      "id": "open-03",
+      "type": "open",
+      "prompt": "Combien de continents y a-t-il sur Terre ?",
+      "expected": "7",
+      "accepted": [
+        "7",
+        "sept",
+        "sept continents",
+        "7 continents"
+      ]
+    },
+    {
+      "id": "open-04",
+      "type": "open",
+      "prompt": "Qui a écrit « Le Petit Prince » ?",
+      "expected": "Antoine de Saint-Exupéry",
+      "accepted": [
+        "saint-exupery",
+        "saint exupery",
+        "antoine de saint-exupery",
+        "antoine de saint exupery",
+        "saint-exupéry",
+        "saint exupéry",
+        "antoine de saint-exupéry",
+        "antoine de saint exupéry"
+      ]
+    },
+    {
+      "id": "open-05",
+      "type": "open",
+      "prompt": "Quel est le symbole chimique de l'or ?",
+      "expected": "Au",
+      "accepted": [
+        "au"
+      ]
+    },
+    {
+      "id": "open-06",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Canada ?",
+      "expected": "Ottawa",
+      "accepted": [
+        "ottawa"
+      ]
+    },
+    {
+      "id": "open-07",
+      "type": "open",
+      "prompt": "Quel organe pompe le sang dans le corps humain ?",
+      "expected": "Le cœur",
+      "accepted": [
+        "coeur",
+        "cœur",
+        "le coeur",
+        "le cœur"
+      ]
+    },
+    {
+      "id": "open-08",
+      "type": "open",
+      "prompt": "Combien de côtés a un hexagone ?",
+      "expected": "6",
+      "accepted": [
+        "6",
+        "six"
+      ]
+    },
+    {
+      "id": "open-09",
+      "type": "open",
+      "prompt": "Quel océan borde la côte ouest de la France ?",
+      "expected": "L'Atlantique",
+      "accepted": [
+        "atlantique",
+        "l'atlantique",
+        "océan atlantique",
+        "ocean atlantique"
+      ]
+    },
+    {
+      "id": "open-10",
+      "type": "open",
+      "prompt": "Qui a peint « La Nuit étoilée » ?",
+      "expected": "Vincent van Gogh",
+      "accepted": [
+        "van gogh",
+        "vincent van gogh",
+        "vincent van-gogh"
+      ]
+    },
+    {
+      "id": "open-11",
+      "type": "open",
+      "prompt": "Quelle est la monnaie du Japon ?",
+      "expected": "Le yen",
+      "accepted": [
+        "yen",
+        "le yen",
+        "yens"
+      ]
+    },
+    {
+      "id": "open-12",
+      "type": "open",
+      "prompt": "Quel est le plus haut sommet du monde ?",
+      "expected": "L'Everest",
+      "accepted": [
+        "everest",
+        "l'everest",
+        "mont everest"
+      ]
+    },
+    {
+      "id": "open-13",
+      "type": "open",
+      "prompt": "Combien de joueurs compose une équipe de football sur le terrain ?",
+      "expected": "11",
+      "accepted": [
+        "11",
+        "onze"
+      ]
+    },
+    {
+      "id": "open-14",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Italie ?",
+      "expected": "Rome",
+      "accepted": [
+        "rome"
+      ]
+    },
+    {
+      "id": "open-15",
+      "type": "open",
+      "prompt": "Quel gaz les plantes absorbent-elles pour la photosynthèse ?",
+      "expected": "Le dioxyde de carbone",
+      "accepted": [
+        "dioxyde de carbone",
+        "le dioxyde de carbone",
+        "co2",
+        "gaz carbonique"
+      ]
+    },
+    {
+      "id": "open-16",
+      "type": "open",
+      "prompt": "Qui a composé « La Cinquième Symphonie » ?",
+      "expected": "Beethoven",
+      "accepted": [
+        "beethoven",
+        "ludwig van beethoven"
+      ]
+    },
+    {
+      "id": "open-17",
+      "type": "open",
+      "prompt": "Quel est le plus grand mammifère du monde ?",
+      "expected": "La baleine bleue",
+      "accepted": [
+        "baleine bleue",
+        "la baleine bleue",
+        "baleine"
+      ]
+    },
+    {
+      "id": "open-18",
+      "type": "open",
+      "prompt": "En quelle année a eu lieu la Révolution française ?",
+      "expected": "1789",
+      "accepted": [
+        "1789"
+      ]
+    },
+    {
+      "id": "open-19",
+      "type": "open",
+      "prompt": "Quel fleuve traverse Paris ?",
+      "expected": "La Seine",
+      "accepted": [
+        "seine",
+        "la seine"
+      ]
+    },
+    {
+      "id": "open-20",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Espagne ?",
+      "expected": "Madrid",
+      "accepted": [
+        "madrid"
+      ]
+    },
+    {
+      "id": "open-21",
+      "type": "open",
+      "prompt": "Combien de minutes compte une heure ?",
+      "expected": "60",
+      "accepted": [
+        "60",
+        "soixante"
+      ]
+    },
+    {
+      "id": "open-22",
+      "type": "open",
+      "prompt": "Quel animal est surnommé le « roi de la savane » ?",
+      "expected": "Le lion",
+      "accepted": [
+        "lion",
+        "le lion"
+      ]
+    },
+    {
+      "id": "open-23",
+      "type": "open",
+      "prompt": "Quelle est la langue officielle du Brésil ?",
+      "expected": "Le portugais",
+      "accepted": [
+        "portugais",
+        "le portugais"
+      ]
+    },
+    {
+      "id": "open-24",
+      "type": "open",
+      "prompt": "Quel est le métal principal qui compose l'acier ?",
+      "expected": "Le fer",
+      "accepted": [
+        "fer",
+        "le fer",
+        "iron"
+      ]
+    },
+    {
+      "id": "open-25",
+      "type": "open",
+      "prompt": "Qui a découvert la pénicilline ?",
+      "expected": "Alexander Fleming",
+      "accepted": [
+        "fleming",
+        "alexander fleming",
+        "a. fleming",
+        "alexandre fleming"
+      ]
+    },
+    {
+      "id": "open-26",
+      "type": "open",
+      "prompt": "Quelle est la plus grande île du monde ?",
+      "expected": "Le Groenland",
+      "accepted": [
+        "groenland",
+        "le groenland",
+        "greenland"
+      ]
+    },
+    {
+      "id": "open-27",
+      "type": "open",
+      "prompt": "Combien de dents compte un adulte humain en moyenne ?",
+      "expected": "32",
+      "accepted": [
+        "32",
+        "trente-deux",
+        "trente deux"
+      ]
+    },
+    {
+      "id": "open-28",
+      "type": "open",
+      "prompt": "Quel pays a pour capitale Buenos Aires ?",
+      "expected": "L'Argentine",
+      "accepted": [
+        "argentine",
+        "l'argentine"
+      ]
+    },
+    {
+      "id": "open-29",
+      "type": "open",
+      "prompt": "Quelle est l'unité de mesure de la force ?",
+      "expected": "Le newton",
+      "accepted": [
+        "newton",
+        "le newton",
+        "newtons"
+      ]
+    },
+    {
+      "id": "open-30",
+      "type": "open",
+      "prompt": "Quel est le plus petit pays du monde ?",
+      "expected": "Le Vatican",
+      "accepted": [
+        "vatican",
+        "le vatican",
+        "cité du vatican",
+        "cite du vatican"
+      ]
+    },
+    {
+      "id": "open-31",
+      "type": "open",
+      "prompt": "Qui a écrit « Roméo et Juliette » ?",
+      "expected": "William Shakespeare",
+      "accepted": [
+        "shakespeare",
+        "william shakespeare"
+      ]
+    },
+    {
+      "id": "open-32",
+      "type": "open",
+      "prompt": "Quelle mer borde l'Égypte ?",
+      "expected": "La mer Rouge",
+      "accepted": [
+        "mer rouge",
+        "la mer rouge",
+        "rouge"
+      ]
+    },
+    {
+      "id": "open-33",
+      "type": "open",
+      "prompt": "Quel est le satellite naturel de la Terre ?",
+      "expected": "La Lune",
+      "accepted": [
+        "lune",
+        "la lune"
+      ]
+    },
+    {
+      "id": "open-34",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Allemagne ?",
+      "expected": "Berlin",
+      "accepted": [
+        "berlin"
+      ]
+    },
+    {
+      "id": "open-35",
+      "type": "open",
+      "prompt": "Quel sport pratique-t-on à Roland-Garros ?",
+      "expected": "Le tennis",
+      "accepted": [
+        "tennis",
+        "le tennis"
+      ]
+    },
+    {
+      "id": "open-36",
+      "type": "open",
+      "prompt": "Quel est le plus long os du corps humain ?",
+      "expected": "Le fémur",
+      "accepted": [
+        "femur",
+        "fémur",
+        "le femur",
+        "le fémur"
+      ]
+    },
+    {
+      "id": "open-37",
+      "type": "open",
+      "prompt": "Quel pays est surnommé « le pays du Soleil-Levant » ?",
+      "expected": "Le Japon",
+      "accepted": [
+        "japon",
+        "le japon",
+        "nippon"
+      ]
+    },
+    {
+      "id": "open-38",
+      "type": "open",
+      "prompt": "Quelle femme a reçu un prix Nobel en 1903 et en 1911 ?",
+      "expected": "Marie Curie",
+      "accepted": [
+        "marie curie",
+        "curie",
+        "marie sklodowska curie"
+      ]
+    },
+    {
+      "id": "open-39",
+      "type": "open",
+      "prompt": "Quel est le plus grand pays du monde par superficie ?",
+      "expected": "La Russie",
+      "accepted": [
+        "russie",
+        "la russie",
+        "russia"
+      ]
+    },
+    {
+      "id": "open-40",
+      "type": "open",
+      "prompt": "Que signifie le sigle « ADN » ?",
+      "expected": "Acide désoxyribonucléique",
+      "accepted": [
+        "acide desoxyribonucleique",
+        "acide désoxyribonucléique",
+        "adn",
+        "acide desoxyribonucleique (adn)"
+      ]
+    },
+    {
+      "id": "open-42",
+      "type": "open",
+      "prompt": "Combien de jours y a-t-il dans une semaine ?",
+      "expected": "7",
+      "accepted": [
+        "7",
+        "sept",
+        "7 jours",
+        "sept jours"
+      ]
+    },
+    {
+      "id": "open-43",
+      "type": "open",
+      "prompt": "Quel est le nom de l'étoile autour de laquelle tourne la Terre ?",
+      "expected": "Le Soleil",
+      "accepted": [
+        "soleil",
+        "le soleil"
+      ]
+    },
+    {
+      "id": "open-44",
+      "type": "open",
+      "prompt": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+      "expected": "Le vert",
+      "accepted": [
+        "vert",
+        "le vert",
+        "du vert"
+      ]
+    },
+    {
+      "id": "open-45",
+      "type": "open",
+      "prompt": "Combien de mois compte une année ?",
+      "expected": "12",
+      "accepted": [
+        "12",
+        "douze",
+        "12 mois",
+        "douze mois"
+      ]
+    },
+    {
+      "id": "open-46",
+      "type": "open",
+      "prompt": "Quel animal produit le miel ?",
+      "expected": "L'abeille",
+      "accepted": [
+        "abeille",
+        "l'abeille",
+        "les abeilles",
+        "abeilles"
+      ]
+    },
+    {
+      "id": "open-47",
+      "type": "open",
+      "prompt": "Sur quel continent se trouve l'Égypte ?",
+      "expected": "L'Afrique",
+      "accepted": [
+        "afrique",
+        "l'afrique",
+        "en afrique"
+      ]
+    },
+    {
+      "id": "open-48",
+      "type": "open",
+      "prompt": "Quel est le nom du célèbre détective créé par Arthur Conan Doyle ?",
+      "expected": "Sherlock Holmes",
+      "accepted": [
+        "sherlock holmes",
+        "holmes",
+        "sherlock"
+      ]
+    },
+    {
+      "id": "open-49",
+      "type": "open",
+      "prompt": "Quelle est la langue officielle de l'Espagne ?",
+      "expected": "L'espagnol",
+      "accepted": [
+        "espagnol",
+        "l'espagnol",
+        "castillan",
+        "le castillan"
+      ]
+    },
+    {
+      "id": "open-50",
+      "type": "open",
+      "prompt": "Combien de pattes possède une araignée ?",
+      "expected": "8",
+      "accepted": [
+        "8",
+        "huit",
+        "8 pattes",
+        "huit pattes"
+      ]
+    },
+    {
+      "id": "open-51",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Royaume-Uni ?",
+      "expected": "Londres",
+      "accepted": [
+        "londres",
+        "london"
+      ]
+    },
+    {
+      "id": "open-52",
+      "type": "open",
+      "prompt": "À quelle température en degrés Celsius l'eau pure gèle-t-elle ?",
+      "expected": "0 °C",
+      "accepted": [
+        "0",
+        "zero",
+        "zéro",
+        "0 degres",
+        "0 degrés",
+        "0°c",
+        "0 °c"
+      ]
+    },
+    {
+      "id": "open-53",
+      "type": "open",
+      "prompt": "Quel instrument de musique possède 88 touches noires et blanches ?",
+      "expected": "Le piano",
+      "accepted": [
+        "piano",
+        "le piano",
+        "un piano"
+      ]
+    },
+    {
+      "id": "open-54",
+      "type": "open",
+      "prompt": "Quelle est la monnaie utilisée aux États-Unis ?",
+      "expected": "Le dollar américain",
+      "accepted": [
+        "dollar",
+        "le dollar",
+        "dollar americain",
+        "dollar américain",
+        "le dollar americain",
+        "le dollar américain",
+        "usd"
+      ]
+    },
+    {
+      "id": "open-55",
+      "type": "open",
+      "prompt": "Quel sport se joue à Roland-Garros ?",
+      "expected": "Le tennis",
+      "accepted": [
+        "tennis",
+        "le tennis"
+      ]
+    },
+    {
+      "id": "open-56",
+      "type": "open",
+      "prompt": "Quel est le nom du bateau qui a coulé en 1912 après avoir heurté un iceberg ?",
+      "expected": "Le Titanic",
+      "accepted": [
+        "titanic",
+        "le titanic",
+        "rms titanic"
+      ]
+    },
+    {
+      "id": "open-57",
+      "type": "open",
+      "prompt": "Combien de côtés possède un triangle ?",
+      "expected": "3",
+      "accepted": [
+        "3",
+        "trois",
+        "3 cotes",
+        "3 côtés",
+        "trois cotes",
+        "trois côtés"
+      ]
+    },
+    {
+      "id": "open-58",
+      "type": "open",
+      "prompt": "Quel fruit est associé à Isaac Newton pour la découverte de la gravitation ?",
+      "expected": "La pomme",
+      "accepted": [
+        "pomme",
+        "la pomme",
+        "une pomme"
+      ]
+    },
+    {
+      "id": "open-59",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Portugal ?",
+      "expected": "Lisbonne",
+      "accepted": [
+        "lisbonne",
+        "lisboa"
+      ]
+    },
+    {
+      "id": "open-60",
+      "type": "open",
+      "prompt": "Quel est le nom du héros de bande dessinée belge accompagné du chien Milou ?",
+      "expected": "Tintin",
+      "accepted": [
+        "tintin"
+      ]
+    },
+    {
+      "id": "open-61",
+      "type": "open",
+      "prompt": "Quel est le plus long fleuve d'Amérique du Sud ?",
+      "expected": "L'Amazone",
+      "accepted": [
+        "amazone",
+        "l'amazone",
+        "le fleuve amazone"
+      ]
+    },
+    {
+      "id": "open-62",
+      "type": "open",
+      "prompt": "Qui a peint le plafond de la chapelle Sixtine ?",
+      "expected": "Michel-Ange",
+      "accepted": [
+        "michel-ange",
+        "michel ange",
+        "michelangelo"
+      ]
+    },
+    {
+      "id": "open-63",
+      "type": "open",
+      "prompt": "Quel est le symbole chimique du fer ?",
+      "expected": "Fe",
+      "accepted": [
+        "fe"
+      ]
+    },
+    {
+      "id": "open-64",
+      "type": "open",
+      "prompt": "En quelle année la Révolution française a-t-elle débuté ?",
+      "expected": "1789",
+      "accepted": [
+        "1789"
+      ]
+    },
+    {
+      "id": "open-65",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Argentine ?",
+      "expected": "Buenos Aires",
+      "accepted": [
+        "buenos aires"
+      ]
+    },
+    {
+      "id": "open-66",
+      "type": "open",
+      "prompt": "Quel écrivain français est l'auteur de « Vingt Mille Lieues sous les mers » ?",
+      "expected": "Jules Verne",
+      "accepted": [
+        "jules verne",
+        "verne"
+      ]
+    },
+    {
+      "id": "open-67",
+      "type": "open",
+      "prompt": "Quelle est la planète surnommée « la planète rouge » ?",
+      "expected": "Mars",
+      "accepted": [
+        "mars",
+        "la planete mars",
+        "la planète mars"
+      ]
+    },
+    {
+      "id": "open-68",
+      "type": "open",
+      "prompt": "Dans quelle ville se trouve le musée du Prado ?",
+      "expected": "Madrid",
+      "accepted": [
+        "madrid",
+        "a madrid",
+        "à madrid"
+      ]
+    },
+    {
+      "id": "open-69",
+      "type": "open",
+      "prompt": "Quel est le nom du détroit qui sépare la France et l'Angleterre ?",
+      "expected": "Le pas de Calais",
+      "accepted": [
+        "pas de calais",
+        "le pas de calais",
+        "detroit du pas de calais",
+        "détroit du pas de calais",
+        "la manche"
+      ]
+    },
+    {
+      "id": "open-70",
+      "type": "open",
+      "prompt": "Qui a composé la « Symphonie n° 9 » dite « Hymne à la joie » ?",
+      "expected": "Ludwig van Beethoven",
+      "accepted": [
+        "beethoven",
+        "ludwig van beethoven"
+      ]
+    },
+    {
+      "id": "open-71",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Norvège ?",
+      "expected": "Oslo",
+      "accepted": [
+        "oslo"
+      ]
+    },
+    {
+      "id": "open-72",
+      "type": "open",
+      "prompt": "Quel est l'os le plus long du corps humain ?",
+      "expected": "Le fémur",
+      "accepted": [
+        "femur",
+        "fémur",
+        "le femur",
+        "le fémur"
+      ]
+    },
+    {
+      "id": "open-74",
+      "type": "open",
+      "prompt": "Qui a écrit la tragédie « Roméo et Juliette » ?",
+      "expected": "William Shakespeare",
+      "accepted": [
+        "shakespeare",
+        "william shakespeare"
+      ]
+    },
+    {
+      "id": "open-75",
+      "type": "open",
+      "prompt": "Quelle est la formule chimique du dioxyde de carbone ?",
+      "expected": "CO2",
+      "accepted": [
+        "co2",
+        "co₂"
+      ]
+    },
+    {
+      "id": "open-76",
+      "type": "open",
+      "prompt": "Dans quelle ville italienne se trouve la tour penchée ?",
+      "expected": "Pise",
+      "accepted": [
+        "pise",
+        "pisa",
+        "a pise",
+        "à pise"
+      ]
+    },
+    {
+      "id": "open-77",
+      "type": "open",
+      "prompt": "Quel général carthaginois a traversé les Alpes avec des éléphants ?",
+      "expected": "Hannibal Barca",
+      "accepted": [
+        "hannibal",
+        "hannibal barca"
+      ]
+    },
+    {
+      "id": "open-78",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Égypte ?",
+      "expected": "Le Caire",
+      "accepted": [
+        "le caire",
+        "caire"
+      ]
+    },
+    {
+      "id": "open-79",
+      "type": "open",
+      "prompt": "Quel scientifique a développé la théorie de la relativité ?",
+      "expected": "Albert Einstein",
+      "accepted": [
+        "einstein",
+        "albert einstein"
+      ]
+    },
+    {
+      "id": "open-80",
+      "type": "open",
+      "prompt": "Quel est le nom du volcan qui a détruit Pompéi en 79 après J.-C. ?",
+      "expected": "Le Vésuve",
+      "accepted": [
+        "vesuve",
+        "vésuve",
+        "le vesuve",
+        "le vésuve",
+        "mont vesuve",
+        "mont vésuve"
+      ]
+    },
+    {
+      "id": "open-81",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Grèce ?",
+      "expected": "Athènes",
+      "accepted": [
+        "athenes",
+        "athènes"
+      ]
+    },
+    {
+      "id": "open-82",
+      "type": "open",
+      "prompt": "Combien d'années dure un mandat présidentiel en France depuis 2002 ?",
+      "expected": "5 ans",
+      "accepted": [
+        "5",
+        "cinq",
+        "5 ans",
+        "cinq ans",
+        "un quinquennat",
+        "quinquennat"
+      ]
+    },
+    {
+      "id": "open-83",
+      "type": "open",
+      "prompt": "Quel peintre espagnol est célèbre pour son tableau « Guernica » ?",
+      "expected": "Pablo Picasso",
+      "accepted": [
+        "picasso",
+        "pablo picasso"
+      ]
+    },
+    {
+      "id": "open-84",
+      "type": "open",
+      "prompt": "Quel est le nom de la plus haute chute d'eau du monde, située au Venezuela ?",
+      "expected": "Salto Ángel",
+      "accepted": [
+        "salto angel",
+        "salto ángel",
+        "saut de l'ange"
+      ]
+    },
+    {
+      "id": "open-85",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Suède ?",
+      "expected": "Stockholm",
+      "accepted": [
+        "stockholm"
+      ]
+    },
+    {
+      "id": "open-86",
+      "type": "open",
+      "prompt": "Quel métal précieux a pour symbole chimique « Ag » ?",
+      "expected": "L'argent",
+      "accepted": [
+        "argent",
+        "l'argent"
+      ]
+    },
+    {
+      "id": "open-87",
+      "type": "open",
+      "prompt": "Qui a écrit la fable « Le Corbeau et le Renard » ?",
+      "expected": "Jean de La Fontaine",
+      "accepted": [
+        "la fontaine",
+        "jean de la fontaine"
+      ]
+    },
+    {
+      "id": "open-88",
+      "type": "open",
+      "prompt": "Quel pays a pour capitale Séoul ?",
+      "expected": "La Corée du Sud",
+      "accepted": [
+        "coree du sud",
+        "corée du sud",
+        "la coree du sud",
+        "la corée du sud"
+      ]
+    },
+    {
+      "id": "open-89",
+      "type": "open",
+      "prompt": "Quel est le nom du célèbre monument funéraire en marbre blanc situé à Agra en Inde ?",
+      "expected": "Le Taj Mahal",
+      "accepted": [
+        "taj mahal",
+        "le taj mahal"
+      ]
+    },
+    {
+      "id": "open-90",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Irlande ?",
+      "expected": "Dublin",
+      "accepted": [
+        "dublin"
+      ]
+    },
+    {
+      "id": "open-91",
+      "type": "open",
+      "prompt": "Quel est le nom du célèbre amphithéâtre romain situé au centre de Rome ?",
+      "expected": "Le Colisée",
+      "accepted": [
+        "colisee",
+        "colisée",
+        "le colisee",
+        "le colisée"
+      ]
+    },
+    {
+      "id": "open-92",
+      "type": "open",
+      "prompt": "Qui était le premier président des États-Unis ?",
+      "expected": "George Washington",
+      "accepted": [
+        "george washington",
+        "washington"
+      ]
+    },
+    {
+      "id": "open-93",
+      "type": "open",
+      "prompt": "Quel est le nom de la plus grande île de la mer Méditerranée ?",
+      "expected": "La Sicile",
+      "accepted": [
+        "sicile",
+        "la sicile"
+      ]
+    },
+    {
+      "id": "open-94",
+      "type": "open",
+      "prompt": "Quel écrivain britannique est le créateur de « Harry Potter » ?",
+      "expected": "J. K. Rowling",
+      "accepted": [
+        "j. k. rowling",
+        "jk rowling",
+        "j.k. rowling",
+        "rowling",
+        "joanne rowling"
+      ]
+    },
+    {
+      "id": "open-95",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Pologne ?",
+      "expected": "Varsovie",
+      "accepted": [
+        "varsovie",
+        "warszawa"
+      ]
+    },
+    {
+      "id": "open-96",
+      "type": "open",
+      "prompt": "Quel gaz est indispensable à la respiration humaine ?",
+      "expected": "Le dioxygène",
+      "accepted": [
+        "oxygene",
+        "oxygène",
+        "l'oxygene",
+        "l'oxygène",
+        "dioxygene",
+        "dioxygène",
+        "le dioxygene",
+        "le dioxygène",
+        "o2"
+      ]
+    },
+    {
+      "id": "open-97",
+      "type": "open",
+      "prompt": "Dans quel pays se situe le Machu Picchu ?",
+      "expected": "Le Pérou",
+      "accepted": [
+        "perou",
+        "pérou",
+        "le perou",
+        "le pérou",
+        "au perou",
+        "au pérou"
+      ]
+    },
+    {
+      "id": "open-98",
+      "type": "open",
+      "prompt": "Quel compositeur allemand est devenu sourd à la fin de sa vie ?",
+      "expected": "Ludwig van Beethoven",
+      "accepted": [
+        "beethoven",
+        "ludwig van beethoven"
+      ]
+    },
+    {
+      "id": "open-99",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Maroc ?",
+      "expected": "Rabat",
+      "accepted": [
+        "rabat"
+      ]
+    },
+    {
+      "id": "open-100",
+      "type": "open",
+      "prompt": "Quel est le nom du célèbre détective belge créé par Agatha Christie ?",
+      "expected": "Hercule Poirot",
+      "accepted": [
+        "hercule poirot",
+        "poirot"
+      ]
+    },
+    {
+      "id": "open-101",
+      "type": "open",
+      "prompt": "En quelle année la Seconde Guerre mondiale a-t-elle pris fin ?",
+      "expected": "1945",
+      "accepted": [
+        "1945"
+      ]
+    },
+    {
+      "id": "open-102",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Finlande ?",
+      "expected": "Helsinki",
+      "accepted": [
+        "helsinki"
+      ]
+    },
+    {
+      "id": "open-103",
+      "type": "open",
+      "prompt": "Quel peintre néerlandais s'est coupé une partie de l'oreille ?",
+      "expected": "Vincent van Gogh",
+      "accepted": [
+        "van gogh",
+        "vincent van gogh"
+      ]
+    },
+    {
+      "id": "open-104",
+      "type": "open",
+      "prompt": "Quel est le nom du canal qui relie l'océan Atlantique à l'océan Pacifique en Amérique centrale ?",
+      "expected": "Le canal de Panama",
+      "accepted": [
+        "canal de panama",
+        "le canal de panama",
+        "panama"
+      ]
+    },
+    {
+      "id": "open-105",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Autriche ?",
+      "expected": "Vienne",
+      "accepted": [
+        "vienne",
+        "wien"
+      ]
+    },
+    {
+      "id": "open-106",
+      "type": "open",
+      "prompt": "Qui a inventé l'imprimerie à caractères mobiles en Europe au XVe siècle ?",
+      "expected": "Johannes Gutenberg",
+      "accepted": [
+        "gutenberg",
+        "johannes gutenberg"
+      ]
+    },
+    {
+      "id": "open-108",
+      "type": "open",
+      "prompt": "Dans quelle ville se trouve la statue de la Liberté ?",
+      "expected": "New York",
+      "accepted": [
+        "new york",
+        "new-york",
+        "a new york",
+        "à new york"
+      ]
+    },
+    {
+      "id": "open-109",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Thaïlande ?",
+      "expected": "Bangkok",
+      "accepted": [
+        "bangkok"
+      ]
+    },
+    {
+      "id": "open-110",
+      "type": "open",
+      "prompt": "Qui a écrit le roman « Madame Bovary » ?",
+      "expected": "Gustave Flaubert",
+      "accepted": [
+        "flaubert",
+        "gustave flaubert"
+      ]
+    },
+    {
+      "id": "open-111",
+      "type": "open",
+      "prompt": "Quel est le nom de la monnaie officielle du Royaume-Uni ?",
+      "expected": "La livre sterling",
+      "accepted": [
+        "livre sterling",
+        "la livre sterling",
+        "livre",
+        "la livre",
+        "gbp"
+      ]
+    },
+    {
+      "id": "open-112",
+      "type": "open",
+      "prompt": "Quel fleuve traverse la ville de Londres ?",
+      "expected": "La Tamise",
+      "accepted": [
+        "tamise",
+        "la tamise",
+        "thames"
+      ]
+    },
+    {
+      "id": "open-113",
+      "type": "open",
+      "prompt": "Qui a réalisé le film « Jurassic Park » sorti en 1993 ?",
+      "expected": "Steven Spielberg",
+      "accepted": [
+        "spielberg",
+        "steven spielberg"
+      ]
+    },
+    {
+      "id": "open-114",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Turquie ?",
+      "expected": "Ankara",
+      "accepted": [
+        "ankara"
+      ]
+    },
+    {
+      "id": "open-115",
+      "type": "open",
+      "prompt": "Quel est l'organe principal du système respiratoire chez l'être humain ?",
+      "expected": "Les poumons",
+      "accepted": [
+        "poumons",
+        "les poumons",
+        "le poumon",
+        "poumon"
+      ]
+    },
+    {
+      "id": "open-116",
+      "type": "open",
+      "prompt": "Quel roi de France était surnommé « le Roi-Soleil » ?",
+      "expected": "Louis XIV",
+      "accepted": [
+        "louis xiv",
+        "louis 14"
+      ]
+    },
+    {
+      "id": "open-117",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Mexique ?",
+      "expected": "Mexico",
+      "accepted": [
+        "mexico",
+        "ville de mexico",
+        "ciudad de mexico"
+      ]
+    },
+    {
+      "id": "open-118",
+      "type": "open",
+      "prompt": "Quel est le nom de la plus haute montagne du Japon ?",
+      "expected": "Le mont Fuji",
+      "accepted": [
+        "mont fuji",
+        "le mont fuji",
+        "fuji",
+        "fujiyama"
+      ]
+    },
+    {
+      "id": "open-119",
+      "type": "open",
+      "prompt": "Qui a écrit « Don Quichotte » ?",
+      "expected": "Miguel de Cervantes",
+      "accepted": [
+        "cervantes",
+        "miguel de cervantes"
+      ]
+    },
+    {
+      "id": "open-120",
+      "type": "open",
+      "prompt": "Quel est le nom du satellite naturel de Mars dont le nom signifie « peur » en grec ?",
+      "expected": "Phobos",
+      "accepted": [
+        "phobos"
+      ]
+    },
+    {
+      "id": "open-121",
+      "type": "open",
+      "prompt": "Quel traité signé en 1919 a officiellement mis fin à la Première Guerre mondiale entre l'Allemagne et les Alliés ?",
+      "expected": "Le traité de Versailles",
+      "accepted": [
+        "traite de versailles",
+        "traité de versailles",
+        "le traite de versailles",
+        "le traité de versailles",
+        "versailles"
+      ]
+    },
+    {
+      "id": "open-122",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Mongolie ?",
+      "expected": "Oulan-Bator",
+      "accepted": [
+        "oulan-bator",
+        "oulan bator",
+        "ulaanbaatar"
+      ]
+    },
+    {
+      "id": "open-123",
+      "type": "open",
+      "prompt": "Quel physicien danois a proposé un modèle atomique quantifié en 1913 ?",
+      "expected": "Niels Bohr",
+      "accepted": [
+        "niels bohr",
+        "bohr"
+      ]
+    },
+    {
+      "id": "open-124",
+      "type": "open",
+      "prompt": "Quelle bataille de 1805 est surnommée la « bataille des Trois Empereurs » ?",
+      "expected": "La bataille d'Austerlitz",
+      "accepted": [
+        "austerlitz",
+        "bataille d'austerlitz",
+        "la bataille d'austerlitz"
+      ]
+    },
+    {
+      "id": "open-125",
+      "type": "open",
+      "prompt": "Quel est le nom du point le plus profond des océans, situé dans l'océan Pacifique ?",
+      "expected": "La fosse des Mariannes",
+      "accepted": [
+        "fosse des mariannes",
+        "la fosse des mariannes",
+        "challenger deep"
+      ]
+    },
+    {
+      "id": "open-126",
+      "type": "open",
+      "prompt": "Quel écrivain irlandais est l'auteur du roman « Ulysse » publié en 1922 ?",
+      "expected": "James Joyce",
+      "accepted": [
+        "james joyce",
+        "joyce"
+      ]
+    },
+    {
+      "id": "open-127",
+      "type": "open",
+      "prompt": "Quel est l'élément chimique le plus abondant dans l'univers observable ?",
+      "expected": "L'hydrogène",
+      "accepted": [
+        "hydrogene",
+        "hydrogène",
+        "l'hydrogene",
+        "l'hydrogène"
+      ]
+    },
+    {
+      "id": "open-128",
+      "type": "open",
+      "prompt": "En quelle année l'Empire romain d'Orient a-t-il pris fin avec la chute de Constantinople ?",
+      "expected": "1453",
+      "accepted": [
+        "1453"
+      ]
+    },
+    {
+      "id": "open-129",
+      "type": "open",
+      "prompt": "Quel philosophe grec de l'Antiquité a fondé le Lycée à Athènes ?",
+      "expected": "Aristote",
+      "accepted": [
+        "aristote"
+      ]
+    },
+    {
+      "id": "open-130",
+      "type": "open",
+      "prompt": "Quelle est la capitale de l'Ouzbékistan ?",
+      "expected": "Tachkent",
+      "accepted": [
+        "tachkent",
+        "tashkent"
+      ]
+    },
+    {
+      "id": "open-131",
+      "type": "open",
+      "prompt": "Quel peintre italien de la Renaissance est l'auteur de « La Naissance de Vénus » ?",
+      "expected": "Sandro Botticelli",
+      "accepted": [
+        "botticelli",
+        "sandro botticelli"
+      ]
+    },
+    {
+      "id": "open-132",
+      "type": "open",
+      "prompt": "Quel est le nom de la glande endocrine située à la base du cerveau qui sécrète notamment l'hormone de croissance ?",
+      "expected": "L'hypophyse",
+      "accepted": [
+        "hypophyse",
+        "l'hypophyse",
+        "glande pituitaire",
+        "la glande pituitaire"
+      ]
+    },
+    {
+      "id": "open-133",
+      "type": "open",
+      "prompt": "Quel navigateur vénitien a dicté le récit de ses voyages en Asie sous le titre « Le Devisement du monde » ?",
+      "expected": "Marco Polo",
+      "accepted": [
+        "marco polo",
+        "polo"
+      ]
+    },
+    {
+      "id": "open-134",
+      "type": "open",
+      "prompt": "Quelle est la capitale du Bhoutan ?",
+      "expected": "Thimphou",
+      "accepted": [
+        "thimphou",
+        "thimphu"
+      ]
+    },
+    {
+      "id": "open-135",
+      "type": "open",
+      "prompt": "Quel chimiste russe a établi la première version du tableau périodique des éléments en 1869 ?",
+      "expected": "Dmitri Mendeleïev",
+      "accepted": [
+        "mendeleiev",
+        "mendeleïev",
+        "dmitri mendeleiev",
+        "dmitri mendeleïev"
+      ]
+    },
+    {
+      "id": "open-136",
+      "type": "open",
+      "prompt": "Quel souverain macédonien a vaincu Darius III à la bataille de Gaugamèles en 331 av. J.-C. ?",
+      "expected": "Alexandre le Grand",
+      "accepted": [
+        "alexandre le grand",
+        "alexandre iii",
+        "alexandre"
+      ]
+    },
+    {
+      "id": "open-137",
+      "type": "open",
+      "prompt": "Quelle est la capitale de la Slovénie ?",
+      "expected": "Ljubljana",
+      "accepted": [
+        "ljubljana"
+      ]
+    },
+    {
+      "id": "open-138",
+      "type": "open",
+      "prompt": "Quel écrivain français a reçu le prix Nobel de littérature en 1964 mais l'a refusé ?",
+      "expected": "Jean-Paul Sartre",
+      "accepted": [
+        "jean-paul sartre",
+        "jean paul sartre",
+        "sartre"
+      ]
+    },
+    {
+      "id": "open-139",
+      "type": "open",
+      "prompt": "Quel est le nom du phénomène optique qui explique pourquoi le ciel apparaît bleu le jour ?",
+      "expected": "La diffusion de Rayleigh",
+      "accepted": [
+        "diffusion de rayleigh",
+        "la diffusion de rayleigh",
+        "rayleigh"
+      ]
+    },
+    {
+      "id": "open-140",
+      "type": "open",
+      "prompt": "En quelle année l'édit de Nantes a-t-il été promulgué par Henri IV ?",
+      "expected": "1598",
+      "accepted": [
+        "1598"
+      ]
+    },
+    {
+      "id": "mcq-01",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand pays d'Afrique par superficie ?",
+      "choices": [
+        "L'Algérie",
+        "L'Égypte",
+        "Le Nigéria",
+        "L'Afrique du Sud"
+      ],
+      "correct": "L'Algérie"
+    },
+    {
+      "id": "mcq-03",
+      "type": "mcq",
+      "prompt": "Combien de joueurs compte une équipe de rugby à XV sur le terrain ?",
+      "choices": [
+        "15",
+        "13",
+        "11",
+        "7"
+      ],
+      "correct": "15"
+    },
+    {
+      "id": "mcq-04",
+      "type": "mcq",
+      "prompt": "Qui a écrit la saga « Harry Potter » ?",
+      "choices": [
+        "J. K. Rowling",
+        "J. R. R. Tolkien",
+        "Stephen King",
+        "Roald Dahl"
+      ],
+      "correct": "J. K. Rowling"
+    },
+    {
+      "id": "mcq-05",
+      "type": "mcq",
+      "prompt": "Quelle planète est surnommée la « planète rouge » ?",
+      "choices": [
+        "Mars",
+        "Vénus",
+        "Jupiter",
+        "Mercure"
+      ],
+      "correct": "Mars"
+    },
+    {
+      "id": "mcq-06",
+      "type": "mcq",
+      "prompt": "Quel est l'océan le plus petit du monde ?",
+      "choices": [
+        "L'océan Arctique",
+        "L'océan Indien",
+        "L'océan Atlantique",
+        "L'océan Pacifique"
+      ],
+      "correct": "L'océan Arctique"
+    },
+    {
+      "id": "mcq-08",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand poisson du monde ?",
+      "choices": [
+        "Le requin-baleine",
+        "Le grand requin blanc",
+        "Le thon rouge",
+        "La raie manta"
+      ],
+      "correct": "Le requin-baleine"
+    },
+    {
+      "id": "mcq-09",
+      "type": "mcq",
+      "prompt": "Quel métal est liquide à température ambiante ?",
+      "choices": [
+        "Le mercure",
+        "Le plomb",
+        "L'aluminium",
+        "Le zinc"
+      ],
+      "correct": "Le mercure"
+    },
+    {
+      "id": "mcq-11",
+      "type": "mcq",
+      "prompt": "Quelle est la monnaie du Royaume-Uni ?",
+      "choices": [
+        "La livre sterling",
+        "L'euro",
+        "Le dollar",
+        "La couronne"
+      ],
+      "correct": "La livre sterling"
+    },
+    {
+      "id": "mcq-12",
+      "type": "mcq",
+      "prompt": "Dans quel pays le judo est-il né ?",
+      "choices": [
+        "Au Japon",
+        "En Chine",
+        "En Corée du Sud",
+        "En Thaïlande"
+      ],
+      "correct": "Au Japon"
+    },
+    {
+      "id": "mcq-13",
+      "type": "mcq",
+      "prompt": "Combien de cordes a une guitare classique ?",
+      "choices": [
+        "6",
+        "4",
+        "7",
+        "12"
+      ],
+      "correct": "6"
+    },
+    {
+      "id": "mcq-15",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand désert du monde, en incluant les déserts froids ?",
+      "choices": [
+        "L'Antarctique",
+        "Le Sahara",
+        "Le Gobi",
+        "L'Arctique"
+      ],
+      "correct": "L'Antarctique"
+    },
+    {
+      "id": "mcq-16",
+      "type": "mcq",
+      "prompt": "Quel est l'élément principal qui compose le Soleil ?",
+      "choices": [
+        "L'hydrogène",
+        "L'oxygène",
+        "Le carbone",
+        "L'hélium"
+      ],
+      "correct": "L'hydrogène"
+    },
+    {
+      "id": "mcq-17",
+      "type": "mcq",
+      "prompt": "Qui a écrit le roman « 1984 » ?",
+      "choices": [
+        "George Orwell",
+        "Aldous Huxley",
+        "Ray Bradbury",
+        "H. G. Wells"
+      ],
+      "correct": "George Orwell"
+    },
+    {
+      "id": "mcq-19",
+      "type": "mcq",
+      "prompt": "Quel sport se joue avec un volant ?",
+      "choices": [
+        "Le badminton",
+        "Le tennis de table",
+        "Le squash",
+        "Le tennis"
+      ],
+      "correct": "Le badminton"
+    },
+    {
+      "id": "mcq-20",
+      "type": "mcq",
+      "prompt": "Quel est le plus long fleuve d'Afrique ?",
+      "choices": [
+        "Le Nil",
+        "Le Congo",
+        "Le Niger",
+        "Le Zambèze"
+      ],
+      "correct": "Le Nil"
+    },
+    {
+      "id": "mcq-21",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale de la Belgique ?",
+      "choices": [
+        "Bruxelles",
+        "Anvers",
+        "Liège",
+        "Gand"
+      ],
+      "correct": "Bruxelles"
+    },
+    {
+      "id": "mcq-22",
+      "type": "mcq",
+      "prompt": "Quel élément chimique a pour symbole O ?",
+      "choices": [
+        "L'oxygène",
+        "L'or",
+        "L'osmium",
+        "L'ozone"
+      ],
+      "correct": "L'oxygène"
+    },
+    {
+      "id": "mcq-24",
+      "type": "mcq",
+      "prompt": "Qui a composé « La Flûte enchantée » ?",
+      "choices": [
+        "Mozart",
+        "Beethoven",
+        "Haydn",
+        "Bach"
+      ],
+      "correct": "Mozart"
+    },
+    {
+      "id": "mcq-26",
+      "type": "mcq",
+      "prompt": "Quel pays est le plus peuplé du monde ?",
+      "choices": [
+        "L'Inde",
+        "La Chine",
+        "Les États-Unis",
+        "L'Indonésie"
+      ],
+      "correct": "L'Inde"
+    },
+    {
+      "id": "mcq-27",
+      "type": "mcq",
+      "prompt": "Quel mammifère pond des œufs ?",
+      "choices": [
+        "L'ornithorynque",
+        "Le kangourou",
+        "Le dauphin",
+        "La chauve-souris"
+      ],
+      "correct": "L'ornithorynque"
+    },
+    {
+      "id": "mcq-28",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale de la Nouvelle-Zélande ?",
+      "choices": [
+        "Wellington",
+        "Auckland",
+        "Christchurch",
+        "Dunedin"
+      ],
+      "correct": "Wellington"
+    },
+    {
+      "id": "mcq-29",
+      "type": "mcq",
+      "prompt": "Quel est le symbole chimique du sodium ?",
+      "choices": [
+        "Na",
+        "So",
+        "Sd",
+        "N"
+      ],
+      "correct": "Na"
+    },
+    {
+      "id": "mcq-30",
+      "type": "mcq",
+      "prompt": "Qui est l'auteur de « L'Odyssée » ?",
+      "choices": [
+        "Homère",
+        "Sophocle",
+        "Virgile",
+        "Platon"
+      ],
+      "correct": "Homère"
+    },
+    {
+      "id": "mcq-32",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand organe du corps humain ?",
+      "choices": [
+        "La peau",
+        "Le foie",
+        "Le cerveau",
+        "Les poumons"
+      ],
+      "correct": "La peau"
+    },
+    {
+      "id": "mcq-33",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale de la Russie ?",
+      "choices": [
+        "Moscou",
+        "Saint-Pétersbourg",
+        "Kiev",
+        "Novossibirsk"
+      ],
+      "correct": "Moscou"
+    },
+    {
+      "id": "mcq-34",
+      "type": "mcq",
+      "prompt": "Combien de fuseaux horaires compte la Russie ?",
+      "choices": [
+        "11",
+        "7",
+        "9",
+        "13"
+      ],
+      "correct": "11"
+    },
+    {
+      "id": "mcq-35",
+      "type": "mcq",
+      "prompt": "Quel est le plus haut sommet d'Afrique ?",
+      "choices": [
+        "Le Kilimandjaro",
+        "Le mont Kenya",
+        "Le mont Cameroun",
+        "Le Ras Dashan"
+      ],
+      "correct": "Le Kilimandjaro"
+    },
+    {
+      "id": "mcq-36",
+      "type": "mcq",
+      "prompt": "Qui a inventé le téléphone ?",
+      "choices": [
+        "Alexander Graham Bell",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi"
+      ],
+      "correct": "Alexander Graham Bell"
+    },
+    {
+      "id": "mcq-37",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale du Kenya ?",
+      "choices": [
+        "Nairobi",
+        "Mombasa",
+        "Kisumu",
+        "Eldoret"
+      ],
+      "correct": "Nairobi"
+    },
+    {
+      "id": "mcq-38",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand lac d'Afrique ?",
+      "choices": [
+        "Le lac Victoria",
+        "Le lac Tanganyika",
+        "Le lac Tchad",
+        "Le lac Malawi"
+      ],
+      "correct": "Le lac Victoria"
+    },
+    {
+      "id": "mcq-39",
+      "type": "mcq",
+      "prompt": "Quelle est la plus grande planète du système solaire ?",
+      "choices": [
+        "Jupiter",
+        "Saturne",
+        "Neptune",
+        "Uranus"
+      ],
+      "correct": "Jupiter"
+    },
+    {
+      "id": "mcq-40",
+      "type": "mcq",
+      "prompt": "Quel pays est le pays d'origine du kangourou ?",
+      "choices": [
+        "L'Australie",
+        "La Nouvelle-Zélande",
+        "L'Afrique du Sud",
+        "Le Canada"
+      ],
+      "correct": "L'Australie"
+    },
+    {
+      "id": "mcq-42",
+      "type": "mcq",
+      "prompt": "Combien de continents y a-t-il sur Terre selon le modèle le plus courant ?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": "7"
+    },
+    {
+      "id": "mcq-43",
+      "type": "mcq",
+      "prompt": "Quel est le symbole chimique de l'eau ?",
+      "choices": [
+        "H2O",
+        "CO2",
+        "O2",
+        "NaCl"
+      ],
+      "correct": "H2O"
+    },
+    {
+      "id": "mcq-47",
+      "type": "mcq",
+      "prompt": "Combien de joueurs composent une équipe de football sur le terrain ?",
+      "choices": [
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "correct": "11"
+    },
+    {
+      "id": "mcq-48",
+      "type": "mcq",
+      "prompt": "Dans quel pays se trouve la tour Eiffel ?",
+      "choices": [
+        "La France",
+        "La Belgique",
+        "La Suisse",
+        "L'Italie"
+      ],
+      "correct": "La France"
+    },
+    {
+      "id": "mcq-49",
+      "type": "mcq",
+      "prompt": "Quel animal est surnommé le « roi de la jungle » ?",
+      "choices": [
+        "Le lion",
+        "Le tigre",
+        "L'éléphant",
+        "Le léopard"
+      ],
+      "correct": "Le lion"
+    },
+    {
+      "id": "mcq-50",
+      "type": "mcq",
+      "prompt": "Combien de jours compte une année bissextile ?",
+      "choices": [
+        "366",
+        "365",
+        "364",
+        "360"
+      ],
+      "correct": "366"
+    },
+    {
+      "id": "mcq-52",
+      "type": "mcq",
+      "prompt": "Quel gaz les plantes absorbent-elles principalement pour la photosynthèse ?",
+      "choices": [
+        "Le dioxyde de carbone",
+        "L'oxygène",
+        "L'azote",
+        "L'hélium"
+      ],
+      "correct": "Le dioxyde de carbone"
+    },
+    {
+      "id": "mcq-54",
+      "type": "mcq",
+      "prompt": "Quelle est la monnaie officielle du Japon ?",
+      "choices": [
+        "Le yen",
+        "Le yuan",
+        "Le won",
+        "Le dollar"
+      ],
+      "correct": "Le yen"
+    },
+    {
+      "id": "mcq-55",
+      "type": "mcq",
+      "prompt": "Combien de couleurs y a-t-il dans un arc-en-ciel traditionnel ?",
+      "choices": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct": "7"
+    },
+    {
+      "id": "mcq-56",
+      "type": "mcq",
+      "prompt": "Quel est le point culminant des Alpes ?",
+      "choices": [
+        "Le mont Blanc",
+        "Le Cervin",
+        "Le mont Rose",
+        "La Jungfrau"
+      ],
+      "correct": "Le mont Blanc"
+    },
+    {
+      "id": "mcq-57",
+      "type": "mcq",
+      "prompt": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+      "choices": [
+        "1969",
+        "1965",
+        "1971",
+        "1959"
+      ],
+      "correct": "1969"
+    },
+    {
+      "id": "mcq-58",
+      "type": "mcq",
+      "prompt": "Quel organe du corps humain pompe le sang ?",
+      "choices": [
+        "Le cœur",
+        "Le foie",
+        "Les poumons",
+        "Le cerveau"
+      ],
+      "correct": "Le cœur"
+    },
+    {
+      "id": "mcq-60",
+      "type": "mcq",
+      "prompt": "Quel est le plus grand mammifère terrestre ?",
+      "choices": [
+        "L'éléphant d'Afrique",
+        "La girafe",
+        "Le rhinocéros blanc",
+        "L'hippopotame"
+      ],
+      "correct": "L'éléphant d'Afrique"
+    },
+    {
+      "id": "mcq-62",
+      "type": "mcq",
+      "prompt": "Qui a composé « Les Quatre Saisons » ?",
+      "choices": [
+        "Antonio Vivaldi",
+        "Johann Sebastian Bach",
+        "Wolfgang Amadeus Mozart",
+        "Ludwig van Beethoven"
+      ],
+      "correct": "Antonio Vivaldi"
+    },
+    {
+      "id": "mcq-63",
+      "type": "mcq",
+      "prompt": "Quel élément chimique a pour symbole « Au » ?",
+      "choices": [
+        "L'or",
+        "L'argent",
+        "L'aluminium",
+        "L'argon"
+      ],
+      "correct": "L'or"
+    },
+    {
+      "id": "mcq-64",
+      "type": "mcq",
+      "prompt": "En quelle année le mur de Berlin est-il tombé ?",
+      "choices": [
+        "1989",
+        "1991",
+        "1987",
+        "1985"
+      ],
+      "correct": "1989"
+    },
+    {
+      "id": "mcq-66",
+      "type": "mcq",
+      "prompt": "Qui est l'auteur de la pièce « Cyrano de Bergerac » ?",
+      "choices": [
+        "Edmond Rostand",
+        "Molière",
+        "Jean Racine",
+        "Pierre Corneille"
+      ],
+      "correct": "Edmond Rostand"
+    },
+    {
+      "id": "mcq-67",
+      "type": "mcq",
+      "prompt": "Quel est le plus petit État indépendant du monde par sa superficie ?",
+      "choices": [
+        "Le Vatican",
+        "Monaco",
+        "Saint-Marin",
+        "Le Liechtenstein"
+      ],
+      "correct": "Le Vatican"
+    },
+    {
+      "id": "mcq-68",
+      "type": "mcq",
+      "prompt": "Dans la mythologie grecque, qui est le dieu de la mer ?",
+      "choices": [
+        "Poséidon",
+        "Zeus",
+        "Hadès",
+        "Apollon"
+      ],
+      "correct": "Poséidon"
+    },
+    {
+      "id": "mcq-69",
+      "type": "mcq",
+      "prompt": "Combien d'os compte le squelette humain adulte ?",
+      "choices": [
+        "206",
+        "196",
+        "216",
+        "226"
+      ],
+      "correct": "206"
+    },
+    {
+      "id": "mcq-70",
+      "type": "mcq",
+      "prompt": "Quelle ville a accueilli les Jeux olympiques d'été en 2016 ?",
+      "choices": [
+        "Rio de Janeiro",
+        "Londres",
+        "Tokyo",
+        "Pékin"
+      ],
+      "correct": "Rio de Janeiro"
+    },
+    {
+      "id": "mcq-71",
+      "type": "mcq",
+      "prompt": "Qui a découvert la pénicilline en 1928 ?",
+      "choices": [
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Robert Koch",
+        "Marie Curie"
+      ],
+      "correct": "Alexander Fleming"
+    },
+    {
+      "id": "mcq-72",
+      "type": "mcq",
+      "prompt": "Quel détroit sépare l'Europe de l'Afrique à son point le plus étroit ?",
+      "choices": [
+        "Le détroit de Gibraltar",
+        "Le détroit du Bosphore",
+        "Le détroit d'Ormuz",
+        "Le détroit de Béring"
+      ],
+      "correct": "Le détroit de Gibraltar"
+    },
+    {
+      "id": "mcq-73",
+      "type": "mcq",
+      "prompt": "Quel peintre est célèbre pour avoir peint « La Nuit étoilée » ?",
+      "choices": [
+        "Vincent van Gogh",
+        "Claude Monet",
+        "Paul Gauguin",
+        "Salvador Dalí"
+      ],
+      "correct": "Vincent van Gogh"
+    },
+    {
+      "id": "mcq-74",
+      "type": "mcq",
+      "prompt": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+      "choices": [
+        "300 000 km/s",
+        "150 000 km/s",
+        "30 000 km/s",
+        "3 000 000 km/s"
+      ],
+      "correct": "300 000 km/s"
+    },
+    {
+      "id": "mcq-75",
+      "type": "mcq",
+      "prompt": "Quel pays possède le plus grand nombre d'îles au monde ?",
+      "choices": [
+        "La Suède",
+        "L'Indonésie",
+        "Les Philippines",
+        "Le Japon"
+      ],
+      "correct": "La Suède"
+    },
+    {
+      "id": "mcq-77",
+      "type": "mcq",
+      "prompt": "En quelle année la Première Guerre mondiale a-t-elle pris fin ?",
+      "choices": [
+        "1918",
+        "1917",
+        "1919",
+        "1916"
+      ],
+      "correct": "1918"
+    },
+    {
+      "id": "mcq-78",
+      "type": "mcq",
+      "prompt": "Quel est le métal liquide à température ambiante ?",
+      "choices": [
+        "Le mercure",
+        "Le plomb",
+        "Le zinc",
+        "L'étain"
+      ],
+      "correct": "Le mercure"
+    },
+    {
+      "id": "mcq-80",
+      "type": "mcq",
+      "prompt": "Combien de cordes possède un violon classique ?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "correct": "4"
+    },
+    {
+      "id": "mcq-81",
+      "type": "mcq",
+      "prompt": "Quel philosophe grec fut le précepteur d'Alexandre le Grand ?",
+      "choices": [
+        "Aristote",
+        "Platon",
+        "Socrate",
+        "Épicure"
+      ],
+      "correct": "Aristote"
+    },
+    {
+      "id": "mcq-82",
+      "type": "mcq",
+      "prompt": "Dans quel pays se trouve le site archéologique de Pétra ?",
+      "choices": [
+        "La Jordanie",
+        "L'Égypte",
+        "La Syrie",
+        "Le Liban"
+      ],
+      "correct": "La Jordanie"
+    },
+    {
+      "id": "mcq-83",
+      "type": "mcq",
+      "prompt": "Quelle est la planète la plus massive du système solaire ?",
+      "choices": [
+        "Jupiter",
+        "Saturne",
+        "Neptune",
+        "Uranus"
+      ],
+      "correct": "Jupiter"
+    },
+    {
+      "id": "mcq-84",
+      "type": "mcq",
+      "prompt": "Qui a réalisé le film « Pulp Fiction » ?",
+      "choices": [
+        "Quentin Tarantino",
+        "Martin Scorsese",
+        "Steven Spielberg",
+        "Christopher Nolan"
+      ],
+      "correct": "Quentin Tarantino"
+    },
+    {
+      "id": "mcq-85",
+      "type": "mcq",
+      "prompt": "Quel pays est traversé par le fleuve Danube et a pour capitale Budapest ?",
+      "choices": [
+        "La Hongrie",
+        "La Roumanie",
+        "L'Autriche",
+        "La Slovaquie"
+      ],
+      "correct": "La Hongrie"
+    },
+    {
+      "id": "mcq-86",
+      "type": "mcq",
+      "prompt": "Quelle vitamine est synthétisée par la peau sous l'effet des rayons UV du soleil ?",
+      "choices": [
+        "La vitamine D",
+        "La vitamine C",
+        "La vitamine B12",
+        "La vitamine A"
+      ],
+      "correct": "La vitamine D"
+    },
+    {
+      "id": "mcq-87",
+      "type": "mcq",
+      "prompt": "Quel écrivain russe est l'auteur de « Crime et Châtiment » ?",
+      "choices": [
+        "Fiodor Dostoïevski",
+        "Léon Tolstoï",
+        "Anton Tchekhov",
+        "Nikolaï Gogol"
+      ],
+      "correct": "Fiodor Dostoïevski"
+    },
+    {
+      "id": "mcq-88",
+      "type": "mcq",
+      "prompt": "Quel est le nom du traité qui a fondé l'Union européenne en 1992 ?",
+      "choices": [
+        "Le traité de Maastricht",
+        "Le traité de Rome",
+        "Le traité de Lisbonne",
+        "Le traité de Schengen"
+      ],
+      "correct": "Le traité de Maastricht"
+    },
+    {
+      "id": "mcq-89",
+      "type": "mcq",
+      "prompt": "Quelle est l'unité de mesure de la résistance électrique ?",
+      "choices": [
+        "L'ohm",
+        "Le volt",
+        "L'ampère",
+        "Le watt"
+      ],
+      "correct": "L'ohm"
+    },
+    {
+      "id": "mcq-90",
+      "type": "mcq",
+      "prompt": "Quel pays d'Amérique du Sud n'a pas d'accès à la mer avec la Bolivie ?",
+      "choices": [
+        "Le Paraguay",
+        "L'Uruguay",
+        "L'Équateur",
+        "Le Suriname"
+      ],
+      "correct": "Le Paraguay"
+    },
+    {
+      "id": "mcq-91",
+      "type": "mcq",
+      "prompt": "Qui a sculpté « Le Penseur » ?",
+      "choices": [
+        "Auguste Rodin",
+        "Camille Claudel",
+        "Alberto Giacometti",
+        "Constantin Brâncuși"
+      ],
+      "correct": "Auguste Rodin"
+    },
+    {
+      "id": "mcq-92",
+      "type": "mcq",
+      "prompt": "Quelle mer borde la côte ouest de l'Arabie saoudite ?",
+      "choices": [
+        "La mer Rouge",
+        "La mer d'Arabie",
+        "La mer Morte",
+        "La mer Caspienne"
+      ],
+      "correct": "La mer Rouge"
+    },
+    {
+      "id": "mcq-93",
+      "type": "mcq",
+      "prompt": "Combien de paires de chromosomes possède une cellule humaine normale ?",
+      "choices": [
+        "23",
+        "22",
+        "24",
+        "46"
+      ],
+      "correct": "23"
+    },
+    {
+      "id": "mcq-94",
+      "type": "mcq",
+      "prompt": "Quel empereur romain a fait construire un mur au nord de l'Angleterre actuelle ?",
+      "choices": [
+        "Hadrien",
+        "Trajan",
+        "Marc Aurèle",
+        "Constantin"
+      ],
+      "correct": "Hadrien"
+    },
+    {
+      "id": "mcq-95",
+      "type": "mcq",
+      "prompt": "Quel est le nom de la galaxie dans laquelle se trouve notre système solaire ?",
+      "choices": [
+        "La Voie lactée",
+        "Andromède",
+        "Le Triangle",
+        "Le Sombrero"
+      ],
+      "correct": "La Voie lactée"
+    },
+    {
+      "id": "mcq-96",
+      "type": "mcq",
+      "prompt": "Quel compositeur autrichien est surnommé « le roi de la valse » ?",
+      "choices": [
+        "Johann Strauss II",
+        "Franz Schubert",
+        "Gustav Mahler",
+        "Joseph Haydn"
+      ],
+      "correct": "Johann Strauss II"
+    },
+    {
+      "id": "mcq-98",
+      "type": "mcq",
+      "prompt": "Quel scientifique a formulé les lois du mouvement et de la gravitation universelle ?",
+      "choices": [
+        "Isaac Newton",
+        "Galilée",
+        "Johannes Kepler",
+        "Albert Einstein"
+      ],
+      "correct": "Isaac Newton"
+    },
+    {
+      "id": "mcq-99",
+      "type": "mcq",
+      "prompt": "Dans quel pays la révolution des Œillets a-t-elle eu lieu en 1974 ?",
+      "choices": [
+        "Le Portugal",
+        "L'Espagne",
+        "La Grèce",
+        "L'Italie"
+      ],
+      "correct": "Le Portugal"
+    },
+    {
+      "id": "mcq-100",
+      "type": "mcq",
+      "prompt": "Quel est l'ingrédient principal du guacamole ?",
+      "choices": [
+        "L'avocat",
+        "Le concombre",
+        "La courgette",
+        "Le poivron vert"
+      ],
+      "correct": "L'avocat"
+    },
+    {
+      "id": "mcq-101",
+      "type": "mcq",
+      "prompt": "Quelle dynastie régnait sur la France avant les Capétiens ?",
+      "choices": [
+        "Les Carolingiens",
+        "Les Mérovingiens",
+        "Les Valois",
+        "Les Bourbons"
+      ],
+      "correct": "Les Carolingiens"
+    },
+    {
+      "id": "mcq-102",
+      "type": "mcq",
+      "prompt": "Quel est le nom du détroit qui sépare l'Asie de l'Amérique du Nord ?",
+      "choices": [
+        "Le détroit de Béring",
+        "Le détroit de Magellan",
+        "Le détroit de Malacca",
+        "Le détroit de Cook"
+      ],
+      "correct": "Le détroit de Béring"
+    },
+    {
+      "id": "mcq-103",
+      "type": "mcq",
+      "prompt": "Qui a écrit « L'Étranger », publié en 1942 ?",
+      "choices": [
+        "Albert Camus",
+        "Jean-Paul Sartre",
+        "André Malraux",
+        "Boris Vian"
+      ],
+      "correct": "Albert Camus"
+    },
+    {
+      "id": "mcq-104",
+      "type": "mcq",
+      "prompt": "Quel est le symbole chimique du potassium ?",
+      "choices": [
+        "K",
+        "P",
+        "Po",
+        "Pt"
+      ],
+      "correct": "K"
+    },
+    {
+      "id": "mcq-105",
+      "type": "mcq",
+      "prompt": "Quelle est la plus haute montagne d'Afrique ?",
+      "choices": [
+        "Le Kilimandjaro",
+        "Le mont Kenya",
+        "Le mont Stanley",
+        "Le mont Méru"
+      ],
+      "correct": "Le Kilimandjaro"
+    },
+    {
+      "id": "mcq-106",
+      "type": "mcq",
+      "prompt": "En quelle année Christophe Colomb a-t-il atteint l'Amérique pour la première fois ?",
+      "choices": [
+        "1492",
+        "1498",
+        "1488",
+        "1502"
+      ],
+      "correct": "1492"
+    },
+    {
+      "id": "mcq-107",
+      "type": "mcq",
+      "prompt": "Quel organe humain produit la bile ?",
+      "choices": [
+        "Le foie",
+        "La vésicule biliaire",
+        "Le pancréas",
+        "La rate"
+      ],
+      "correct": "Le foie"
+    },
+    {
+      "id": "mcq-108",
+      "type": "mcq",
+      "prompt": "Quel courant artistique Claude Monet a-t-il contribué à fonder ?",
+      "choices": [
+        "L'impressionnisme",
+        "Le cubisme",
+        "Le surréalisme",
+        "Le fauvisme"
+      ],
+      "correct": "L'impressionnisme"
+    },
+    {
+      "id": "mcq-109",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale de la Suisse ?",
+      "choices": [
+        "Berne",
+        "Zurich",
+        "Genève",
+        "Bâle"
+      ],
+      "correct": "Berne"
+    },
+    {
+      "id": "mcq-110",
+      "type": "mcq",
+      "prompt": "Combien de côtés possède un dodécagone ?",
+      "choices": [
+        "12",
+        "10",
+        "20",
+        "8"
+      ],
+      "correct": "12"
+    },
+    {
+      "id": "mcq-111",
+      "type": "mcq",
+      "prompt": "Quel gaz compose environ 78 % de l'atmosphère terrestre ?",
+      "choices": [
+        "L'azote",
+        "L'oxygène",
+        "L'argon",
+        "Le dioxyde de carbone"
+      ],
+      "correct": "L'azote"
+    },
+    {
+      "id": "mcq-112",
+      "type": "mcq",
+      "prompt": "Quel navigateur portugais a mené la première expédition à faire le tour du monde ?",
+      "choices": [
+        "Fernand de Magellan",
+        "Vasco de Gama",
+        "Bartolomeu Dias",
+        "Henri le Navigateur"
+      ],
+      "correct": "Fernand de Magellan"
+    },
+    {
+      "id": "mcq-113",
+      "type": "mcq",
+      "prompt": "Quelle ville italienne est traversée par le fleuve Arno ?",
+      "choices": [
+        "Florence",
+        "Rome",
+        "Turin",
+        "Vérone"
+      ],
+      "correct": "Florence"
+    },
+    {
+      "id": "mcq-114",
+      "type": "mcq",
+      "prompt": "Quel animal est le plus rapide sur terre en vitesse de pointe ?",
+      "choices": [
+        "Le guépard",
+        "L'antilope d'Amérique",
+        "Le lion",
+        "Le lévrier"
+      ],
+      "correct": "Le guépard"
+    },
+    {
+      "id": "mcq-115",
+      "type": "mcq",
+      "prompt": "Qui a composé l'opéra « Carmen » ?",
+      "choices": [
+        "Georges Bizet",
+        "Giuseppe Verdi",
+        "Giacomo Puccini",
+        "Richard Wagner"
+      ],
+      "correct": "Georges Bizet"
+    },
+    {
+      "id": "mcq-116",
+      "type": "mcq",
+      "prompt": "Quel est le nom du satellite naturel de la Terre ?",
+      "choices": [
+        "La Lune",
+        "Phobos",
+        "Titan",
+        "Europe"
+      ],
+      "correct": "La Lune"
+    },
+    {
+      "id": "mcq-117",
+      "type": "mcq",
+      "prompt": "Dans quel pays se situe le désert d'Atacama ?",
+      "choices": [
+        "Le Chili",
+        "Le Pérou",
+        "L'Argentine",
+        "La Bolivie"
+      ],
+      "correct": "Le Chili"
+    },
+    {
+      "id": "mcq-118",
+      "type": "mcq",
+      "prompt": "Quel roman de George Orwell décrit un régime totalitaire dirigé par Big Brother ?",
+      "choices": [
+        "1984",
+        "La Ferme des animaux",
+        "Le Meilleur des mondes",
+        "Fahrenheit 451"
+      ],
+      "correct": "1984"
+    },
+    {
+      "id": "mcq-119",
+      "type": "mcq",
+      "prompt": "Quelle est la formule chimique du sel de table ?",
+      "choices": [
+        "NaCl",
+        "KCl",
+        "CaCO3",
+        "NaHCO3"
+      ],
+      "correct": "NaCl"
+    },
+    {
+      "id": "mcq-120",
+      "type": "mcq",
+      "prompt": "Combien de joueurs composent une équipe de basket-ball sur le terrain ?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "4"
+      ],
+      "correct": "5"
+    },
+    {
+      "id": "mcq-121",
+      "type": "mcq",
+      "prompt": "Quel traité signé en 1648 a mis fin à la guerre de Trente Ans ?",
+      "choices": [
+        "Les traités de Westphalie",
+        "Le traité d'Utrecht",
+        "La paix d'Augsbourg",
+        "Le traité des Pyrénées"
+      ],
+      "correct": "Les traités de Westphalie"
+    },
+    {
+      "id": "mcq-122",
+      "type": "mcq",
+      "prompt": "Quelle est la constante d'Avogadro approximative ?",
+      "choices": [
+        "6,022 × 10^23 mol^-1",
+        "3,141 × 10^23 mol^-1",
+        "1,602 × 10^-19 mol^-1",
+        "6,626 × 10^-34 mol^-1"
+      ],
+      "correct": "6,022 × 10^23 mol^-1"
+    },
+    {
+      "id": "mcq-123",
+      "type": "mcq",
+      "prompt": "Quel empereur byzantin a fait codifier le droit romain dans le « Corpus juris civilis » ?",
+      "choices": [
+        "Justinien Ier",
+        "Constantin Ier",
+        "Théodose Ier",
+        "Héraclius"
+      ],
+      "correct": "Justinien Ier"
+    },
+    {
+      "id": "mcq-124",
+      "type": "mcq",
+      "prompt": "Quelle est la capitale du Kazakhstan ?",
+      "choices": [
+        "Astana",
+        "Almaty",
+        "Tachkent",
+        "Bichkek"
+      ],
+      "correct": "Astana"
+    },
+    {
+      "id": "mcq-125",
+      "type": "mcq",
+      "prompt": "Quel écrivain a remporté le prix Nobel de littérature en 1957 ?",
+      "choices": [
+        "Albert Camus",
+        "Jean-Paul Sartre",
+        "François Mauriac",
+        "Saint-John Perse"
+      ],
+      "correct": "Albert Camus"
+    },
+    {
+      "id": "mcq-126",
+      "type": "mcq",
+      "prompt": "Quel est l'élément chimique ayant le numéro atomique 74, utilisé pour les filaments d'ampoules ?",
+      "choices": [
+        "Le tungstène",
+        "Le titane",
+        "Le tantale",
+        "Le molybdène"
+      ],
+      "correct": "Le tungstène"
+    },
+    {
+      "id": "mcq-127",
+      "type": "mcq",
+      "prompt": "En quelle année la bataille de Lépante a-t-elle opposé la Sainte Ligue à l'Empire ottoman ?",
+      "choices": [
+        "1571",
+        "1529",
+        "1683",
+        "1453"
+      ],
+      "correct": "1571"
+    },
+    {
+      "id": "mcq-128",
+      "type": "mcq",
+      "prompt": "Quelle est la seule planète du système solaire dont la rotation est rétrograde et plus lente que sa révolution autour du Soleil ?",
+      "choices": [
+        "Vénus",
+        "Uranus",
+        "Mercure",
+        "Mars"
+      ],
+      "correct": "Vénus"
+    },
+    {
+      "id": "mcq-129",
+      "type": "mcq",
+      "prompt": "Quel philosophe allemand est l'auteur de la « Critique de la raison pure » ?",
+      "choices": [
+        "Emmanuel Kant",
+        "Georg Wilhelm Friedrich Hegel",
+        "Arthur Schopenhauer",
+        "Friedrich Nietzsche"
+      ],
+      "correct": "Emmanuel Kant"
+    },
+    {
+      "id": "mcq-130",
+      "type": "mcq",
+      "prompt": "Quel fleuve traverse la ville de Kinshasa et sépare la République démocratique du Congo de la République du Congo ?",
+      "choices": [
+        "Le fleuve Congo",
+        "Le fleuve Oubangui",
+        "Le fleuve Kasaï",
+        "Le fleuve Zambèze"
+      ],
+      "correct": "Le fleuve Congo"
+    },
+    {
+      "id": "mcq-131",
+      "type": "mcq",
+      "prompt": "Quelle particule subatomique a été découverte par James Chadwick en 1932 ?",
+      "choices": [
+        "Le neutron",
+        "Le proton",
+        "L'électron",
+        "Le positron"
+      ],
+      "correct": "Le neutron"
+    },
+    {
+      "id": "mcq-132",
+      "type": "mcq",
+      "prompt": "Quel architecte espagnol a conçu le pavillon de Barcelone pour l'Exposition internationale de 1929 ?",
+      "choices": [
+        "Ludwig Mies van der Rohe",
+        "Antoni Gaudí",
+        "Le Corbusier",
+        "Walter Gropius"
+      ],
+      "correct": "Ludwig Mies van der Rohe"
+    },
+    {
+      "id": "mcq-133",
+      "type": "mcq",
+      "prompt": "Quel royaume africain médiéval avait pour capitale Tombouctou et Gao sous le règne d'Askia Mohammed ?",
+      "choices": [
+        "L'Empire songhaï",
+        "L'Empire du Mali",
+        "L'Empire du Ghana",
+        "Le royaume du Kanem-Bornou"
+      ],
+      "correct": "L'Empire songhaï"
+    },
+    {
+      "id": "mcq-134",
+      "type": "mcq",
+      "prompt": "Quelle est la couche de l'atmosphère terrestre située directement au-dessus de la stratosphère ?",
+      "choices": [
+        "La mésosphère",
+        "La troposphère",
+        "La thermosphère",
+        "L'exosphère"
+      ],
+      "correct": "La mésosphère"
+    },
+    {
+      "id": "mcq-135",
+      "type": "mcq",
+      "prompt": "Qui a composé l'œuvre orchestrale « Le Sacre du printemps », dont la première en 1913 provoqua un scandale à Paris ?",
+      "choices": [
+        "Igor Stravinsky",
+        "Claude Debussy",
+        "Maurice Ravel",
+        "Sergueï Prokofiev"
+      ],
+      "correct": "Igor Stravinsky"
+    },
+    {
+      "id": "mcq-136",
+      "type": "mcq",
+      "prompt": "Quel mathématicien suisse du XVIIIe siècle a introduit la notation « e » pour la base des logarithmes naturels et « i » pour l'unité imaginaire ?",
+      "choices": [
+        "Leonhard Euler",
+        "Daniel Bernoulli",
+        "Jean-Jacques Rousseau",
+        "Gabriel Cramer"
+      ],
+      "correct": "Leonhard Euler"
+    },
+    {
+      "id": "mcq-137",
+      "type": "mcq",
+      "prompt": "Quel détroit relie la mer Noire à la mer de Marmara ?",
+      "choices": [
+        "Le Bosphore",
+        "Les Dardanelles",
+        "Le détroit de Kertch",
+        "Le détroit d'Otrante"
+      ],
+      "correct": "Le Bosphore"
+    },
+    {
+      "id": "mcq-138",
+      "type": "mcq",
+      "prompt": "Quelle enzyme digestive présente dans la salive amorce la dégradation de l'amidon ?",
+      "choices": [
+        "L'amylase",
+        "La pepsine",
+        "La lipase",
+        "La trypsine"
+      ],
+      "correct": "L'amylase"
+    },
+    {
+      "id": "mcq-139",
+      "type": "mcq",
+      "prompt": "Quel peintre flamand du XVe siècle est l'auteur du triptyque « Le Jardin des délices » ?",
+      "choices": [
+        "Jérôme Bosch",
+        "Jan van Eyck",
+        "Pieter Brueghel l'Ancien",
+        "Rogier van der Weyden"
+      ],
+      "correct": "Jérôme Bosch"
+    },
+    {
+      "id": "mcq-140",
+      "type": "mcq",
+      "prompt": "En quelle année le traité de Verdun a-t-il partagé l'Empire carolingien entre les trois petits-fils de Charlemagne ?",
+      "choices": [
+        "843",
+        "800",
+        "814",
+        "877"
+      ],
+      "correct": "843"
+    },
+    {
+      "id": "bac-01",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays",
+        "Animal",
+        "Métier",
+        "Fruit"
+      ],
+      "categoryHints": {
+        "Pays": "Un pays",
+        "Animal": "Un animal",
+        "Métier": "Un métier",
+        "Fruit": "Un fruit"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-02",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville",
+        "Fleur",
+        "Instrument de musique",
+        "Plat"
+      ],
+      "categoryHints": {
+        "Ville": "Une ville",
+        "Fleur": "Une fleur",
+        "Instrument de musique": "Un instrument de musique",
+        "Plat": "Un plat"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "F",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-03",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Prénom",
+        "Couleur",
+        "Sport",
+        "Boisson"
+      ],
+      "categoryHints": {
+        "Prénom": "Un prénom",
+        "Couleur": "Une couleur",
+        "Sport": "Un sport",
+        "Boisson": "Une boisson"
+      },
+      "letterPool": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-04",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Objet de la maison",
+        "Vêtement",
+        "Animal",
+        "Métier"
+      ],
+      "categoryHints": {
+        "Objet de la maison": "Un objet de la maison",
+        "Vêtement": "Un vêtement",
+        "Animal": "Un animal",
+        "Métier": "Un métier"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-05",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays",
+        "Langue",
+        "Monnaie",
+        "Ville"
+      ],
+      "categoryHints": {
+        "Pays": "Un pays",
+        "Langue": "Une langue",
+        "Monnaie": "Une monnaie",
+        "Ville": "Une ville"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "I",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-06",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Fruit",
+        "Légume",
+        "Plat",
+        "Boisson"
+      ],
+      "categoryHints": {
+        "Fruit": "Un fruit",
+        "Légume": "Un légume",
+        "Plat": "Un plat",
+        "Boisson": "Une boisson"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-07",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Animal marin",
+        "Poisson",
+        "Coquillage",
+        "Métier de la mer"
+      ],
+      "categoryHints": {
+        "Animal marin": "Un animal marin",
+        "Poisson": "Un poisson",
+        "Coquillage": "Un coquillage",
+        "Métier de la mer": "Un métier de la mer"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "H",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-08",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Instrument de musique",
+        "Danse",
+        "Chanteur",
+        "Style musical"
+      ],
+      "categoryHints": {
+        "Instrument de musique": "Un instrument de musique",
+        "Danse": "Une danse",
+        "Chanteur": "Un chanteur",
+        "Style musical": "Un style musical"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "J",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-09",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Film",
+        "Acteur",
+        "Réalisateur",
+        "Personnage de fiction"
+      ],
+      "categoryHints": {
+        "Film": "Un film",
+        "Acteur": "Un acteur",
+        "Réalisateur": "Un réalisateur",
+        "Personnage de fiction": "Un personnage de fiction"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "H",
+        "J",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-10",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque",
+        "Sport",
+        "Objet high-tech",
+        "Application"
+      ],
+      "categoryHints": {
+        "Marque": "Une marque",
+        "Sport": "Un sport",
+        "Objet high-tech": "Un objet high-tech",
+        "Application": "Une application"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "I",
+        "M",
+        "N",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-11",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Europe",
+        "Capitale",
+        "Fleuve",
+        "Montagne"
+      ],
+      "categoryHints": {
+        "Pays d'Europe": "Un pays d'Europe",
+        "Capitale": "Une capitale",
+        "Fleuve": "Un fleuve",
+        "Montagne": "Une montagne"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "I",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-12",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Afrique",
+        "Animal d'Afrique",
+        "Plat africain",
+        "Fleuve"
+      ],
+      "categoryHints": {
+        "Pays d'Afrique": "Un pays d'Afrique",
+        "Animal d'Afrique": "Un animal d'Afrique",
+        "Plat africain": "Un plat africain",
+        "Fleuve": "Un fleuve"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "K",
+        "M",
+        "N",
+        "S",
+        "T",
+        "Z"
+      ]
+    },
+    {
+      "id": "bac-13",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Asie",
+        "Ville d'Asie",
+        "Plat asiatique",
+        "Animal d'Asie"
+      ],
+      "categoryHints": {
+        "Pays d'Asie": "Un pays d'Asie",
+        "Ville d'Asie": "Une ville d'Asie",
+        "Plat asiatique": "Un plat asiatique",
+        "Animal d'Asie": "Un animal d'Asie"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "H",
+        "J",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-14",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Amérique",
+        "Ville d'Amérique",
+        "Plat",
+        "Animal"
+      ],
+      "categoryHints": {
+        "Pays d'Amérique": "Un pays d'Amérique",
+        "Ville d'Amérique": "Une ville d'Amérique",
+        "Plat": "Un plat",
+        "Animal": "Un animal"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "L",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-15",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Super-héros",
+        "Super-vilain",
+        "Pouvoir",
+        "Film de super-héros"
+      ],
+      "categoryHints": {
+        "Super-héros": "Un super-héros",
+        "Super-vilain": "Un super-vilain",
+        "Pouvoir": "Un pouvoir",
+        "Film de super-héros": "Un film de super-héros"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "M",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-16",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Jeu vidéo",
+        "Console",
+        "Personnage de jeu vidéo",
+        "Éditeur de jeux"
+      ],
+      "categoryHints": {
+        "Jeu vidéo": "Un jeu vidéo",
+        "Console": "Une console",
+        "Personnage de jeu vidéo": "Un personnage de jeu vidéo",
+        "Éditeur de jeux": "Un éditeur de jeux"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "N",
+        "P",
+        "S",
+        "T",
+        "Z"
+      ]
+    },
+    {
+      "id": "bac-17",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Animal",
+        "Cri d'animal",
+        "Habitat",
+        "Nourriture"
+      ],
+      "categoryHints": {
+        "Animal": "Un animal",
+        "Cri d'animal": "Un cri d'animal",
+        "Habitat": "Un habitat",
+        "Nourriture": "Un aliment"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "F",
+        "G",
+        "H",
+        "M",
+        "N",
+        "P",
+        "R",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-18",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Métier",
+        "Outil",
+        "Lieu de travail",
+        "Verbe d'action"
+      ],
+      "categoryHints": {
+        "Métier": "Un métier",
+        "Outil": "Un outil",
+        "Lieu de travail": "Un lieu de travail",
+        "Verbe d'action": "Un verbe d'action"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-19",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Vêtement",
+        "Accessoire",
+        "Marque de mode",
+        "Couleur"
+      ],
+      "categoryHints": {
+        "Vêtement": "Un vêtement",
+        "Accessoire": "Un accessoire",
+        "Marque de mode": "Une marque de mode",
+        "Couleur": "Une couleur"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "J",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-20",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Partie du corps",
+        "Maladie",
+        "Médicament",
+        "Métier de santé"
+      ],
+      "categoryHints": {
+        "Partie du corps": "Une partie du corps",
+        "Maladie": "Une maladie",
+        "Médicament": "Un médicament",
+        "Métier de santé": "Un métier de santé"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-21",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "École",
+        "Fourniture scolaire",
+        "Matière",
+        "Métier de l'éducation"
+      ],
+      "categoryHints": {
+        "École": "Une école",
+        "Fourniture scolaire": "Une fourniture scolaire",
+        "Matière": "Une matière",
+        "Métier de l'éducation": "Un métier de l'éducation"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-22",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Cuisine",
+        "Ustensile",
+        "Épice",
+        "Fromage"
+      ],
+      "categoryHints": {
+        "Cuisine": "Une cuisine",
+        "Ustensile": "Un ustensile",
+        "Épice": "Une épice",
+        "Fromage": "Un fromage"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-23",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Voyage",
+        "Moyen de transport",
+        "Ville touristique",
+        "Objet de voyage"
+      ],
+      "categoryHints": {
+        "Voyage": "Un voyage",
+        "Moyen de transport": "Un moyen de transport",
+        "Ville touristique": "Une ville touristique",
+        "Objet de voyage": "Un objet de voyage"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-24",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Arbre",
+        "Oiseau",
+        "Insecte",
+        "Fleur"
+      ],
+      "categoryHints": {
+        "Arbre": "Un arbre",
+        "Oiseau": "Un oiseau",
+        "Insecte": "Un insecte",
+        "Fleur": "Une fleur"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-25",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Fête",
+        "Animal",
+        "Dessert",
+        "Endroit pour faire ses besoins"
+      ],
+      "categoryHints": {
+        "Fête": "Une fête",
+        "Animal": "Un animal",
+        "Dessert": "Un dessert",
+        "Endroit pour faire ses besoins": "Un endroit pour faire ses besoins"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-26",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays",
+        "Métier",
+        "Fruit ou légume",
+        "Objet de la salle de bain"
+      ],
+      "categoryHints": {
+        "Pays": "Un pays",
+        "Métier": "Un métier",
+        "Fruit ou légume": "Un fruit ou un légume",
+        "Objet de la salle de bain": "Un objet de la salle de bain"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-27",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque célèbre",
+        "Sport",
+        "Vêtement",
+        "Excuse pour un retard"
+      ],
+      "categoryHints": {
+        "Marque célèbre": "Une marque célèbre",
+        "Sport": "Un sport",
+        "Vêtement": "Un vêtement",
+        "Excuse pour un retard": "Une excuse pour un retard"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "J",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-28",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Capitale",
+        "Instrument de musique",
+        "Boisson",
+        "Chose qui pue"
+      ],
+      "categoryHints": {
+        "Capitale": "Une capitale",
+        "Instrument de musique": "Un instrument de musique",
+        "Boisson": "Une boisson",
+        "Chose qui pue": "Une chose qui pue"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "H",
+        "L",
+        "M",
+        "O",
+        "P",
+        "R",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-29",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Film ou série",
+        "Partie du corps",
+        "Moyen de transport",
+        "Endroit où l'on dort"
+      ],
+      "categoryHints": {
+        "Film ou série": "Un film ou une série",
+        "Partie du corps": "Une partie du corps",
+        "Moyen de transport": "Un moyen de transport",
+        "Endroit où l'on dort": "Un endroit où l'on dort"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-30",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Prénom féminin",
+        "Couleur",
+        "Outil",
+        "Chose froide"
+      ],
+      "categoryHints": {
+        "Prénom féminin": "Un prénom féminin",
+        "Couleur": "Une couleur",
+        "Outil": "Un outil",
+        "Chose froide": "Une chose froide"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "J",
+        "L",
+        "M",
+        "N",
+        "P",
+        "R",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-31",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Célébrité",
+        "Fleur ou plante",
+        "Plat cuisiné",
+        "Mot que l'on crie"
+      ],
+      "categoryHints": {
+        "Célébrité": "Une célébrité",
+        "Fleur ou plante": "Une fleur ou une plante",
+        "Plat cuisiné": "Un plat cuisiné",
+        "Mot que l'on crie": "Un mot que l'on crie"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "G",
+        "H",
+        "L",
+        "M",
+        "O",
+        "P",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "id": "bac-32",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville",
+        "Insecte",
+        "Meuble",
+        "Chose que l'on cache"
+      ],
+      "categoryHints": {
+        "Ville": "Une ville",
+        "Insecte": "Un insecte",
+        "Meuble": "Un meuble",
+        "Chose que l'on cache": "Une chose que l'on cache"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-33",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Chanteur ou groupe",
+        "Fromage",
+        "Jeu vidéo ou jeu de société",
+        "Chose qui fait peur"
+      ],
+      "categoryHints": {
+        "Chanteur ou groupe": "Un chanteur ou un groupe",
+        "Fromage": "Un fromage",
+        "Jeu vidéo ou jeu de société": "Un jeu vidéo ou un jeu de société",
+        "Chose qui fait peur": "Une chose qui fait peur"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-34",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Prénom masculin",
+        "Animal marin",
+        "Objet de cuisine",
+        "Endroit romantique"
+      ],
+      "categoryHints": {
+        "Prénom masculin": "Un prénom masculin",
+        "Animal marin": "Un animal marin",
+        "Objet de cuisine": "Un objet de cuisine",
+        "Endroit romantique": "Un endroit romantique"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "id": "bac-35",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage fictif",
+        "Arbre",
+        "Matière scolaire",
+        "Chose qui casse facilement"
+      ],
+      "categoryHints": {
+        "Personnage fictif": "Un personnage fictif",
+        "Arbre": "Un arbre",
+        "Matière scolaire": "Une matière scolaire",
+        "Chose qui casse facilement": "Une chose qui casse facilement"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-36",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Fleuve ou rivière",
+        "Épice ou condiment",
+        "Accessoire de mode",
+        "Chose ronde"
+      ],
+      "categoryHints": {
+        "Fleuve ou rivière": "Un fleuve ou une rivière",
+        "Épice ou condiment": "Une épice ou un condiment",
+        "Accessoire de mode": "Un accessoire de mode",
+        "Chose ronde": "Une chose ronde"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "G",
+        "L",
+        "M",
+        "O",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-37",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Sportif célèbre",
+        "Maladie ou symptôme",
+        "Appareil électronique",
+        "Chose collante"
+      ],
+      "categoryHints": {
+        "Sportif célèbre": "Un sportif célèbre",
+        "Maladie ou symptôme": "Une maladie ou un symptôme",
+        "Appareil électronique": "Un appareil électronique",
+        "Chose collante": "Une chose collante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "O",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-38",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Monument célèbre",
+        "Oiseau",
+        "Bonbon ou sucrerie",
+        "Chose bruyante"
+      ],
+      "categoryHints": {
+        "Monument célèbre": "Un monument célèbre",
+        "Oiseau": "Un oiseau",
+        "Bonbon ou sucrerie": "Un bonbon ou une sucrerie",
+        "Chose bruyante": "Une chose bruyante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-39",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Acteur ou actrice",
+        "Matière ou matériau",
+        "Objet de bureau",
+        "Chose que l'on perd souvent"
+      ],
+      "categoryHints": {
+        "Acteur ou actrice": "Un acteur ou une actrice",
+        "Matière ou matériau": "Une matière ou un matériau",
+        "Objet de bureau": "Un objet de bureau",
+        "Chose que l'on perd souvent": "Une chose que l'on perd souvent"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-40",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Île ou archipel",
+        "Qualité humaine",
+        "Arme",
+        "Chose qui flotte"
+      ],
+      "categoryHints": {
+        "Île ou archipel": "Une île ou un archipel",
+        "Qualité humaine": "Une qualité humaine",
+        "Arme": "Une arme",
+        "Chose qui flotte": "Une chose qui flotte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "id": "bac-41",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage historique",
+        "Défaut humain",
+        "Lieu de vacances",
+        "Chose que l'on met dans sa poche"
+      ],
+      "categoryHints": {
+        "Personnage historique": "Un personnage historique",
+        "Défaut humain": "Un défaut humain",
+        "Lieu de vacances": "Un lieu de vacances",
+        "Chose que l'on met dans sa poche": "Une chose que l'on met dans sa poche"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "I",
+        "J",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-42",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Super-héros ou méchant",
+        "Chose verte",
+        "Magasin ou commerce",
+        "Chose interdit à l'école"
+      ],
+      "categoryHints": {
+        "Super-héros ou méchant": "Un super-héros ou un méchant",
+        "Chose verte": "Une chose verte",
+        "Magasin ou commerce": "Un magasin ou un commerce",
+        "Chose interdit à l'école": "Une chose interdite à l'école"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "G",
+        "J",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-43",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Langue parlée",
+        "Animal de la ferme",
+        "Chose sucrée",
+        "Endroit où il fait chaud"
+      ],
+      "categoryHints": {
+        "Langue parlée": "Une langue parlée",
+        "Animal de la ferme": "Un animal de la ferme",
+        "Chose sucrée": "Une chose sucrée",
+        "Endroit où il fait chaud": "Un endroit où il fait chaud"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-44",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Livre célèbre",
+        "Émotion ou sentiment",
+        "Sport d'hiver",
+        "Chose qui brille"
+      ],
+      "categoryHints": {
+        "Livre célèbre": "Un livre célèbre",
+        "Émotion ou sentiment": "Une émotion ou un sentiment",
+        "Sport d'hiver": "Un sport d'hiver",
+        "Chose qui brille": "Une chose qui brille"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "H",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-45",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Montagne ou volcan",
+        "Chose salée",
+        "Jouet",
+        "Endroit bruyant"
+      ],
+      "categoryHints": {
+        "Montagne ou volcan": "Une montagne ou un volcan",
+        "Chose salée": "Une chose salée",
+        "Jouet": "Un jouet",
+        "Endroit bruyant": "Un endroit bruyant"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-46",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Dieu ou créature mythologique",
+        "Partie d'une voiture",
+        "Sauce",
+        "Chose qui pique"
+      ],
+      "categoryHints": {
+        "Dieu ou créature mythologique": "Un dieu ou une créature mythologique",
+        "Partie d'une voiture": "Une partie d'une voiture",
+        "Sauce": "Une sauce",
+        "Chose qui pique": "Une chose qui pique"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "G",
+        "H",
+        "M",
+        "O",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-47",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Dessin animé",
+        "Verbe d'action",
+        "Objet de plage",
+        "Chose qui vole"
+      ],
+      "categoryHints": {
+        "Dessin animé": "Un dessin animé",
+        "Verbe d'action": "Un verbe d'action",
+        "Objet de plage": "Un objet de plage",
+        "Chose qui vole": "Une chose qui vole"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-48",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque de voiture",
+        "Chose rouge",
+        "Pièce de la maison",
+        "Chose que l'on jette"
+      ],
+      "categoryHints": {
+        "Marque de voiture": "Une marque de voiture",
+        "Chose rouge": "Une chose rouge",
+        "Pièce de la maison": "Une pièce de la maison",
+        "Chose que l'on jette": "Une chose que l'on jette"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-49",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Émission télé",
+        "Animal sauvage",
+        "Chaussure ou accessoire",
+        "Chose qui fond"
+      ],
+      "categoryHints": {
+        "Émission télé": "Une émission télé",
+        "Animal sauvage": "Un animal sauvage",
+        "Chaussure ou accessoire": "Une chaussure ou un accessoire",
+        "Chose qui fond": "Une chose qui fond"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-50",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Objet du quotidien",
+        "Adjectif",
+        "Lieu public",
+        "Chose interdite en avion"
+      ],
+      "categoryHints": {
+        "Objet du quotidien": "Un objet du quotidien",
+        "Adjectif": "Un adjectif",
+        "Lieu public": "Un lieu public",
+        "Chose interdite en avion": "Une chose interdite en avion"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "S",
+        "T"
+      ]
+    },
+
+{
+      "id": "bac-51",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Animal aquatique",
+        "Instrument de cuisine",
+        "Nom de famille célèbre",
+        "Chose qui fait du bruit la nuit"
+      ],
+      "categoryHints": {
+        "Animal aquatique": "Un animal aquatique",
+        "Instrument de cuisine": "Un instrument de cuisine",
+        "Nom de famille célèbre": "Un nom de famille célèbre",
+        "Chose qui fait du bruit la nuit": "Une chose qui fait du bruit la nuit"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-52",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Matière première",
+        "Sport de combat",
+        "Lieu de culte",
+        "Chose que l'on oublie souvent"
+      ],
+      "categoryHints": {
+        "Matière première": "Une matière première",
+        "Sport de combat": "Un sport de combat",
+        "Lieu de culte": "Un lieu de culte",
+        "Chose que l'on oublie souvent": "Une chose que l'on oublie souvent"
+      },
+      "letterPool": [
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "J",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-53",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Série télévisée",
+        "Outil de jardinage",
+        "Meuble de salon",
+        "Chose qui gratte"
+      ],
+      "categoryHints": {
+        "Série télévisée": "Une série télévisée",
+        "Outil de jardinage": "Un outil de jardinage",
+        "Meuble de salon": "Un meuble de salon",
+        "Chose qui gratte": "Une chose qui gratte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-54",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Plante médicinale",
+        "Métier manuel",
+        "Type de fromage",
+        "Chose lourde"
+      ],
+      "categoryHints": {
+        "Plante médicinale": "Une plante médicinale",
+        "Métier manuel": "Un métier manuel",
+        "Type de fromage": "Un type de fromage",
+        "Chose lourde": "Une chose lourde"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-55",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage de BD",
+        "Boisson alcoolisée",
+        "Vêtement d'hiver",
+        "Chose molle"
+      ],
+      "categoryHints": {
+        "Personnage de BD": "Un personnage de BD",
+        "Boisson alcoolisée": "Une boisson alcoolisée",
+        "Vêtement d'hiver": "Un vêtement d'hiver",
+        "Chose molle": "Une chose molle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-56",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Asie",
+        "Instrument à vent",
+        "Accessoire de coiffure",
+        "Chose qui sent bon"
+      ],
+      "categoryHints": {
+        "Pays d'Asie": "Un pays d'Asie",
+        "Instrument à vent": "Un instrument à vent",
+        "Accessoire de coiffure": "Un accessoire de coiffure",
+        "Chose qui sent bon": "Une chose qui sent bon"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "H",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-57",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Capitale européenne",
+        "Race de chien",
+        "Ustensile de pâtisserie",
+        "Chose inutile"
+      ],
+      "categoryHints": {
+        "Capitale européenne": "Une capitale européenne",
+        "Race de chien": "Une race de chien",
+        "Ustensile de pâtisserie": "Un ustensile de pâtisserie",
+        "Chose inutile": "Une chose inutile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-58",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Fleuve français",
+        "Fruit exotique",
+        "Type de chaussure",
+        "Chose qui fait rire"
+      ],
+      "categoryHints": {
+        "Fleuve français": "Un fleuve français",
+        "Fruit exotique": "Un fruit exotique",
+        "Type de chaussure": "Un type de chaussure",
+        "Chose qui fait rire": "Une chose qui fait rire"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-59",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Film d'animation",
+        "Partie d'un navire",
+        "Épice exotique",
+        "Chose transparente"
+      ],
+      "categoryHints": {
+        "Film d'animation": "Un film d'animation",
+        "Partie d'un navire": "Une partie d'un navire",
+        "Épice exotique": "Une épice exotique",
+        "Chose transparente": "Une chose transparente"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-60",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Jeu de société",
+        "Mammifère marin",
+        "Fourniture scolaire",
+        "Chose piquante"
+      ],
+      "categoryHints": {
+        "Jeu de société": "Un jeu de société",
+        "Mammifère marin": "Un mammifère marin",
+        "Fourniture scolaire": "Une fourniture scolaire",
+        "Chose piquante": "Une chose piquante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-61",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Écrivain célèbre",
+        "Légume vert",
+        "Appareil de sport",
+        "Chose que l'on jette par la fenêtre"
+      ],
+      "categoryHints": {
+        "Écrivain célèbre": "Un écrivain célèbre",
+        "Légume vert": "Un légume vert",
+        "Appareil de sport": "Un appareil de sport",
+        "Chose que l'on jette par la fenêtre": "Une chose que l'on jette par la fenêtre"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-62",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Île méditerranéenne",
+        "Style de musique",
+        "Objet de papeterie",
+        "Chose que l'on trouve dans une poubelle"
+      ],
+      "categoryHints": {
+        "Île méditerranéenne": "Une île méditerranéenne",
+        "Style de musique": "Un style de musique",
+        "Objet de papeterie": "Un objet de papeterie",
+        "Chose que l'on trouve dans une poubelle": "Une chose que l'on trouve dans une poubelle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-63",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Nom d'une galaxie ou planète",
+        "Insecte volant",
+        "Pièce de monnaie ou billet",
+        "Chose que l'on fait en cachette"
+      ],
+      "categoryHints": {
+        "Nom d'une galaxie ou planète": "Un nom d'une galaxie ou planète",
+        "Insecte volant": "Un insecte volant",
+        "Pièce de monnaie ou billet": "Une pièce de monnaie ou un billet",
+        "Chose que l'on fait en cachette": "Une chose que l'on fait en cachette"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-64",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Chimiste ou physicien célèbre",
+        "Fleur sauvage",
+        "Moyen de communication",
+        "Chose qui dure longtemps"
+      ],
+      "categoryHints": {
+        "Chimiste ou physicien célèbre": "Un chimiste ou physicien célèbre",
+        "Fleur sauvage": "Une fleur sauvage",
+        "Moyen de communication": "Un moyen de communication",
+        "Chose qui dure longtemps": "Une chose qui dure longtemps"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-65",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Acteur français",
+        "Poisson d'eau douce",
+        "Élément chimique",
+        "Chose fragile"
+      ],
+      "categoryHints": {
+        "Acteur français": "Un acteur français",
+        "Poisson d'eau douce": "Un poisson d'eau douce",
+        "Élément chimique": "Un élément chimique",
+        "Chose fragile": "Une chose fragile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-66",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque de vêtement",
+        "Oiseau migrateur",
+        "Meuble de chambre",
+        "Chose qui fait du bruit"
+      ],
+      "categoryHints": {
+        "Marque de vêtement": "Une marque de vêtement",
+        "Oiseau migrateur": "Un oiseau migrateur",
+        "Meuble de chambre": "Un meuble de chambre",
+        "Chose qui fait du bruit": "Une chose qui fait du bruit"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-67",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Peintre célèbre",
+        "Arbre fruitier",
+        "Appareil photo ou optique",
+        "Chose piquante"
+      ],
+      "categoryHints": {
+        "Peintre célèbre": "Un peintre célèbre",
+        "Arbre fruitier": "Un arbre fruitier",
+        "Appareil photo ou optique": "Un appareil photo ou optique",
+        "Chose piquante": "Une chose piquante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-68",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville américaine",
+        "Symptôme de maladie",
+        "Objet de décoration",
+        "Chose qui tourne"
+      ],
+      "categoryHints": {
+        "Ville américaine": "Une ville américaine",
+        "Symptôme de maladie": "Un symptôme de maladie",
+        "Objet de décoration": "Un objet de décoration",
+        "Chose qui tourne": "Une chose qui tourne"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-69",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Monument historique français",
+        "Chose jaune",
+        "Instrument à cordes",
+        "Chose que l'on mange avec les doigts"
+      ],
+      "categoryHints": {
+        "Monument historique français": "Un monument historique français",
+        "Chose jaune": "Une chose jaune",
+        "Instrument à cordes": "Un instrument à cordes",
+        "Chose que l'on mange avec les doigts": "Une chose que l'on mange avec les doigts"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-70",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Philosophe ou penseur",
+        "Reptile ou amphibien",
+        "Plat en sauce",
+        "Chose qui pèse lourd"
+      ],
+      "categoryHints": {
+        "Philosophe ou penseur": "Un philosophe ou un penseur",
+        "Reptile ou amphibien": "Un reptile ou un amphibien",
+        "Plat en sauce": "Un plat en sauce",
+        "Chose qui pèse lourd": "Une chose qui pèse lourd"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-71",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Pays d'Afrique",
+        "Fromage français",
+        "Moyen de paiement",
+        "Chose qui brûle"
+      ],
+      "categoryHints": {
+        "Pays d'Afrique": "Un pays d'Afrique",
+        "Fromage français": "Un fromage français",
+        "Moyen de paiement": "Un moyen de paiement",
+        "Chose qui brûle": "Une chose qui brûle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-72",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Sport collectif",
+        "Arbre tropical",
+        "Type de pain",
+        "Chose qui fait peur la nuit"
+      ],
+      "categoryHints": {
+        "Sport collectif": "Un sport collectif",
+        "Arbre tropical": "Un arbre tropical",
+        "Type de pain": "Un type de pain",
+        "Chose qui fait peur la nuit": "Une chose qui fait peur la nuit"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-73",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Actrice hollywoodienne",
+        "Chose bleue",
+        "Accessoire de cuisine",
+        "Chose qui tache"
+      ],
+      "categoryHints": {
+        "Actrice hollywoodienne": "Une actrice hollywoodienne",
+        "Chose bleue": "Une chose bleue",
+        "Accessoire de cuisine": "Un accessoire de cuisine",
+        "Chose qui tache": "Une chose qui tache"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "L",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-74",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville d'Europe de l'Est",
+        "Race de chat",
+        "Vêtement de sport",
+        "Chose qui gratte"
+      ],
+      "categoryHints": {
+        "Ville d'Europe de l'Est": "Une ville d'Europe de l'Est",
+        "Race de chat": "Une race de chat",
+        "Vêtement de sport": "Un vêtement de sport",
+        "Chose qui gratte": "Une chose qui gratte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V",
+        "Z"
+      ]
+    },
+    {
+      "id": "bac-75",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage de roman",
+        "Outil de bricolage",
+        "Boisson chaude",
+        "Chose molle"
+      ],
+      "categoryHints": {
+        "Personnage de roman": "Un personnage de roman",
+        "Outil de bricolage": "Un outil de bricolage",
+        "Boisson chaude": "Une boisson chaude",
+        "Chose molle": "Une chose molle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-76",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Groupe de rock",
+        "Chose qui vole",
+        "Ustensile de table",
+        "Chose qui brille dans le noir"
+      ],
+      "categoryHints": {
+        "Groupe de rock": "Un groupe de rock",
+        "Chose qui vole": "Une chose qui vole",
+        "Ustensile de table": "Un ustensile de table",
+        "Chose qui brille dans le noir": "Une chose qui brille dans le noir"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "id": "bac-77",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Désert du monde",
+        "Mammifère terrestre",
+        "Matière plastique ou textile",
+        "Chose que l'on perd facilement"
+      ],
+      "categoryHints": {
+        "Désert du monde": "Un désert du monde",
+        "Mammifère terrestre": "Un mammifère terrestre",
+        "Matière plastique ou textile": "Une matière plastique ou textile",
+        "Chose que l'on perd facilement": "Une chose que l'on perd facilement"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-78",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Événement historique",
+        "Plante d'intérieur",
+        "Type de véhicule",
+        "Chose collante"
+      ],
+      "categoryHints": {
+        "Événement historique": "Un événement historique",
+        "Plante d'intérieur": "Une plante d'intérieur",
+        "Type de véhicule": "Un type de véhicule",
+        "Chose collante": "Une chose collante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-79",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Réalisateur de cinéma",
+        "Légume racine",
+        "Objet de papeterie",
+        "Chose bruyante"
+      ],
+      "categoryHints": {
+        "Réalisateur de cinéma": "Un réalisateur de cinéma",
+        "Légume racine": "Un légume racine",
+        "Objet de papeterie": "Un objet de papeterie",
+        "Chose bruyante": "Une chose bruyante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-80",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Mer ou océan",
+        "Animal carnivore",
+        "Meuble de bureau",
+        "Chose froide"
+      ],
+      "categoryHints": {
+        "Mer ou océan": "Une mer ou un océan",
+        "Animal carnivore": "Un animal carnivore",
+        "Meuble de bureau": "Un meuble de bureau",
+        "Chose froide": "Une chose froide"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-81",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville portuaire",
+        "Chose orange",
+        "Accessoire de mode",
+        "Chose piquante"
+      ],
+      "categoryHints": {
+        "Ville portuaire": "Une ville portuaire",
+        "Chose orange": "Une chose orange",
+        "Accessoire de mode": "Un accessoire de mode",
+        "Chose piquante": "Une chose piquante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-82",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Explorateur célèbre",
+        "Fruit à coque",
+        "Appareil électroménager",
+        "Chose transparente"
+      ],
+      "categoryHints": {
+        "Explorateur célèbre": "Un explorateur célèbre",
+        "Fruit à coque": "Un fruit à coque",
+        "Appareil électroménager": "Un appareil électroménager",
+        "Chose transparente": "Une chose transparente"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-83",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage mythologique",
+        "Oiseau aquatique",
+        "Plat traditionnel",
+        "Chose qui flotte"
+      ],
+      "categoryHints": {
+        "Personnage mythologique": "Un personnage mythologique",
+        "Oiseau aquatique": "Un oiseau aquatique",
+        "Plat traditionnel": "Un plat traditionnel",
+        "Chose qui flotte": "Une chose qui flotte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-84",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Langue officielle",
+        "Chose ronde",
+        "Outil de menuisier",
+        "Chose que l'on casse facilement"
+      ],
+      "categoryHints": {
+        "Langue officielle": "Une langue officielle",
+        "Chose ronde": "Une chose ronde",
+        "Outil de menuisier": "Un outil de menuisier",
+        "Chose que l'on casse facilement": "Une chose que l'on casse facilement"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-85",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Sport individuel",
+        "Insecte nuisible",
+        "Type de vêtement de nuit",
+        "Chose molle"
+      ],
+      "categoryHints": {
+        "Sport individuel": "Un sport individuel",
+        "Insecte nuisible": "Un insecte nuisible",
+        "Type de vêtement de nuit": "Un type de vêtement de nuit",
+        "Chose molle": "Une chose molle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-86",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque de cosmétique",
+        "Fleur de jardin",
+        "Objet de salle de bain",
+        "Chose qui fait du bruit"
+      ],
+      "categoryHints": {
+        "Marque de cosmétique": "Une marque de cosmétique",
+        "Fleur de jardin": "Une fleur de jardin",
+        "Objet de salle de bain": "Un objet de salle de bain",
+        "Chose qui fait du bruit": "Une chose qui fait du bruit"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-87",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Île tropicale",
+        "Chose salée",
+        "Instrument de musique à percussion",
+        "Chose brillante"
+      ],
+      "categoryHints": {
+        "Île tropicale": "Une île tropicale",
+        "Chose salée": "Une chose salée",
+        "Instrument de musique à percussion": "Un instrument de musique à percussion",
+        "Chose brillante": "Une chose brillante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-88",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Chanteur francophone",
+        "Animal nocturne",
+        "Vêtement de pluie",
+        "Chose lourde"
+      ],
+      "categoryHints": {
+        "Chanteur francophone": "Un chanteur francophone",
+        "Animal nocturne": "Un animal nocturne",
+        "Vêtement de pluie": "Un vêtement de pluie",
+        "Chose lourde": "Une chose lourde"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-89",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville d'Amérique du Sud",
+        "Chose sucrée",
+        "Objet de voyage",
+        "Chose inutile"
+      ],
+      "categoryHints": {
+        "Ville d'Amérique du Sud": "Une ville d'Amérique du Sud",
+        "Chose sucrée": "Une chose sucrée",
+        "Objet de voyage": "Un objet de voyage",
+        "Chose inutile": "Une chose inutile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-90",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage de conte de fées",
+        "Légume d'hiver",
+        "Appareil électronique de salon",
+        "Chose qui tache"
+      ],
+      "categoryHints": {
+        "Personnage de conte de fées": "Un personnage de conte de fées",
+        "Légume d'hiver": "Un légume d'hiver",
+        "Appareil électronique de salon": "Un appareil électronique de salon",
+        "Chose qui tache": "Une chose qui tache"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-91",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Bande dessinée ou manga",
+        "Chose verte",
+        "Ustensile de bar",
+        "Chose qui fait rire"
+      ],
+      "categoryHints": {
+        "Bande dessinée ou manga": "Une bande dessinée ou un manga",
+        "Chose verte": "Une chose verte",
+        "Ustensile de bar": "Un ustensile de bar",
+        "Chose qui fait rire": "Une chose qui fait rire"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-92",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Athlète olympique",
+        "Animal herbivore",
+        "Accessoire de plage",
+        "Chose collante"
+      ],
+      "categoryHints": {
+        "Athlète olympique": "Un athlète olympique",
+        "Animal herbivore": "Un animal herbivore",
+        "Accessoire de plage": "Un accessoire de plage",
+        "Chose collante": "Une chose collante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-93",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville portuaire européenne",
+        "Chose rouge",
+        "Meuble de jardin",
+        "Chose qui brûle"
+      ],
+      "categoryHints": {
+        "Ville portuaire européenne": "Une ville portuaire européenne",
+        "Chose rouge": "Une chose rouge",
+        "Meuble de jardin": "Un meuble de jardin",
+        "Chose qui brûle": "Une chose qui brûle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-94",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Inventeur célèbre",
+        "Fruit d'automne",
+        "Type de vêtement d'été",
+        "Chose fragile"
+      ],
+      "categoryHints": {
+        "Inventeur célèbre": "Un inventeur célèbre",
+        "Fruit d'automne": "Un fruit d'automne",
+        "Type de vêtement d'été": "Un type de vêtement d'été",
+        "Chose fragile": "Une chose fragile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-95",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Surnom d'une ville ou d'un pays",
+        "Animal préhistorique",
+        "Objet de couture",
+        "Chose qui flotte"
+      ],
+      "categoryHints": {
+        "Surnom d'une ville ou d'un pays": "Un surnom d'une ville ou d'un pays",
+        "Animal préhistorique": "Un animal préhistorique",
+        "Objet de couture": "Un objet de couture",
+        "Chose qui flotte": "Une chose qui flotte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-96",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Célébrité du web ou influenceur",
+        "Légume oublié",
+        "Appareil de mesure",
+        "Chose lourde"
+      ],
+      "categoryHints": {
+        "Célébrité du web ou influenceur": "Une célébrité du web ou un influenceur",
+        "Légume oublié": "Un légume oublié",
+        "Appareil de mesure": "Un appareil de mesure",
+        "Chose lourde": "Une chose lourde"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-97",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Chanson célèbre",
+        "Chose jaune",
+        "Ustensile de nettoyage",
+        "Chose qui gratte"
+      ],
+      "categoryHints": {
+        "Chanson célèbre": "Une chanson célèbre",
+        "Chose jaune": "Une chose jaune",
+        "Ustensile de nettoyage": "Un ustensile de nettoyage",
+        "Chose qui gratte": "Une chose qui gratte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-98",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Style architectural",
+        "Animal arboricole",
+        "Type de véhicule lourd",
+        "Chose inutile"
+      ],
+      "categoryHints": {
+        "Style architectural": "Un style architectural",
+        "Animal arboricole": "Un animal arboricole",
+        "Type de véhicule lourd": "Un type de véhicule lourd",
+        "Chose inutile": "Une chose inutile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-99",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Mouvement littéraire",
+        "Chose bleue",
+        "Accessoire de bureau",
+        "Chose qui tourne"
+      ],
+      "categoryHints": {
+        "Mouvement littéraire": "Un mouvement littéraire",
+        "Chose bleue": "Une chose bleue",
+        "Accessoire de bureau": "Un accessoire de bureau",
+        "Chose qui tourne": "Une chose qui tourne"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-100",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Festival de musique ou de cinéma",
+        "Chose orange",
+        "Vêtement traditionnel",
+        "Chose qui fait du bruit"
+      ],
+      "categoryHints": {
+        "Festival de musique ou de cinéma": "Un festival de musique ou de cinéma",
+        "Chose orange": "Une chose orange",
+        "Vêtement traditionnel": "Un vêtement traditionnel",
+        "Chose qui fait du bruit": "Une chose qui fait du bruit"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-101",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville olympique",
+        "Chose rose",
+        "Outil de jardin",
+        "Chose piquante"
+      ],
+      "categoryHints": {
+        "Ville olympique": "Une ville olympique",
+        "Chose rose": "Une chose rose",
+        "Outil de jardin": "Un outil de jardin",
+        "Chose piquante": "Une chose piquante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-102",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Auteur de bande dessinée",
+        "Animal souterrain",
+        "Ustensile de cuisine",
+        "Chose brillante"
+      ],
+      "categoryHints": {
+        "Auteur de bande dessinée": "Un auteur de bande dessinée",
+        "Animal souterrain": "Un animal souterrain",
+        "Ustensile de cuisine": "Un ustensile de cuisine",
+        "Chose brillante": "Une chose brillante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-103",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Acteur de série",
+        "Chose violette",
+        "Objet connecté",
+        "Chose que l'on perd souvent"
+      ],
+      "categoryHints": {
+        "Acteur de série": "Un acteur de série",
+        "Chose violette": "Une chose violette",
+        "Objet connecté": "Un objet connecté",
+        "Chose que l'on perd souvent": "Une chose que l'on perd souvent"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-104",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Chaîne de télévision",
+        "Animal qui pond des œufs",
+        "Type de chapeau",
+        "Chose molle"
+      ],
+      "categoryHints": {
+        "Chaîne de télévision": "Une chaîne de télévision",
+        "Animal qui pond des œufs": "Un animal qui pond des œufs",
+        "Type de chapeau": "Un type de chapeau",
+        "Chose molle": "Une chose molle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-105",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Titre de noblesse",
+        "Chose noire",
+        "Meuble d'entrée",
+        "Chose qui brûle"
+      ],
+      "categoryHints": {
+        "Titre de noblesse": "Un titre de noblesse",
+        "Chose noire": "Une chose noire",
+        "Meuble d'entrée": "Un meuble d'entrée",
+        "Chose qui brûle": "Une chose qui brûle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-106",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Style vestimentaire",
+        "Chose blanche",
+        "Accessoire de sport",
+        "Chose fragile"
+      ],
+      "categoryHints": {
+        "Style vestimentaire": "Un style vestimentaire",
+        "Chose blanche": "Une chose blanche",
+        "Accessoire de sport": "Un accessoire de sport",
+        "Chose fragile": "Une chose fragile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-107",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage historique féminin",
+        "Chose marron",
+        "Objet de décoration murale",
+        "Chose qui flotte"
+      ],
+      "categoryHints": {
+        "Personnage historique féminin": "Un personnage historique féminin",
+        "Chose marron": "Une chose marron",
+        "Objet de décoration murale": "Un objet de décoration murale",
+        "Chose qui flotte": "Une chose qui flotte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-108",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Sport extrême",
+        "Animal venimeux",
+        "Type de bâtiment",
+        "Chose lourde"
+      ],
+      "categoryHints": {
+        "Sport extrême": "Un sport extrême",
+        "Animal venimeux": "Un animal venimeux",
+        "Type de bâtiment": "Un type de bâtiment",
+        "Chose lourde": "Une chose lourde"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-109",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Marque de boisson",
+        "Chose grise",
+        "Ustensile de coiffure",
+        "Chose inutile"
+      ],
+      "categoryHints": {
+        "Marque de boisson": "Une marque de boisson",
+        "Chose grise": "Une chose grise",
+        "Ustensile de coiffure": "Un ustensile de coiffure",
+        "Chose inutile": "Une chose inutile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-110",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Danse traditionnelle",
+        "Chose dorée",
+        "Objet de camping",
+        "Chose qui tache"
+      ],
+      "categoryHints": {
+        "Danse traditionnelle": "Une danse traditionnelle",
+        "Chose dorée": "Une chose dorée",
+        "Objet de camping": "Un objet de camping",
+        "Chose qui tache": "Une chose qui tache"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-111",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Ville industrielle",
+        "Chose argentine ou argentée",
+        "Type de chaussures de sport",
+        "Chose qui fait rire"
+      ],
+      "categoryHints": {
+        "Ville industrielle": "Une ville industrielle",
+        "Chose argentine ou argentée": "Une chose argentine ou argentée",
+        "Type de chaussures de sport": "Un type de chaussures de sport",
+        "Chose qui fait rire": "Une chose qui fait rire"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-112",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Terme scientifique",
+        "Animal microscopique",
+        "Accessoire de jardinage",
+        "Chose collante"
+      ],
+      "categoryHints": {
+        "Terme scientifique": "Un terme scientifique",
+        "Animal microscopique": "Un animal microscopique",
+        "Accessoire de jardinage": "Un accessoire de jardinage",
+        "Chose collante": "Une chose collante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-113",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Titre de film culte",
+        "Chose transparente",
+        "Objet de mercerie",
+        "Chose qui brûle"
+      ],
+      "categoryHints": {
+        "Titre de film culte": "Un titre de film culte",
+        "Chose transparente": "Une chose transparente",
+        "Objet de mercerie": "Un objet de mercerie",
+        "Chose qui brûle": "Une chose qui brûle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-114",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Instrument de mesure scientifique",
+        "Chose molle",
+        "Meuble de cuisine",
+        "Chose fragile"
+      ],
+      "categoryHints": {
+        "Instrument de mesure scientifique": "Un instrument de mesure scientifique",
+        "Chose molle": "Une chose molle",
+        "Meuble de cuisine": "Un meuble de cuisine",
+        "Chose fragile": "Une chose fragile"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-115",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Nom de lac célèbre",
+        "Chose brillante",
+        "Accessoire d'hiver",
+        "Chose qui flotte"
+      ],
+      "categoryHints": {
+        "Nom de lac célèbre": "Un nom de lac célèbre",
+        "Chose brillante": "Une chose brillante",
+        "Accessoire d'hiver": "Un accessoire d'hiver",
+        "Chose qui flotte": "Une chose qui flotte"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-116",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Type de nuage",
+        "Chose lourde",
+        "Objet de bureau design",
+        "Chose que l'on perd souvent"
+      ],
+      "categoryHints": {
+        "Type de nuage": "Un type de nuage",
+        "Chose lourde": "Une chose lourde",
+        "Objet de bureau design": "Un objet de bureau design",
+        "Chose que l'on perd souvent": "Une chose que l'on perd souvent"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-117",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Région du monde",
+        "Chose inutile",
+        "Vêtement de cérémonie",
+        "Chose bruyante"
+      ],
+      "categoryHints": {
+        "Région du monde": "Une région du monde",
+        "Chose inutile": "Une chose inutile",
+        "Vêtement de cérémonie": "Un vêtement de cérémonie",
+        "Chose bruyante": "Une chose bruyante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-118",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Personnage de théâtre",
+        "Chose qui tache",
+        "Ustensile de bar",
+        "Chose piquante"
+      ],
+      "categoryHints": {
+        "Personnage de théâtre": "Un personnage de théâtre",
+        "Chose qui tache": "Une chose qui tache",
+        "Ustensile de bar": "Un ustensile de bar",
+        "Chose piquante": "Une chose piquante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-119",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Terme maritime",
+        "Chose qui fait rire",
+        "Objet de décoration de table",
+        "Chose collante"
+      ],
+      "categoryHints": {
+        "Terme maritime": "Un terme maritime",
+        "Chose qui fait rire": "Une chose qui fait rire",
+        "Objet de décoration de table": "Un objet de décoration de table",
+        "Chose collante": "Une chose collante"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+    {
+      "id": "bac-120",
+      "type": "petitbac",
+      "prompt": "Petit Bac",
+      "categories": [
+        "Style artistique",
+        "Chose collante",
+        "Accessoire de mode rétro",
+        "Chose qui brûle"
+      ],
+      "categoryHints": {
+        "Style artistique": "Un style artistique",
+        "Chose collante": "Une chose collante",
+        "Accessoire de mode rétro": "Un accessoire de mode rétro",
+        "Chose qui brûle": "Une chose qui brûle"
+      },
+      "letterPool": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "M",
+        "P",
+        "R",
+        "S",
+        "T",
+        "V"
+      ]
+    },
+
+    {
+      "id": "flag-01",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/fr.png",
+      "expected": "La France",
+      "accepted": [
+        "france",
+        "la france"
+      ]
+    },
+    {
+      "id": "flag-02",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/de.png",
+      "expected": "L'Allemagne",
+      "accepted": [
+        "allemagne",
+        "l'allemagne",
+        "germany"
+      ]
+    },
+    {
+      "id": "flag-03",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/it.png",
+      "expected": "L'Italie",
+      "accepted": [
+        "italie",
+        "l'italie",
+        "italy"
+      ]
+    },
+    {
+      "id": "flag-04",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/es.png",
+      "expected": "L'Espagne",
+      "accepted": [
+        "espagne",
+        "l'espagne",
+        "spain"
+      ]
+    },
+    {
+      "id": "flag-05",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/pt.png",
+      "expected": "Le Portugal",
+      "accepted": [
+        "portugal",
+        "le portugal"
+      ]
+    },
+    {
+      "id": "flag-06",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/gb.png",
+      "expected": "Le Royaume-Uni",
+      "accepted": [
+        "royaume-uni",
+        "royaume uni",
+        "le royaume-uni",
+        "le royaume uni",
+        "uk",
+        "angleterre",
+        "grande-bretagne",
+        "grande bretagne"
+      ]
+    },
+    {
+      "id": "flag-07",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ie.png",
+      "expected": "L'Irlande",
+      "accepted": [
+        "irlande",
+        "l'irlande",
+        "ireland"
+      ]
+    },
+    {
+      "id": "flag-08",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/nl.png",
+      "expected": "Les Pays-Bas",
+      "accepted": [
+        "pays-bas",
+        "pays bas",
+        "les pays-bas",
+        "les pays bas",
+        "hollande",
+        "netherlands"
+      ]
+    },
+    {
+      "id": "flag-09",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/se.png",
+      "expected": "La Suède",
+      "accepted": [
+        "suede",
+        "suède",
+        "la suede",
+        "la suède",
+        "sweden"
+      ]
+    },
+    {
+      "id": "flag-10",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/pl.png",
+      "expected": "La Pologne",
+      "accepted": [
+        "pologne",
+        "la pologne",
+        "poland"
+      ]
+    },
+    {
+      "id": "flag-11",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/gr.png",
+      "expected": "La Grèce",
+      "accepted": [
+        "grece",
+        "grèce",
+        "la grece",
+        "la grèce",
+        "greece"
+      ]
+    },
+    {
+      "id": "flag-12",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/tr.png",
+      "expected": "La Turquie",
+      "accepted": [
+        "turquie",
+        "la turquie",
+        "turkey"
+      ]
+    },
+    {
+      "id": "flag-13",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ru.png",
+      "expected": "La Russie",
+      "accepted": [
+        "russie",
+        "la russie",
+        "russia"
+      ]
+    },
+    {
+      "id": "flag-14",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ca.png",
+      "expected": "Le Canada",
+      "accepted": [
+        "canada",
+        "le canada"
+      ]
+    },
+    {
+      "id": "flag-15",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/us.png",
+      "expected": "Les États-Unis",
+      "accepted": [
+        "etats-unis",
+        "états-unis",
+        "etats unis",
+        "états unis",
+        "les etats-unis",
+        "les états-unis",
+        "usa",
+        "united states"
+      ]
+    },
+    {
+      "id": "flag-16",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/mx.png",
+      "expected": "Le Mexique",
+      "accepted": [
+        "mexique",
+        "le mexique",
+        "mexico"
+      ]
+    },
+    {
+      "id": "flag-17",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/br.png",
+      "expected": "Le Brésil",
+      "accepted": [
+        "bresil",
+        "brésil",
+        "le bresil",
+        "le brésil",
+        "brazil"
+      ]
+    },
+    {
+      "id": "flag-18",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ar.png",
+      "expected": "L'Argentine",
+      "accepted": [
+        "argentine",
+        "l'argentine",
+        "argentina"
+      ]
+    },
+    {
+      "id": "flag-19",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/cl.png",
+      "expected": "Le Chili",
+      "accepted": [
+        "chili",
+        "le chili",
+        "chile"
+      ]
+    },
+    {
+      "id": "flag-20",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/jp.png",
+      "expected": "Le Japon",
+      "accepted": [
+        "japon",
+        "le japon",
+        "nippon",
+        "japan"
+      ]
+    },
+    {
+      "id": "flag-21",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/cn.png",
+      "expected": "La Chine",
+      "accepted": [
+        "chine",
+        "la chine",
+        "china"
+      ]
+    },
+    {
+      "id": "flag-22",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/in.png",
+      "expected": "L'Inde",
+      "accepted": [
+        "inde",
+        "l'inde",
+        "india"
+      ]
+    },
+    {
+      "id": "flag-23",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/kr.png",
+      "expected": "La Corée du Sud",
+      "accepted": [
+        "coree du sud",
+        "corée du sud",
+        "la coree du sud",
+        "la corée du sud",
+        "coree-du-sud",
+        "corée-du-sud",
+        "south korea"
+      ]
+    },
+    {
+      "id": "flag-24",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/au.png",
+      "expected": "L'Australie",
+      "accepted": [
+        "australie",
+        "l'australie",
+        "australia"
+      ]
+    },
+    {
+      "id": "flag-25",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/nz.png",
+      "expected": "La Nouvelle-Zélande",
+      "accepted": [
+        "nouvelle-zelande",
+        "nouvelle-zélande",
+        "la nouvelle-zelande",
+        "la nouvelle-zélande",
+        "new zealand"
+      ]
+    },
+    {
+      "id": "flag-26",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/za.png",
+      "expected": "L'Afrique du Sud",
+      "accepted": [
+        "afrique du sud",
+        "l'afrique du sud",
+        "afrique-du-sud",
+        "south africa"
+      ]
+    },
+    {
+      "id": "flag-27",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/eg.png",
+      "expected": "L'Égypte",
+      "accepted": [
+        "egypte",
+        "égypte",
+        "l'egypte",
+        "l'égypte",
+        "egypt"
+      ]
+    },
+    {
+      "id": "flag-28",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ma.png",
+      "expected": "Le Maroc",
+      "accepted": [
+        "maroc",
+        "le maroc",
+        "morocco"
+      ]
+    },
+    {
+      "id": "flag-29",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/ke.png",
+      "expected": "Le Kenya",
+      "accepted": [
+        "kenya",
+        "le kenya"
+      ]
+    },
+    {
+      "id": "flag-30",
+      "type": "image",
+      "prompt": "Quel pays représente ce drapeau ?",
+      "image": "https://flagcdn.com/w320/sn.png",
+      "expected": "Le Sénégal",
+      "accepted": [
+        "senegal",
+        "sénégal",
+        "le senegal",
+        "le sénégal"
+      ]
+    }
+  ]
+}

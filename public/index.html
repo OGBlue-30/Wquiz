@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f5fa" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1016" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="WahliQuiz — quiz multijoueur en temps réel : 4 formats de questions, correction collaborative et podium animé." />
+  <title>WahliQuiz — quiz multijoueur</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="WahliQuiz, accueil">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>WahliQuiz</span>
+      </a>
+      <div class="topbar-actions">
+        <span id="conn-dot" class="conn-dot" title="Connexion active" aria-label="Connexion active" hidden></span>
+        <button id="btn-quit" class="btn btn-ghost btn-sm" type="button" hidden>Quitter</button>
+      </div>
+    </header>
+
+    <main class="views">
+      <!-- ============================ ACCUEIL ============================ -->
+      <section id="view-home" class="view" aria-labelledby="home-title">
+        <div class="hero">
+          <p class="eyebrow">Quiz multijoueur en direct</p>
+          <h1 id="home-title">Votre culture,<br /><span class="grad">à plusieurs.</span></h1>
+          <p class="lead">Cinq formats de questions, une correction collaborative et un podium qui garde le suspense jusqu'au bout.</p>
+        </div>
+
+        <div class="card form-card">
+          <label class="field-label" for="input-name">Votre pseudo</label>
+          <input id="input-name" class="input" type="text" maxlength="16" placeholder="Ex. Camille" autocomplete="nickname" autocapitalize="words" spellcheck="false" />
+          <p class="hint">2 à 16 caractères, visible par tous les joueurs.</p>
+
+          <div class="grid-2">
+            <button id="btn-create" class="btn btn-primary" type="button">Créer un salon</button>
+            <button id="btn-toggle-join" class="btn" type="button" aria-expanded="false" aria-controls="join-row">Rejoindre</button>
+          </div>
+
+          <div id="join-row" class="join-row" hidden>
+            <input id="input-code" class="input input-code" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="0000" aria-label="Code du salon à 4 chiffres" autocomplete="off" />
+            <button id="btn-join" class="btn btn-primary" type="button">Entrer</button>
+          </div>
+          <p class="hint hint-accent" id="invite-hint" hidden></p>
+        </div>
+
+        <ul class="feature-list">
+          <li><span aria-hidden="true">🎲</span> 4 formats mélangés à chaque partie</li>
+          <li><span aria-hidden="true">⚖️</span> Tous les joueurs votent pour corriger</li>
+          <li><span aria-hidden="true">🏆</span> Podium révélé du dernier au vainqueur</li>
+        </ul>
+      </section>
+
+      <!-- ============================ LOBBY ============================ -->
+      <section id="view-lobby" class="view" hidden aria-labelledby="lobby-title">
+        <div class="card room-banner">
+          <div>
+            <p class="eyebrow">Code du salon</p>
+            <p id="room-code" class="room-code">0000</p>
+            <p class="hint">Partagez le lien : le code se remplit tout seul.</p>
+          </div>
+          <button id="btn-copy" class="btn btn-soft" type="button">Copier le lien</button>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 id="lobby-title">Joueurs</h2>
+            <span id="player-count" class="pill">1 / 10</span>
+          </div>
+          <ul id="players-list" class="players"></ul>
+        </div>
+
+        <div class="card" id="host-settings">
+          <div class="card-head">
+            <h2>Réglages</h2>
+            <span class="pill pill-soft">Hôte</span>
+          </div>
+          <p class="field-label" id="label-mode">Mode de jeu</p>
+          <div class="chips" id="chips-mode" role="group" aria-labelledby="label-mode">
+            <button class="chip" type="button" data-value="mixte">Tous les formats</button>
+            <button class="chip" type="button" data-value="petitbac">Petit Bac uniquement</button>
+          </div>
+          <p class="field-label" id="label-count">Nombre de questions</p>
+          <div class="chips" id="chips-count" role="group" aria-labelledby="label-count">
+            <button class="chip" type="button" data-value="3">3</button>
+            <button class="chip" type="button" data-value="10">10</button>
+            <button class="chip" type="button" data-value="15">15</button>
+            <button class="chip" type="button" data-value="20">20</button>
+            <button class="chip" type="button" data-value="30">30</button>
+          </div>
+          <p class="field-label" id="label-time">Temps par réponse</p>
+          <div class="chips" id="chips-time" role="group" aria-labelledby="label-time">
+            <button class="chip" type="button" data-value="5">5 s</button>
+            <button class="chip" type="button" data-value="10">10 s</button>
+            <button class="chip" type="button" data-value="20">20 s</button>
+            <button class="chip" type="button" data-value="30">30 s</button>
+          </div>
+          <p class="hint">Le Petit Bac dispose de 100 % de temps en plus.</p>
+        </div>
+
+        <div class="card" id="guest-settings" hidden>
+          <div class="card-head">
+            <h2>Réglages</h2>
+          </div>
+          <p id="guest-summary" class="guest-summary">10 questions · 10 s par réponse</p>
+          <p class="hint">Le Petit Bac dispose de 100 % de temps en plus.</p>
+          <p class="hint">L'hôte peut encore les modifier avant le lancement.</p>
+        </div>
+
+        <button id="btn-start" class="btn btn-primary btn-lg" type="button">Lancer la partie</button>
+        <p id="start-hint" class="hint center"></p>
+      </section>
+
+      <!-- ============================ JEU ============================ -->
+      <section id="view-play" class="view" hidden aria-label="Question en cours">
+        <div class="play-head">
+          <span id="play-index" class="pill">Question 1 / 10</span>
+          <span id="timer" class="timer" aria-live="off"><span id="timer-value">10</span><small>s</small></span>
+        </div>
+        <div class="progress" aria-hidden="true"><i id="progress-fill"></i></div>
+
+        <article id="question-card" class="card question-card" aria-live="polite"></article>
+
+        <button id="btn-answer" class="btn btn-primary btn-lg" type="button">Valider ma réponse</button>
+
+        <div class="card card-tight">
+          <p class="field-label">Ont répondu <span id="answered-count" class="muted"></span></p>
+          <ul id="answered-list" class="player-chips"></ul>
+        </div>
+      </section>
+
+      <!-- ============================ CORRECTION ============================ -->
+      <section id="view-review" class="view" hidden>
+        <div class="play-head">
+          <span id="review-index" class="pill">Correction 1 / 10</span>
+          <span id="review-voters" class="pill pill-soft">0 / 0 ont voté</span>
+        </div>
+
+        <article id="review-question" class="card"></article>
+
+        <div class="notice" id="review-notice" hidden></div>
+
+        <div id="review-items" class="stack"></div>
+
+        <div class="row">
+          <button id="btn-prev-review" class="btn btn-soft btn-lg" type="button" hidden>← Précédent</button>
+          <button id="btn-next-review" class="btn btn-primary btn-lg" type="button" hidden>Question suivante</button>
+        </div>
+        <p class="hint center" id="review-host-hint" hidden>Les réponses encore en attente seront refusées.</p>
+        <p class="hint center" id="review-guest-hint" hidden>Seul l’hôte peut passer à la question suivante.</p>
+      </section>
+
+      <!-- ============================ RÉSULTATS ============================ -->
+      <section id="view-results" class="view" hidden>
+        <div id="reveal-stage" class="reveal-stage" aria-live="polite">
+          <p class="hint">Préparation du classement…</p>
+        </div>
+
+        <div id="podium-wrap" hidden>
+          <div id="winner-card" class="card winner-card"></div>
+          <div id="podium" class="podium"></div>
+          <div class="card">
+            <div class="card-head">
+              <h2>Classement final</h2>
+            </div>
+            <ol id="results-list" class="results"></ol>
+          </div>
+        </div>
+
+        <div class="row">
+          <button id="btn-rematch" class="btn btn-primary" type="button" hidden>Revanche immédiate</button>
+          <button id="btn-replay" class="btn btn-soft" type="button" hidden>Retour au lobby</button>
+          <button id="btn-leave" class="btn btn-ghost" type="button">Quitter le salon</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      100 % en mémoire vive · aucun compte requis
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="overlay" class="overlay" hidden>
+    <div class="spinner" aria-hidden="true"></div>
+    <p id="overlay-text">Connexion…</p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

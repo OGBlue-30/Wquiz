@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224" role="img" aria-label="Drapeau">
+  <rect width="320" height="224" rx="14" fill="#009c3b"/>
+  <path d="M160 22 298 112 160 202 22 112Z" fill="#ffdf00"/>
+  <circle cx="160" cy="112" r="52" fill="#002776"/>
+  <path d="M110 104q50 26 100-6" fill="none" stroke="#ffffff" stroke-width="11"/>
+  <g fill="#ffffff">
+    <circle cx="140" cy="99" r="3.4"/>
+    <circle cx="161" cy="107" r="4.2"/>
+    <circle cx="182" cy="103" r="3"/>
+    <circle cx="150" cy="122" r="3"/>
+    <circle cx="171" cy="126" r="3.6"/>
+    <circle cx="190" cy="117" r="2.6"/>
+    <circle cx="132" cy="115" r="2.6"/>
+    <circle cx="159" cy="88" r="2.4"/>
+  </g>
+</svg>

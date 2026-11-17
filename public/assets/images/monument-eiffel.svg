@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Monument">
+  <rect width="320" height="320" rx="20" fill="#e9f1fb"/>
+  <circle cx="250" cy="66" r="28" fill="#ffe08a"/>
+  <g fill="#ffffff" opacity=".85">
+    <ellipse cx="70" cy="74" rx="34" ry="14"/>
+    <ellipse cx="96" cy="66" rx="24" ry="16"/>
+    <ellipse cx="150" cy="52" rx="22" ry="10"/>
+  </g>
+  <rect x="34" y="278" width="252" height="16" rx="8" fill="#c9dcc4"/>
+  <circle cx="52" cy="272" r="20" fill="#a9c9a2"/>
+  <circle cx="78" cy="280" r="14" fill="#bcd6b4"/>
+  <circle cx="264" cy="272" r="22" fill="#a9c9a2"/>
+  <circle cx="240" cy="280" r="13" fill="#bcd6b4"/>
+  <path d="M160 8 164 30 156 30Z" fill="#6b4a37"/>
+  <path d="M160 26 167 96 176 152 190 212 216 276 186 276 172 216C166 196 154 196 148 216L134 276 104 276 130 212 144 152 153 96Z" fill="#6b4a37"/>
+  <g fill="#553a2b">
+    <rect x="139" y="145" width="42" height="8" rx="3"/>
+    <rect x="128" y="199" width="64" height="9" rx="3"/>
+    <rect x="112" y="254" width="96" height="10" rx="4"/>
+  </g>
+  <g stroke="#8b6753" stroke-width="1.6" opacity=".75">
+    <path d="M156 32 165 90M164 32 155 90"/>
+    <path d="M151 104 168 104 174 146 146 146Z"/>
+    <path d="M147 160 172 160 181 196 139 196Z"/>
+    <path d="M141 210 178 210 190 250 130 250Z"/>
+    <path d="M132 262 188 262"/>
+  </g>
+</svg>
