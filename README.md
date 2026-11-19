@@ -1,4 +1,4 @@
-# WahliQuiz
+# WQuiz
 
 Quiz multijoueur en temps réel, mobile-first, inspiré de Kculture. Quatre formats de questions,
 correction collaborative par vote et podium révélé du dernier au vainqueur.
