@@ -529,6 +529,7 @@ button {
 
 .player {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 11px;
   padding: 9px 11px;
@@ -546,6 +547,41 @@ button {
   opacity: 0.55;
 }
 
+.avatar-picker {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.avatar-option {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.avatar-option.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 2px var(--accent-ring);
+}
+
+.avatar-option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -558,6 +594,11 @@ button {
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.02em;
+}
+
+.avatar-emoji {
+  font-size: 20px;
+  letter-spacing: 0;
 }
 
 .player-name {
@@ -999,6 +1040,10 @@ button {
   font-size: 11px;
 }
 
+.review-player-head .avatar-emoji {
+  font-size: 18px;
+}
+
 .review-player-head strong {
   font-size: 14px;
 }
@@ -1189,6 +1234,10 @@ button {
   font-weight: 850;
   box-shadow: 0 22px 40px -22px var(--accent);
   margin-bottom: 8px;
+}
+
+.reveal-avatar.avatar-emoji {
+  font-size: 48px;
 }
 
 .reveal-card.winner .reveal-avatar {

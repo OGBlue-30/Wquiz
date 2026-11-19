@@ -23,6 +23,7 @@ const PETIT_BAC_TIME_MULTIPLIER = 2;
 const QUESTION_COUNTS = [3, 10, 15, 20, 30];
 const ANSWER_TIMES = [5, 10, 20, 30];
 const GAME_MODES = ['mixte', 'petitbac'];
+const AVATAR_EMOJIS = ['😀', '😎', '🥳', '🐱', '🐶', '🦊', '🐼', '🐸', '🦄', '🐙', '🚀', '⭐'];
 
 const rooms = new Map();
 let hooks = { notify() {}, removed() {} };
@@ -90,6 +91,7 @@ function makePlayer(id, name, socketId) {
     socketId,
     connected: true,
     score: 0,
+    emoji: '',
     joinedAt: Date.now(),
   };
 }
@@ -323,6 +325,16 @@ function updateConfig(room, playerId, config) {
   notify(room);
 }
 
+function setPlayerEmoji(room, playerId, emoji) {
+  assertLobby(room);
+  if (!AVATAR_EMOJIS.includes(emoji)) fail('Cet emoji n’est pas disponible.');
+
+  const player = getPlayer(room, playerId);
+  if (!player || !player.connected) fail('Vous ne participez plus à ce salon.');
+  player.emoji = emoji;
+  notify(room);
+}
+
 /* ------------------------------------------------------------------ */
 /* Phase de jeu                                                        */
 /* ------------------------------------------------------------------ */
@@ -444,7 +456,16 @@ function submitAnswer(room, playerId, payload) {
       return;
     }
     room.answers[index] ||= {};
-    room.answers[index][playerId] = sanitizeAnswers(question, payload?.answers);
+    const answers = sanitizeAnswers(question, payload?.answers);
+    if (
+      question.type === 'image'
+      && Array.isArray(question.slots)
+      && question.slots.length > 1
+      && question.slots.some((slot) => !answers[slot.key])
+    ) {
+      fail('Vous devez écrire les deux personnalités.');
+    }
+    room.answers[index][playerId] = answers;
     return;
   }
 
@@ -494,6 +515,7 @@ function startReview(room, index) {
         items.push({
           pid: player.id,
           name: player.name,
+          emoji: player.emoji,
           slot: slot.key,
           slotLabel: slot.label,
           value: empty ? '' : formatAnswer(question, slot.key, raw),
@@ -536,6 +558,7 @@ function castVote(room, voterId, payload) {
   if (!voter || !voter.connected) fail('Vous ne participez plus à ce salon.');
 
   const { pid, slot } = payload || {};
+  if (pid === voterId) fail('Vous ne pouvez pas voter pour votre propre réponse.');
   const item = room.review.items.find((i) => i.pid === pid && i.slot === slot);
   if (!item) fail('Réponse introuvable.');
   if (item.status !== 'pending') fail('Cette réponse est déjà corrigée.');
@@ -556,19 +579,20 @@ function resolvePendingItems(room) {
   if (room.phase !== 'review' || !room.review) return;
 
   const voters = room.players.filter((p) => p.connected);
-  if (voters.length === 0) return;
-  const voterIds = new Set(voters.map((p) => p.id));
 
   for (const item of room.review.items) {
     if (item.status !== 'pending') continue;
+    const eligibleVoters = voters.filter((p) => p.id !== item.pid);
+    if (eligibleVoters.length === 0) continue;
+    const voterIds = new Set(eligibleVoters.map((p) => p.id));
 
     const votes = room.review.votes[`${item.pid}|${item.slot}`] || {};
     const cast = Object.entries(votes).filter(
       ([id, value]) => voterIds.has(id) && (value === 'yes' || value === 'no'),
     );
-    if (cast.length < voters.length) continue;
+    if (cast.length < eligibleVoters.length) continue;
 
-    settleItem(room, item, cast, voters.length);
+    settleItem(room, item, cast, eligibleVoters.length);
   }
 }
 
@@ -593,15 +617,24 @@ function skipReview(room, playerId) {
   if (room.phase !== 'review' || !room.review) fail('Aucune correction en cours.');
 
   const voters = room.players.filter((p) => p.connected);
-  const voterIds = new Set(voters.map((p) => p.id));
 
   for (const item of room.review.items) {
     if (item.status !== 'pending') continue;
+    const eligibleVoters = voters.filter((p) => p.id !== item.pid);
+    const voterIds = new Set(eligibleVoters.map((p) => p.id));
     const votes = room.review.votes[`${item.pid}|${item.slot}`] || {};
     const cast = Object.entries(votes).filter(
       ([id, value]) => voterIds.has(id) && (value === 'yes' || value === 'no'),
     );
-    settleItem(room, item, cast, voters.length || 1);
+    if (eligibleVoters.length === 0) {
+      item.status = 'refused';
+      item.resolvedBy = 'vote';
+      item.yes = 0;
+      item.no = 0;
+      item.total = 0;
+    } else {
+      settleItem(room, item, cast, eligibleVoters.length);
+    }
     item.skipped = true;
   }
 
@@ -644,7 +677,11 @@ function finishGame(room) {
     }))
     .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, 'fr'));
   room.results.forEach((entry, i) => {
-    entry.rank = i + 1;
+    if (i === 0 || entry.score !== room.results[i - 1].score) {
+      entry.rank = i + 1;
+    } else {
+      entry.rank = room.results[i - 1].rank;
+    }
   });
 
   notify(room);
@@ -708,6 +745,7 @@ function reviewView(room, viewer) {
     items: review.items.map((item) => ({
       pid: item.pid,
       name: item.name,
+      emoji: item.emoji,
       slot: item.slot,
       slotLabel: item.slotLabel,
       value: item.value,
@@ -743,8 +781,10 @@ function snapshotFor(room, viewer) {
       id: p.id,
       name: p.name,
       isHost: p.id === room.hostId,
+      emoji: p.emoji,
       connected: p.connected,
       score: p.score,
+      emoji: p.emoji,
       submitted: Boolean(room.submitted?.[p.id]),
     })),
   };
@@ -821,6 +861,7 @@ module.exports = {
   findRoomBySocket,
   leaveRoom,
   updateConfig,
+  setPlayerEmoji,
   startGame,
   restartGame,
   submitAnswer,

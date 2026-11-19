@@ -10,9 +10,12 @@
 const { spawn } = require('node:child_process');
 const path = require('node:path');
 const { io } = require('socket.io-client');
+const rooms = require(path.join(__dirname, '..', 'server', 'rooms'));
+const questionService = require(path.join(__dirname, '..', 'server', 'questions'));
 
 const questionBank = require(path.join(__dirname, '..', 'data', 'questions.json'));
-const EXPECTED_QUESTIONS = questionBank.questions.length;
+const celebrityBank = require(path.join(__dirname, '..', 'celebrities.json'));
+const EXPECTED_QUESTIONS = questionBank.questions.length + celebrityBank.length;
 
 const PORT = Number(process.env.TEST_PORT) || 3111;
 const BASE = `http://127.0.0.1:${PORT}`;
@@ -125,12 +128,72 @@ function buildAnswers(state) {
 async function main() {
   console.log('\nWahliQuiz — test de flux complet\n');
 
+  const ownVoteRoom = {
+    phase: 'review',
+    review: {
+      index: 0,
+      items: [{ pid: '1', slot: 'answer', status: 'pending' }],
+      votes: {},
+    },
+    players: [
+      { id: '1', name: 'Alice', connected: true },
+      { id: '2', name: 'Bob', connected: true },
+    ],
+  };
+  let ownVoteRejected = false;
+  try {
+    rooms.castVote(ownVoteRoom, '1', { index: 0, pid: '1', slot: 'answer', value: 'yes' });
+  } catch (error) {
+    ownVoteRejected = /propre réponse/.test(error.message);
+  }
+  ok(ownVoteRejected, 'un joueur ne peut pas voter pour sa propre réponse');
+
+  const celebrityNames = new Set(celebrityBank.map((celebrity) => celebrity.name));
+  const celebrityUrls = new Set(celebrityBank.map((celebrity) => celebrity.url));
+  const allQuestions = questionService.buildDeck(questionService.questionCount);
+  const celebrityQuestions = allQuestions.filter(
+    (question) => question.type === 'image' && celebrityUrls.has(question.image),
+  );
+  ok(
+    celebrityQuestions.length === celebrityBank.length
+      && celebrityQuestions.every((question) => (
+        question.slots.length === 1
+        && question.slots[0].key === 'answer'
+        && question.slots[0].label === 'Nom de la célébrité'
+        && celebrityNames.has(question.expectedBySlot.answer)
+      )),
+    'toutes les célébrités du JSON sont intégrées comme questions à une photo et une réponse',
+  );
+
+  const tieRoom = {
+    phase: 'playing',
+    finishedAt: null,
+    players: [
+      { id: '1', name: 'Alice', score: 11, connected: true },
+      { id: '2', name: 'Bob', score: 11, connected: true },
+      { id: '3', name: 'Cara', score: 10, connected: true },
+    ],
+  };
+  rooms.finishGame(tieRoom);
+  ok(
+    tieRoom.results.map((entry) => entry.rank).join(',') === '1,1,3',
+    'classement ex æquo : 1er, 1er, 3e',
+  );
+
   startServer();
   const health = await waitForHealth();
   ok(
     health.ok && health.questions === EXPECTED_QUESTIONS,
     `serveur démarré, ${EXPECTED_QUESTIONS} questions chargées`,
     JSON.stringify(health),
+  );
+  const celebrityImageResponse = await fetch(`${BASE}${celebrityBank[0].url}`);
+  const celebrityImageBytes = Buffer.from(await celebrityImageResponse.arrayBuffer());
+  ok(
+    celebrityImageResponse.ok
+      && celebrityImageResponse.headers.get('content-type')?.includes('image/jpeg')
+      && celebrityImageBytes.length > 1000,
+    'les fichiers photo du JSON sont servis au navigateur',
   );
 
   const host = connectPlayer('Alice', 'test-alice-0001');
@@ -165,6 +228,16 @@ async function main() {
     'les 3 joueurs dans le lobby',
   );
   ok(host.state.players.length === 3, '3 joueurs connectés dans le lobby');
+
+  const avatarUpdate = await emitAck(host.socket, 'room:avatar', { emoji: '🦊' });
+  assert(avatarUpdate.ok, 'sélection de l’avatar refusée');
+  await waitUntil(
+    () => host.state.players.find((player) => player.id === host.playerId)?.emoji === '🦊',
+    'avatar choisi dans le lobby',
+  );
+  ok(true, 'l’avatar emoji est diffusé à tous les joueurs');
+  const invalidAvatar = await emitAck(host.socket, 'room:avatar', { emoji: 'not-an-emoji' });
+  ok(invalidAvatar.ok === false, 'un avatar non autorisé est refusé');
 
   // Doublon de pseudo
   const duplicate = connectPlayer('Bob', 'test-doublon-04');

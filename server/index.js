@@ -148,6 +148,14 @@ io.on('connection', (socket) => {
     });
   });
 
+  socket.on('room:avatar', (payload, ack) => {
+    respond(socket, ack, () => {
+      const { room, player } = context(socket);
+      rooms.setPlayerEmoji(room, player.id, payload?.emoji);
+      return {};
+    });
+  });
+
   socket.on('game:start', (payload, ack) => {
     respond(socket, ack, () => {
       const { room, player } = context(socket);

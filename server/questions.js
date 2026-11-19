@@ -11,6 +11,46 @@ const path = require('node:path');
 
 const DATA_FILE = path.join(__dirname, '..', 'data', 'questions.json');
 const raw = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+const PROJECT_DIR = path.join(__dirname, '..');
+const PUBLIC_DIR = path.join(PROJECT_DIR, 'public');
+const CELEBRITY_IMAGE_DIR = path.join(PUBLIC_DIR, 'assets', 'images', 'celebs');
+const CELEBRITIES_FILE = path.join(PROJECT_DIR, 'celebrities.json');
+const rawCelebrities = JSON.parse(fs.readFileSync(CELEBRITIES_FILE, 'utf8'));
+
+if (!Array.isArray(rawCelebrities)) {
+  throw new Error('celebrities.json doit contenir une liste de célébrités.');
+}
+
+const celebrities = rawCelebrities.map((celebrity, index) => {
+  const where = `celebrities[${index}]`;
+  if (!celebrity || typeof celebrity.name !== 'string' || !celebrity.name.trim()) {
+    throw new Error(`${where} : nom manquant.`);
+  }
+  if (typeof celebrity.file !== 'string' || !celebrity.file.trim()) {
+    throw new Error(`${where} : fichier image manquant.`);
+  }
+
+  const imagePath = path.resolve(PROJECT_DIR, celebrity.file);
+  const relativePath = path.relative(CELEBRITY_IMAGE_DIR, imagePath);
+  const isImageFile = fs.existsSync(imagePath) && fs.statSync(imagePath).isFile();
+  if (
+    relativePath.startsWith(`..${path.sep}`)
+    || relativePath === '..'
+    || path.isAbsolute(relativePath)
+    || !isImageFile
+  ) {
+    throw new Error(`${where} : image absente ou située hors de public/assets/images/celebs.`);
+  }
+
+  return {
+    name: celebrity.name.trim(),
+    url: `/${path.relative(PUBLIC_DIR, imagePath).split(path.sep).join('/')}`,
+  };
+});
+
+if (celebrities.length === 0) {
+  throw new Error('celebrities.json doit contenir au moins une célébrité avec une image.');
+}
 
 const TYPE_LABELS = {
   open: 'Culture générale',
@@ -38,7 +78,18 @@ const petitBac = {
   letterPool: raw.petitBac?.letterPool?.length ? raw.petitBac.letterPool : DEFAULT_PETIT_BAC.letterPool,
 };
 
-const questions = Array.isArray(raw.questions) ? raw.questions : [];
+const questions = Array.isArray(raw.questions) ? [...raw.questions] : [];
+
+for (const [index, celebrity] of celebrities.entries()) {
+  questions.push({
+    id: `celebrity-image-${index + 1}`,
+    type: 'image',
+    prompt: 'Qui est cette célébrité ?',
+    image: celebrity.url,
+    expected: celebrity.name,
+    slots: [{ key: 'answer', label: 'Nom de la célébrité', expected: celebrity.name }],
+  });
+}
 
 /* ------------------------------------------------------------------ */
 /* Validation                                                          */
@@ -99,7 +150,26 @@ for (const [i, q] of questions.entries()) {
       break;
     case 'image':
       if (!q.image) throw new Error(`${where} : URL d'image manquante.`);
-      if (!q.expected) throw new Error(`${where} : réponse attendue manquante.`);
+      if (q.slots !== undefined) {
+        if (!Array.isArray(q.slots) || q.slots.length < 1 || q.slots.length > 6) {
+          throw new Error(`${where} : une question image doit avoir entre 1 et 6 champs de réponse.`);
+        }
+        if (q.slots.some((slot) => (
+          !slot
+          || typeof slot.key !== 'string'
+          || !slot.key.trim()
+          || typeof slot.label !== 'string'
+          || !slot.label.trim()
+          || !slot.expected
+        ))) {
+          throw new Error(`${where} : champs de réponse d'image invalides.`);
+        }
+        if (new Set(q.slots.map((slot) => slot.key)).size !== q.slots.length) {
+          throw new Error(`${where} : clés de champs d'image dupliquées.`);
+        }
+      } else if (!q.expected) {
+        throw new Error(`${where} : réponse attendue manquante.`);
+      }
       break;
     default:
       if (!q.expected) throw new Error(`${where} : réponse attendue manquante.`);
@@ -126,6 +196,23 @@ function pick(list) {
 /** Prépare une question jouable : slots, lettre tirée au sort, choix mélangés. */
 function prepare(rawQuestion) {
   const q = { ...rawQuestion };
+
+  if (q.type === 'image' && Array.isArray(q.slots)) {
+    const rawSlots = q.slots.map((slot) => ({
+      key: slot.key,
+      label: slot.label,
+      expected: slot.expected,
+      accepted: slot.accepted,
+    }));
+    q.slots = rawSlots.map((slot) => ({ key: slot.key, label: slot.label }));
+    q.expectedBySlot = Object.fromEntries(
+      rawSlots.map((slot) => [slot.key, slot.expected]),
+    );
+    q.acceptedBySlot = Object.fromEntries(
+      rawSlots.map((slot) => [slot.key, slot.accepted || null]),
+    );
+    return q;
+  }
 
   if (q.type === 'petitbac') {
     const categories = q.categories?.length ? [...q.categories] : [...petitBac.categories];
@@ -228,6 +315,7 @@ function reviewQuestion(question, index) {
   const q = publicQuestion(question, index);
   q.expectedBySlot = question.expectedBySlot;
   q.accepted = question.accepted || null;
+  q.acceptedBySlot = question.acceptedBySlot || null;
   q.hint = question.hint || null;
   q.correct = question.correct || null;
   return q;

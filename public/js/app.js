@@ -70,6 +70,7 @@
   const NAME_KEY = 'wahliquiz:name';
   const PID_KEY = 'wahliquiz:player-id';
   const SESSION_KEY = 'wahliquiz:session';
+  const AVATAR_EMOJIS = ['😀', '😎', '🥳', '🐱', '🐶', '🦊', '🐼', '🐸', '🦄', '🐙', '🚀', '⭐'];
 
   const state = {
     snapshot: null,
@@ -114,8 +115,8 @@
     return (parts[0][0] + parts[1][0]).toUpperCase();
   }
 
-  function avatar(name, className = 'avatar') {
-    return el('span', className, initials(name));
+  function avatar(name, className = 'avatar', emoji = '') {
+    return el('span', `${className}${emoji ? ' avatar-emoji' : ''}`, emoji || initials(name));
   }
 
   function plural(count, singular, pluralForm) {
@@ -387,11 +388,25 @@
 
     for (const player of snapshot.players) {
       const li = el('li', `player${player.id === snapshot.me.id ? ' self' : ''}${player.connected ? '' : ' offline'}`);
-      li.append(avatar(player.name));
+      li.append(avatar(player.name, 'avatar', player.emoji));
       li.append(el('span', 'player-name', player.name));
       if (player.isHost) li.append(el('span', 'player-tag host', 'Hôte'));
       if (player.id === snapshot.me.id) li.append(el('span', 'player-tag you', 'Vous'));
       else if (!player.connected) li.append(el('span', 'player-tag', 'hors ligne'));
+      if (player.id === snapshot.me.id) {
+        const picker = el('div', 'avatar-picker');
+        picker.setAttribute('role', 'group');
+        picker.setAttribute('aria-label', 'Choisir votre avatar');
+        for (const emoji of AVATAR_EMOJIS) {
+          const option = el('button', `avatar-option${player.emoji === emoji ? ' selected' : ''}`, emoji);
+          option.type = 'button';
+          option.setAttribute('aria-label', `Choisir ${emoji} comme avatar`);
+          option.setAttribute('aria-pressed', String(player.emoji === emoji));
+          option.addEventListener('click', () => emit('room:avatar', { emoji }));
+          picker.append(option);
+        }
+        li.append(picker);
+      }
       els.playersList.append(li);
     }
 
@@ -493,6 +508,7 @@
 
   function pointsHint(question) {
     if (question.type === 'petitbac') return '1 pt par catégorie · temps doublé';
+    if (question.type === 'image' && question.slots?.length > 1) return '1 point par réponse correcte';
     return '1 point';
   }
 
@@ -501,7 +517,7 @@
       const wrap = el('div', 'media');
       const img = el('img');
       img.src = question.image;
-      img.alt = 'Illustration à deviner';
+      img.alt = 'Image à deviner';
       img.draggable = false;
       wrap.append(img);
       return wrap;
@@ -642,6 +658,10 @@
           filled += 1;
         }
       }
+      if (question.type === 'image' && question.slots?.length > 1 && filled < question.slots.length) {
+        showToast('Écrivez les deux personnalités.', 'error');
+        return;
+      }
       if (filled === 0) {
         showToast('Écrivez au moins une réponse.', 'error');
         return;
@@ -712,6 +732,14 @@
       const variants = question.accepted.slice(0, 8).join(', ');
       expected.append(el('p', 'expected-note', `Tolérances : ${variants}`));
     }
+    if (question.acceptedBySlot) {
+      for (const slot of question.slots) {
+        const variants = question.acceptedBySlot[slot.key];
+        if (Array.isArray(variants) && variants.length > 1) {
+          expected.append(el('p', 'expected-note', `${slot.label} — Tolérances : ${variants.slice(0, 8).join(', ')}`));
+        }
+      }
+    }
     if (question.hint) {
       expected.append(el('p', 'expected-note', `Indice du rébus : ${question.hint}`));
     }
@@ -728,27 +756,27 @@
 
     const groups = new Map();
     for (const item of review.items) {
-      if (!groups.has(item.pid)) groups.set(item.pid, { name: item.name, items: [] });
+      if (!groups.has(item.pid)) groups.set(item.pid, { name: item.name, emoji: item.emoji, items: [] });
       groups.get(item.pid).items.push(item);
     }
 
     for (const [pid, group] of groups) {
       const card = el('div', 'review-player');
       const head = el('div', 'review-player-head');
-      head.append(avatar(group.name));
+      head.append(avatar(group.name, 'avatar', group.emoji));
       head.append(el('strong', '', group.name));
       if (pid === myId) head.append(el('span', 'player-tag you', 'Vous'));
       card.append(head);
 
       for (const item of group.items) {
-        card.append(buildReviewRow(review, item));
+        card.append(buildReviewRow(review, item, pid === myId));
       }
 
       container.append(card);
     }
   }
 
-  function buildReviewRow(review, item) {
+  function buildReviewRow(review, item, isOwnAnswer) {
     const row = el('div', `rv-row ${item.status}`);
 
     const top = el('div', 'rv-top');
@@ -768,7 +796,9 @@
     const bottom = el('div', 'rv-bottom');
     const myVote = review.myVotes?.[`${item.pid}|${item.slot}`];
 
-    if (item.status === 'pending') {
+    if (item.status === 'pending' && isOwnAnswer) {
+      bottom.append(el('span', 'tally', 'Vous ne pouvez pas voter pour votre réponse'));
+    } else if (item.status === 'pending') {
       const buttons = el('div', 'vote-btns');
       const yes = el('button', `vote-btn yes${myVote === 'yes' ? ' active' : ''}`, '✓ Valider');
       yes.type = 'button';
@@ -857,14 +887,15 @@
       return;
     }
 
-    const isWinner = reveal.index === reveal.queue.length - 1;
+    const isWinner = entry.rank === 1;
+    const isTie = isWinner && reveal.queue.filter((item) => item.rank === 1).length > 1;
     const stage = els.revealStage;
     stage.innerHTML = '';
     stage.onclick = finishReveal;
 
     const card = el('div', `reveal-card${isWinner ? ' winner' : ''}`);
-    card.append(el('p', 'reveal-rank', isWinner ? '🏆 Vainqueur' : `${ordinal(entry.rank)} place`));
-    card.append(avatar(entry.name, 'reveal-avatar'));
+    card.append(el('p', 'reveal-rank', isTie ? '🏆 Ex æquo' : isWinner ? '🏆 Vainqueur' : `${ordinal(entry.rank)} place`));
+    card.append(avatar(entry.name, 'reveal-avatar', entry.emoji));
     card.append(el('p', 'reveal-name', entry.name));
 
     const score = el('p', 'reveal-score', String(entry.score));
@@ -924,8 +955,10 @@
       const trophy = el('span', 'winner-trophy', '🏆');
       trophy.setAttribute('aria-hidden', 'true');
       const text = el('div');
-      text.append(el('p', 'winner-title', 'Vainqueur'));
-      text.append(el('p', 'winner-name', winner.name));
+      const winners = ordered.filter((entry) => entry.rank === winner.rank);
+      const isTie = winners.length > 1;
+      text.append(el('p', 'winner-title', isTie ? 'Ex æquo' : 'Vainqueur'));
+      text.append(el('p', 'winner-name', isTie ? winners.map((entry) => entry.name).join(' · ') : winner.name));
       text.append(el('p', 'winner-sub', `${winner.score} ${winner.score > 1 ? 'points' : 'point'} · ${plural(ordered.length, 'joueur', 'joueurs')}`));
       els.winnerCard.append(trophy, text);
     }

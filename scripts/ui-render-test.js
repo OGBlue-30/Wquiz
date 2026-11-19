@@ -124,6 +124,23 @@ try {
   ok($('#chips-mode .chip[data-value="mixte"]').getAttribute('aria-pressed') === 'true', 'mode tous les formats sélectionné');
   ok($('#chips-mode .chip[data-value="petitbac"]') !== null, 'option Petit Bac uniquement disponible');
   ok($('#btn-start').hidden === false, 'bouton lancer visible pour l’hôte');
+  ok($('#btn-test-celebrities') === null, 'le bouton de test de célébrités a été retiré');
+  ok($$('#players-list .avatar-picker').length === 1, 'seul son propre joueur peut choisir un avatar');
+  $('.avatar-option[aria-label="Choisir 🐱 comme avatar"]').click();
+  ok(lastEmit('room:avatar')?.payload?.emoji === '🐱', 'choisir un emoji émet room:avatar');
+  pushState(
+    snapshot('lobby', {
+      players: PLAYERS.map((player) => ({
+        ...player,
+        emoji: player.id === 'player-1' ? '🐱' : '',
+      })),
+    }),
+  );
+  ok($('#players-list .player.self .avatar').textContent === '🐱', 'l’emoji choisi apparaît sur le joueur');
+  ok(
+    $('.avatar-option[aria-label="Choisir 🐱 comme avatar"]').getAttribute('aria-pressed') === 'true',
+    'l’emoji choisi est marqué comme sélectionné',
+  );
 
   $('#chips-count .chip[data-value="20"]').click();
   const configEvent = lastEmit('room:config');
@@ -197,30 +214,35 @@ try {
         index: 1,
         type: 'image',
         typeLabel: 'Image mystère',
-        prompt: 'Quel pays ?',
-        image: '/assets/images/flag-japan.svg',
-        slots: [{ key: 'answer', label: 'Réponse' }],
+        prompt: 'Qui est cette célébrité ?',
+        image: '/assets/images/celebs/8.jpg',
+        slots: [
+          { key: 'answer', label: 'Nom de la célébrité' },
+        ],
       },
       myAnswers: {},
       submitted: false,
     }),
   );
-  ok($('#question-card img')?.getAttribute('src') === '/assets/images/flag-japan.svg', 'l’image de la question est affichée');
-  ok($$('#question-card input').length === 1, 'un champ texte pour la question image');
+  ok(
+    $('#question-card img')?.getAttribute('src') === '/assets/images/celebs/8.jpg',
+    'la photo de célébrité est affichée depuis son fichier local',
+  );
+  ok($$('#question-card input').length === 1, 'un seul champ pour le nom de la célébrité');
   const answersBeforeTyping = emitted.filter((entry) => entry.event === 'game:answer').length;
-  const imageAnswer = $('#question-card input');
-  imageAnswer.value = 'Japon';
-  imageAnswer.dispatchEvent(new window.Event('input', { bubbles: true }));
-  imageAnswer.dispatchEvent(new window.Event('change', { bubbles: true }));
-  imageAnswer.dispatchEvent(new window.FocusEvent('blur', { bubbles: true }));
+  const imageInputs = $$('#question-card input');
+  imageInputs[0].value = 'Charlie Chaplin';
+  imageInputs[0].dispatchEvent(new window.Event('input', { bubbles: true }));
+  imageInputs[0].dispatchEvent(new window.Event('change', { bubbles: true }));
+  imageInputs[0].dispatchEvent(new window.FocusEvent('blur', { bubbles: true }));
   ok(
     emitted.filter((entry) => entry.event === 'game:answer').length === answersBeforeTyping,
     'saisir une réponse et quitter le champ ne l’envoie pas',
   );
   $('#btn-answer').click();
   ok(
-    lastEmit('game:answer')?.payload?.answers?.answer === 'Japon',
-    'la réponse texte est envoyée après confirmation explicite',
+    lastEmit('game:answer')?.payload?.answers?.answer === 'Charlie Chaplin',
+    'le nom est envoyé après confirmation explicite',
   );
 
   /* --- Petit Bac (temps doublé) --- */
@@ -353,11 +375,11 @@ try {
     index: 0,
     type: 'image',
     typeLabel: 'Image mystère',
-    prompt: 'Quel pays ?',
-    image: '/assets/images/flag-japan.svg',
-    slots: [{ key: 'answer', label: 'Réponse' }],
-    expectedBySlot: { answer: 'Le Japon' },
-    accepted: ['japon', 'nippon'],
+    prompt: 'Qui est cette célébrité ?',
+    image: '/assets/images/celebs/8.jpg',
+    slots: [{ key: 'answer', label: 'Nom de la célébrité' }],
+    expectedBySlot: { answer: 'Charlie Chaplin' },
+    acceptedBySlot: { answer: null },
     hint: null,
   };
   pushState(
@@ -372,7 +394,7 @@ try {
             name: 'Alice',
             slot: 'answer',
             slotLabel: 'Réponse',
-            value: 'Japon',
+            value: 'Charlie Chaplin',
             status: 'pending',
             resolvedBy: 'vote',
             skipped: false,
@@ -402,16 +424,16 @@ try {
     }),
   );
   ok(viewVisible('review'), 'écran de correction affiché');
-  ok($('#review-question').textContent.includes('Le Japon'), 'réponse attendue affichée');
-  ok($$('.vote-btn.yes').length === 1, 'un seul bouton de vote pour la réponse non vide');
-  ok($$('.rv-row.empty').length === 1, 'la réponse vide est marquée sans réponse');
-
-  $('.vote-btn.yes').click();
-  const voteEvent = lastEmit('review:vote');
   ok(
-    voteEvent?.payload?.pid === 'player-1' && voteEvent?.payload?.value === 'yes',
-    'le vote Valider émet review:vote',
+    $('#review-question').textContent.includes('Charlie Chaplin'),
+    'le nom de la célébrité attendue est affiché',
   );
+  ok($$('.vote-btn.yes').length === 0, 'aucun bouton de vote pour sa propre réponse');
+  ok(
+    $$('.tally').some((item) => item.textContent.includes('ne pouvez pas voter')),
+    'l’avertissement indique qu’on ne peut pas voter pour sa propre réponse',
+  );
+  ok($$('.rv-row.empty').length === 1, 'la réponse vide est marquée sans réponse');
 
   const acceptedReview = {
     index: 0,
