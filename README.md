@@ -1,6 +1,6 @@
 # WQuiz
 
-Quiz multijoueur en temps réel, mobile-first, inspiré de Kculture. Quatre formats de questions,
+Quiz multijoueur en temps réel, mobile-first, inspiré de Kculture. Sept formats de questions,
 correction collaborative par vote et podium révélé du dernier au vainqueur.
 
 - **Front** : HTML/CSS/JS vanilla (aucun build, aucune dépendance front).
@@ -14,7 +14,8 @@ public/                 interface (une seule page)
   css/app.css
   js/app.js
   assets/images/        illustrations SVG locales (drapeaux, monuments, logos…)
-data/questions.json     347 questions, 4 formats
+data/questions.json     Questions de culture générale, QCM, Petit Bac, images et rébus
+data/lyrics.json        Extraits avec artiste et titre
 server/index.js         Express + Socket.io
 server/rooms.js         salons, joueurs, réponses, votes, timers, nettoyage
 server/questions.js     chargement / validation / tirage des questions
@@ -40,7 +41,8 @@ Le terminal affiche aussi l'adresse du réseau local pour tester depuis un tél�
 - **Créer un salon** génère un code à 4 chiffres et un lien `/?room=1234`.
   Le lien pré-remplit le code ; il suffit de saisir son pseudo et de valider.
 - Lobby en direct : liste des joueurs (hôte, vous, hors ligne), 10 joueurs maximum.
-- L'hôte choisit le **mode de jeu** (**tous les formats** ou **Petit Bac uniquement**),
+- L'hôte choisit le **mode de jeu** (**tous les formats**, **Petit Bac uniquement**
+  ou **Citez-en 3 uniquement**),
   le nombre de questions (**3, 10, 15, 20 ou 30**) et le temps par réponse
   (**5, 10, 20 ou 30 secondes**). Lui seul peut lancer la partie.
 - Reconnexion : un identifiant de joueur est conservé dans le navigateur. Un rafraîchissement
@@ -49,9 +51,10 @@ Le terminal affiche aussi l'adresse du réseau local pour tester depuis un tél�
 ### Phase de jeu
 
 - Toutes les questions sont tirées au début de la partie. En mode **tous les formats**,
-  elles mélangent les quatre formats ; en mode **Petit Bac uniquement**, toutes les manches
-  sont des grilles de Petit Bac.
-  Une partie courte (3 questions) utilise les formats tirés au sort pour cette manche.
+  elles mélangent les huit formats ; en mode **Petit Bac uniquement**, toutes les manches
+  sont des grilles de Petit Bac ; en mode **Citez-en 3 uniquement**, toutes les questions
+  demandent trois réponses. Une énigme est garantie en mode mixte ; dans une partie courte
+  (3 questions), les autres formats sont tirés au sort.
 - Chaque question a un compte à rebours commun, visible par tous. C'est le seul chronomètre
   de la partie : aucune autre étape n'est limitée dans le temps.
 - Personne ne voit les réponses des autres ni la correction : seuls les pseudos des joueurs
@@ -62,6 +65,11 @@ Le terminal affiche aussi l'adresse du réseau local pour tester depuis un tél�
   catégories (pays, animaux, métiers, culture pop, cuisine, etc.), ses indices et sa réserve
   de lettres.
   Il bénéficie de **100 % de temps en plus** : 10 s de réglage donnent 20 s pour la manche.
+- Paroles : un extrait de `data/lyrics.json` est présenté et le jeu demande aléatoirement
+  l’artiste ou le titre.
+- Citez-en 3 : chaque question affiche trois champs à remplir. Les exemples non exhaustifs
+  sont révélés uniquement à la correction ; les réponses sont corrigées séparément par vote.
+- Énigmes : elles utilisent le format ouvert.
 
 ### Correction collaborative
 
@@ -151,12 +159,16 @@ Identifiants uniques obligatoires. Formats :
 // 4. Image
 { "id": "q-img", "type": "image", "prompt": "…", "image": "/assets/images/mon-image.svg",
   "expected": "…", "accepted": ["…"] }
+
+// 5. Citez-en 3 — les exemples servent de référence pendant la correction collaborative
+{ "id": "q-list", "type": "list", "prompt": "Citez 3 …",
+  "examples": ["Exemple 1", "Exemple 2", "Exemple 3"] }
 ```
 
-La banque contient 347 questions : 140 ouvertes, 124 QCM, 51 grilles de Petit Bac
-et 32 images (dont 30 drapeaux). Le mode 30 questions peut donc se jouer
-sans réutiliser deux fois la même question. Une grille de Petit Bac possède ses propres
-catégories, indices et réserve de lettres.
+La banque contient 536 questions : 192 ouvertes, 124 QCM, 121 grilles de Petit Bac,
+32 images (dont 30 drapeaux) et 67 questions « Citez-en 3 ». Le mode 30 questions peut
+donc se jouer sans réutiliser deux fois la même question. Une grille de Petit Bac possède
+ses propres catégories, indices et réserve de lettres.
 
 ## Tests
 

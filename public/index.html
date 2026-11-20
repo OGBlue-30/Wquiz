@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f4f5fa" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0e1016" media="(prefers-color-scheme: dark)" />
-  <meta name="description" content="WahliQuiz — quiz multijoueur en temps réel : 4 formats de questions, correction collaborative et podium animé." />
+  <meta name="description" content="WahliQuiz — quiz multijoueur en temps réel : 8 formats de questions, correction collaborative et podium animé." />
   <title>WahliQuiz — quiz multijoueur</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/css/app.css" />
@@ -29,7 +29,7 @@
         <div class="hero">
           <p class="eyebrow">Quiz multijoueur en direct</p>
           <h1 id="home-title">Votre culture,<br /><span class="grad">à plusieurs.</span></h1>
-          <p class="lead">Cinq formats de questions, une correction collaborative et un podium qui garde le suspense jusqu'au bout.</p>
+          <p class="lead">Sept formats de questions, une correction collaborative et un podium qui garde le suspense jusqu'au bout.</p>
         </div>
 
         <div class="card form-card">
@@ -41,7 +41,6 @@
             <button id="btn-create" class="btn btn-primary" type="button">Créer un salon</button>
             <button id="btn-toggle-join" class="btn" type="button" aria-expanded="false" aria-controls="join-row">Rejoindre</button>
           </div>
-
           <div id="join-row" class="join-row" hidden>
             <input id="input-code" class="input input-code" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="0000" aria-label="Code du salon à 4 chiffres" autocomplete="off" />
             <button id="btn-join" class="btn btn-primary" type="button">Entrer</button>
@@ -50,7 +49,7 @@
         </div>
 
         <ul class="feature-list">
-          <li><span aria-hidden="true">🎲</span> 4 formats mélangés à chaque partie</li>
+          <li><span aria-hidden="true">🎲</span> 8 formats mélangés à chaque partie</li>
           <li><span aria-hidden="true">⚖️</span> Tous les joueurs votent pour corriger</li>
           <li><span aria-hidden="true">🏆</span> Podium révélé du dernier au vainqueur</li>
         </ul>
@@ -84,6 +83,7 @@
           <div class="chips" id="chips-mode" role="group" aria-labelledby="label-mode">
             <button class="chip" type="button" data-value="mixte">Tous les formats</button>
             <button class="chip" type="button" data-value="petitbac">Petit Bac uniquement</button>
+            <button class="chip" type="button" data-value="list">Citez-en 3 uniquement</button>
           </div>
           <p class="field-label" id="label-count">Nombre de questions</p>
           <div class="chips" id="chips-count" role="group" aria-labelledby="label-count">

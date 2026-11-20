@@ -2,7 +2,7 @@
   "meta": {
     "title": "WahliQuiz",
     "version": 4,
-    "description": "Banque de questions WahliQuiz — 4 formats, 347 questions."
+    "description": "Banque de questions WahliQuiz — 5 formats, 536 questions."
   },
   "petitBac": {
     "categories": [
@@ -7158,6 +7158,991 @@
         "le senegal",
         "le sénégal"
       ]
+    },
+    {
+      "id": "list-glovebox",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans une boîte à gants de voiture.",
+      "examples": [
+        "Un constat amiable",
+        "Les papiers du véhicule",
+        "Un manuel d'utilisation"
+      ]
+    },
+    {
+      "id": "list-undrinkable-liquids",
+      "type": "list",
+      "prompt": "Citez 3 liquides que l'on ne peut pas boire.",
+      "examples": [
+        "De l'essence",
+        "De l'eau de Javel",
+        "Du liquide vaisselle"
+      ]
+    },
+    {
+      "id": "list-fridge",
+      "type": "list",
+      "prompt": "Citez 3 aliments que l'on trouve dans un frigo.",
+      "examples": [
+        "Lait",
+        "Beurre",
+        "Yaourt"
+      ]
+    },
+    {
+      "id": "list-school-supplies",
+      "type": "list",
+      "prompt": "Citez 3 fournitures scolaires.",
+      "examples": [
+        "Stylo",
+        "Cahier",
+        "Règle"
+      ]
+    },
+    {
+      "id": "list-beach-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on emporte à la plage.",
+      "examples": [
+        "Serviette",
+        "Crème solaire",
+        "Parasol"
+      ]
+    },
+    {
+      "id": "list-red-fruits",
+      "type": "list",
+      "prompt": "Citez 3 fruits rouges.",
+      "examples": [
+        "Fraise",
+        "Framboise",
+        "Cerise"
+      ]
+    },
+    {
+      "id": "list-string-instruments",
+      "type": "list",
+      "prompt": "Citez 3 instruments de musique à cordes.",
+      "examples": [
+        "Guitare",
+        "Violon",
+        "Harpe"
+      ]
+    },
+    {
+      "id": "list-bathroom-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans une salle de bain.",
+      "examples": [
+        "Brosse à dents",
+        "Savon",
+        "Serviette"
+      ]
+    },
+    {
+      "id": "list-winter-clothes",
+      "type": "list",
+      "prompt": "Citez 3 vêtements que l'on porte en hiver.",
+      "examples": [
+        "Bonnet",
+        "Écharpe",
+        "Manteau"
+      ]
+    },
+    {
+      "id": "list-flying-things",
+      "type": "list",
+      "prompt": "Citez 3 choses qui volent.",
+      "examples": [
+        "Avion",
+        "Oiseau",
+        "Cerf-volant"
+      ]
+    },
+    {
+      "id": "list-swiss-cheeses",
+      "type": "list",
+      "prompt": "Citez 3 fromages suisses.",
+      "examples": [
+        "Gruyère",
+        "Emmental",
+        "Vacherin"
+      ]
+    },
+    {
+      "id": "list-ball-sports",
+      "type": "list",
+      "prompt": "Citez 3 sports qui se jouent avec un ballon.",
+      "examples": [
+        "Football",
+        "Basket",
+        "Volley"
+      ]
+    },
+    {
+      "id": "list-kitchen-utensils",
+      "type": "list",
+      "prompt": "Citez 3 ustensiles de cuisine.",
+      "examples": [
+        "Spatule",
+        "Fouet",
+        "Louche"
+      ]
+    },
+    {
+      "id": "list-farm-animals",
+      "type": "list",
+      "prompt": "Citez 3 animaux de la ferme.",
+      "examples": [
+        "Vache",
+        "Cochon",
+        "Poule"
+      ]
+    },
+    {
+      "id": "list-camping-gear",
+      "type": "list",
+      "prompt": "Citez 3 objets indispensables pour faire du camping.",
+      "examples": [
+        "Tente",
+        "Sac de couchage",
+        "Lampe frontale"
+      ]
+    },
+    {
+      "id": "list-green-vegetables",
+      "type": "list",
+      "prompt": "Citez 3 légumes verts.",
+      "examples": [
+        "Brocoli",
+        "Courgette",
+        "Épinards"
+      ]
+    },
+    {
+      "id": "list-pencil-case",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans une trousse.",
+      "examples": [
+        "Gomme",
+        "Taille-crayon",
+        "Surligneur"
+      ]
+    },
+    {
+      "id": "list-hot-things",
+      "type": "list",
+      "prompt": "Citez 3 choses qui sont très chaudes.",
+      "examples": [
+        "Soleil",
+        "Four",
+        "Café"
+      ]
+    },
+    {
+      "id": "list-cold-things",
+      "type": "list",
+      "prompt": "Citez 3 choses qui sont très froides.",
+      "examples": [
+        "Glaçon",
+        "Neige",
+        "Congélateur"
+      ]
+    },
+    {
+      "id": "list-public-transport",
+      "type": "list",
+      "prompt": "Citez 3 moyens de transport en commun.",
+      "examples": [
+        "Bus",
+        "Tram",
+        "Train"
+      ]
+    },
+    {
+      "id": "list-toolbox",
+      "type": "list",
+      "prompt": "Citez 3 outils que l'on trouve dans une caisse à outils.",
+      "examples": [
+        "Marteau",
+        "Tournevis",
+        "Pince"
+      ]
+    },
+    {
+      "id": "list-breakfast-foods",
+      "type": "list",
+      "prompt": "Citez 3 aliments que l'on mange au petit-déjeuner.",
+      "examples": [
+        "Croissant",
+        "Céréales",
+        "Confiture"
+      ]
+    },
+    {
+      "id": "list-pizza-toppings",
+      "type": "list",
+      "prompt": "Citez 3 ingrédients que l'on met sur une pizza.",
+      "examples": [
+        "Mozzarella",
+        "Champignons",
+        "Jambon"
+      ]
+    },
+    {
+      "id": "list-wallet-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans un portefeuille.",
+      "examples": [
+        "Carte bancaire",
+        "Billets",
+        "Permis de conduire"
+      ]
+    },
+    {
+      "id": "list-swiss-cities",
+      "type": "list",
+      "prompt": "Citez 3 villes suisses.",
+      "examples": [
+        "Genève",
+        "Lausanne",
+        "Zurich"
+      ]
+    },
+    {
+      "id": "list-board-games",
+      "type": "list",
+      "prompt": "Citez 3 jeux de société.",
+      "examples": [
+        "Monopoly",
+        "Échecs",
+        "Scrabble"
+      ]
+    },
+    {
+      "id": "list-rainbow-colors",
+      "type": "list",
+      "prompt": "Citez 3 couleurs de l'arc-en-ciel.",
+      "examples": [
+        "Rouge",
+        "Jaune",
+        "Violet"
+      ]
+    },
+    {
+      "id": "list-bedroom-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on utilise pour dormir.",
+      "examples": [
+        "Oreiller",
+        "Couette",
+        "Pyjama"
+      ]
+    },
+    {
+      "id": "list-wind-instruments",
+      "type": "list",
+      "prompt": "Citez 3 instruments à vent.",
+      "examples": [
+        "Flûte",
+        "Trompette",
+        "Saxophone"
+      ]
+    },
+    {
+      "id": "list-garden-tools",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on utilise pour jardiner.",
+      "examples": [
+        "Tondeuse",
+        "Arrosoir",
+        "Râteau"
+      ]
+    },
+    {
+      "id": "list-desserts",
+      "type": "list",
+      "prompt": "Citez 3 desserts.",
+      "examples": [
+        "Tarte",
+        "Mousse au chocolat",
+        "Crème brûlée"
+      ]
+    },
+    {
+      "id": "list-things-with-wheels",
+      "type": "list",
+      "prompt": "Citez 3 objets qui ont des roues.",
+      "examples": [
+        "Vélo",
+        "Valise",
+        "Trottinette"
+      ]
+    },
+    {
+      "id": "list-pets",
+      "type": "list",
+      "prompt": "Citez 3 animaux de compagnie.",
+      "examples": [
+        "Chien",
+        "Chat",
+        "Hamster"
+      ]
+    },
+    {
+      "id": "list-sky-things",
+      "type": "list",
+      "prompt": "Citez 3 choses que l'on peut voir dans le ciel.",
+      "examples": [
+        "Nuage",
+        "Lune",
+        "Étoile"
+      ]
+    },
+    {
+      "id": "list-hot-drinks",
+      "type": "list",
+      "prompt": "Citez 3 boissons chaudes.",
+      "examples": [
+        "Thé",
+        "Chocolat chaud",
+        "Café"
+      ]
+    },
+    {
+      "id": "list-office-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans un bureau.",
+      "examples": [
+        "Agrafeuse",
+        "Imprimante",
+        "Classeur"
+      ]
+    },
+    {
+      "id": "list-kitchen-appliances",
+      "type": "list",
+      "prompt": "Citez 3 appareils électroménagers.",
+      "examples": [
+        "Four",
+        "Micro-ondes",
+        "Lave-vaisselle"
+      ]
+    },
+    {
+      "id": "list-mountain-activities",
+      "type": "list",
+      "prompt": "Citez 3 activités que l'on pratique à la montagne.",
+      "examples": [
+        "Ski",
+        "Snowboard",
+        "Randonnée"
+      ]
+    },
+    {
+      "id": "list-round-things",
+      "type": "list",
+      "prompt": "Citez 3 objets de forme ronde.",
+      "examples": [
+        "Ballon",
+        "Pièce de monnaie",
+        "Roue"
+      ]
+    },
+    {
+      "id": "list-face-parts",
+      "type": "list",
+      "prompt": "Citez 3 parties du visage.",
+      "examples": [
+        "Œil",
+        "Nez",
+        "Oreille"
+      ]
+    },
+    {
+      "id": "list-classroom-items",
+      "type": "list",
+      "prompt": "Citez 3 objets que l'on trouve dans une salle de classe.",
+      "examples": [
+        "Tableau",
+        "Bureau",
+        "Craie"
+      ]
+    },
+    {
+      "id": "list-yellow-fruits",
+      "type": "list",
+      "prompt": "Citez 3 fruits jaunes.",
+      "examples": [
+        "Banane",
+        "Citron",
+        "Ananas"
+      ]
+    },
+    {
+      "id": "list-suitcase-items",
+      "type": "list",
+      "prompt": "Citez 3 choses que l'on met dans une valise pour partir en vacances.",
+      "examples": [
+        "Vêtements",
+        "Trousse de toilette",
+        "Chargeur"
+      ]
+    },
+    {
+      "id": "list-bakery-products",
+      "type": "list",
+      "prompt": "Citez 3 produits que l'on achète à la boulangerie.",
+      "examples": [
+        "Baguette",
+        "Pain au chocolat",
+        "Brioche"
+      ]
+    },
+    {
+      "id": "list-health-professions",
+      "type": "list",
+      "prompt": "Citez 3 métiers de la santé.",
+      "examples": [
+        "Médecin",
+        "Infirmier",
+        "Dentiste"
+      ]
+    },
+    {
+      "id": "list-noisy-things",
+      "type": "list",
+      "prompt": "Citez 3 objets qui font du bruit.",
+      "examples": [
+        "Réveil",
+        "Sirène",
+        "Klaxon"
+      ]
+    },
+    {
+      "id": "list-pasta-types",
+      "type": "list",
+      "prompt": "Citez 3 sortes de pâtes.",
+      "examples": [
+        "Spaghetti",
+        "Penne",
+        "Tagliatelle"
+      ]
+    },
+    {
+      "id": "list-living-room-items",
+      "type": "list",
+      "prompt": "Citez 3 meubles ou objets que l'on trouve dans un salon.",
+      "examples": [
+        "Canapé",
+        "Télévision",
+        "Table basse"
+      ]
+    },
+    {
+      "id": "list-spices",
+      "type": "list",
+      "prompt": "Citez 3 épices.",
+      "examples": [
+        "Poivre",
+        "Cannelle",
+        "Paprika"
+      ]
+    },
+    {
+      "id": "list-forest-things",
+      "type": "list",
+      "prompt": "Citez 3 choses que l'on peut trouver en forêt.",
+      "examples": [
+        "Arbre",
+        "Champignon",
+        "Écureuil"
+      ]
+    },
+    {
+      "id": "list-water-sports",
+      "type": "list",
+      "prompt": "Citez 3 sports nautiques.",
+      "examples": [
+        "Natation",
+        "Planche à voile",
+        "Aviron"
+      ]
+    },
+    {
+      "id": "list-foldable-things",
+      "type": "list",
+      "prompt": "Citez 3 choses que l'on peut plier.",
+      "examples": [
+        "Feuille de papier",
+        "Serviette",
+        "Parapluie"
+      ]
+    },
+    
+    {
+      "id": "list-european-capitals",
+      "type": "list",
+      "prompt": "Citez 3 capitales européennes.",
+      "examples": [
+        "Paris",
+        "Berlin",
+        "Madrid"
+      ]
+    },
+    {
+      "id": "list-french-rivers",
+      "type": "list",
+      "prompt": "Citez 3 fleuves qui traversent la France.",
+      "examples": [
+        "Seine",
+        "Loire",
+        "Rhône"
+      ]
+    },
+    {
+      "id": "list-african-countries",
+      "type": "list",
+      "prompt": "Citez 3 pays d'Afrique.",
+      "examples": [
+        "Maroc",
+        "Kenya",
+        "Sénégal"
+      ]
+    },
+    {
+      "id": "list-oceans",
+      "type": "list",
+      "prompt": "Citez 3 océans.",
+      "examples": [
+        "Atlantique",
+        "Pacifique",
+        "Indien"
+      ]
+    },
+    {
+      "id": "list-alpine-peaks",
+      "type": "list",
+      "prompt": "Citez 3 sommets des Alpes.",
+      "examples": [
+        "Cervin",
+        "Mont Blanc",
+        "Eiger"
+      ]
+    },
+    {
+      "id": "list-swiss-lakes",
+      "type": "list",
+      "prompt": "Citez 3 lacs situés en Suisse.",
+      "examples": [
+        "Léman",
+        "Lac de Neuchâtel",
+        "Lac des Quatre-Cantons"
+      ]
+    },
+    {
+      "id": "list-mediterranean-islands",
+      "type": "list",
+      "prompt": "Citez 3 îles de la Méditerranée.",
+      "examples": [
+        "Corse",
+        "Sardaigne",
+        "Sicile"
+      ]
+    },
+    {
+      "id": "list-asian-countries",
+      "type": "list",
+      "prompt": "Citez 3 pays d'Asie.",
+      "examples": [
+        "Japon",
+        "Inde",
+        "Vietnam"
+      ]
+    },
+    {
+      "id": "list-swiss-cantons",
+      "type": "list",
+      "prompt": "Citez 3 cantons suisses.",
+      "examples": [
+        "Valais",
+        "Vaud",
+        "Tessin"
+      ]
+    },
+    {
+      "id": "list-deserts",
+      "type": "list",
+      "prompt": "Citez 3 déserts.",
+      "examples": [
+        "Sahara",
+        "Gobi",
+        "Atacama"
+      ]
+    },
+    {
+      "id": "list-south-american-countries",
+      "type": "list",
+      "prompt": "Citez 3 pays d'Amérique du Sud.",
+      "examples": [
+        "Brésil",
+        "Chili",
+        "Pérou"
+      ]
+    },
+    {
+      "id": "list-asian-capitals",
+      "type": "list",
+      "prompt": "Citez 3 capitales asiatiques.",
+      "examples": [
+        "Tokyo",
+        "Bangkok",
+        "Séoul"
+      ]
+    },
+    {
+      "id": "list-swiss-neighbors",
+      "type": "list",
+      "prompt": "Citez 3 pays qui ont une frontière avec la Suisse.",
+      "examples": [
+        "France",
+        "Italie",
+        "Autriche"
+      ]
+    },
+    {
+      "id": "list-volcanoes",
+      "type": "list",
+      "prompt": "Citez 3 volcans.",
+      "examples": [
+        "Etna",
+        "Vésuve",
+        "Stromboli"
+      ]
+    },
+    {
+      "id": "list-landlocked-countries",
+      "type": "list",
+      "prompt": "Citez 3 pays qui n'ont pas d'accès à la mer.",
+      "examples": [
+        "Suisse",
+        "Autriche",
+        "Luxembourg"
+      ]
+    },
+    {
+      "id": "open-riddle-electric-train",
+      "type": "open",
+      "prompt": "Un train électrique roule vers le nord à 100 km/h et le vent souffle vers le sud. Dans quelle direction va la fumée ?",
+      "expected": "Nulle part, c'est un train électrique."
+    },
+    {
+      "id": "open-riddle-first-name",
+      "type": "open",
+      "prompt": "Qu'est-ce qui t'appartient, mais que les autres utilisent beaucoup plus souvent que toi ?",
+      "expected": "Ton prénom."
+    },
+    {
+      "id": "open-riddle-piano",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a des touches mais n'ouvre aucune porte ?",
+      "expected": "Un piano."
+    },
+    {
+      "id": "open-riddle-age",
+      "type": "open",
+      "prompt": "Qu'est-ce qui monte toujours mais ne redescend jamais ?",
+      "expected": "Ton âge."
+    },
+    {
+      "id": "open-riddle-coin",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a une tête et une queue, mais pas de corps ?",
+      "expected": "Une pièce de monnaie (pile ou face)."
+    },
+    {
+      "id": "open-riddle-footsteps",
+      "type": "open",
+      "prompt": "Plus tu en prends, plus tu en laisses derrière toi. Qu'est-ce que c'est ?",
+      "expected": "Des pas."
+    },
+    {
+      "id": "open-riddle-towel",
+      "type": "open",
+      "prompt": "Qu'est-ce qui mouille quand il sèche ?",
+      "expected": "Une serviette."
+    },
+    {
+      "id": "open-riddle-comb",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a beaucoup de dents mais ne mord jamais ?",
+      "expected": "Un peigne."
+    },
+    {
+      "id": "open-riddle-needle",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a un œil mais ne voit rien ?",
+      "expected": "Une aiguille."
+    },
+    {
+      "id": "open-riddle-sphinx",
+      "type": "open",
+      "prompt": "Qu'est-ce qui marche à quatre pattes le matin, à deux pattes le midi et à trois pattes le soir ?",
+      "expected": "L'être humain : bébé il marche à quatre pattes, adulte sur deux jambes, vieux avec une canne."
+    },
+    {
+      "id": "open-riddle-sponge",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est plein de trous mais retient quand même l'eau ?",
+      "expected": "Une éponge."
+    },
+    {
+      "id": "open-riddle-stamp",
+      "type": "open",
+      "prompt": "Qu'est-ce qui voyage dans le monde entier tout en restant collé dans son coin ?",
+      "expected": "Un timbre."
+    },
+    {
+      "id": "open-riddle-silence",
+      "type": "open",
+      "prompt": "Qu'est-ce qui se brise dès qu'on prononce son nom ?",
+      "expected": "Le silence."
+    },
+    {
+      "id": "open-riddle-darkness",
+      "type": "open",
+      "prompt": "Plus il y en a, moins tu vois. Qu'est-ce que c'est ?",
+      "expected": "L'obscurité."
+    },
+    {
+      "id": "open-riddle-water",
+      "type": "open",
+      "prompt": "Qu'est-ce qui court sans jamais avoir de jambes ?",
+      "expected": "L'eau (d'un ruisseau, d'une rivière)."
+    },
+    {
+      "id": "open-riddle-clock",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a des mains mais ne peut pas applaudir ?",
+      "expected": "Une horloge."
+    },
+    {
+      "id": "open-riddle-light",
+      "type": "open",
+      "prompt": "Qu'est-ce qui peut remplir une pièce entière sans prendre aucune place ?",
+      "expected": "La lumière."
+    },
+    {
+      "id": "open-riddle-future",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est toujours devant toi mais que tu ne peux jamais voir ?",
+      "expected": "L'avenir."
+    },
+    {
+      "id": "open-riddle-echo",
+      "type": "open",
+      "prompt": "Je parle sans bouche et j'entends sans oreilles. Je n'ai pas de corps, mais je prends vie avec le vent. Qui suis-je ?",
+      "expected": "Un écho."
+    },
+    {
+      "id": "open-riddle-bottle",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a un cou mais pas de tête ?",
+      "expected": "Une bouteille."
+    },
+    {
+      "id": "open-riddle-river",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a un lit et une bouche, mais ne dort ni ne mange jamais ?",
+      "expected": "Une rivière (ou un fleuve)."
+    },
+    {
+      "id": "open-riddle-book",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a un dos et des pages, mais pas de jambes ?",
+      "expected": "Un livre."
+    },
+    {
+      "id": "open-riddle-breath",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est plus léger qu'une plume, mais que l'homme le plus fort ne peut pas retenir plus de quelques minutes ?",
+      "expected": "Son souffle."
+    },
+    {
+      "id": "open-riddle-blackboard",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est blanc quand il est sale et noir quand il est propre ?",
+      "expected": "Un tableau noir."
+    },
+    {
+      "id": "open-riddle-28-days",
+      "type": "open",
+      "prompt": "Combien de mois de l'année ont 28 jours ?",
+      "expected": "Les douze : tous les mois ont au moins 28 jours."
+    },
+    {
+      "id": "open-riddle-sheep",
+      "type": "open",
+      "prompt": "Un fermier a 17 moutons. Tous sauf 9 meurent. Combien de moutons lui reste-t-il ?",
+      "expected": "9."
+    },
+    {
+      "id": "open-riddle-fire",
+      "type": "open",
+      "prompt": "Si tu me nourris, je vis. Si tu me donnes à boire, je meurs. Qui suis-je ?",
+      "expected": "Le feu."
+    },
+    {
+      "id": "open-riddle-time",
+      "type": "open",
+      "prompt": "Qu'est-ce qui vole sans avoir d'ailes ?",
+      "expected": "Le temps."
+    },
+    {
+      "id": "open-riddle-word",
+      "type": "open",
+      "prompt": "Qu'est-ce que tu peux garder même après l'avoir donné ?",
+      "expected": "Ta parole."
+    },
+    {
+      "id": "open-riddle-promise",
+      "type": "open",
+      "prompt": "Qu'est-ce qui peut être brisé sans jamais avoir été touché ?",
+      "expected": "Une promesse."
+    },
+    {
+      "id": "open-riddle-tripod",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a trois pieds mais ne peut pas marcher ?",
+      "expected": "Un trépied."
+    },
+    {
+      "id": "open-riddle-artichoke",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a un cœur mais pas de sang ?",
+      "expected": "Un artichaut."
+    },
+    {
+      "id": "open-riddle-rooster-egg",
+      "type": "open",
+      "prompt": "Un coq pond un œuf au sommet d'un toit pointu. De quel côté tombe l'œuf ?",
+      "expected": "D'aucun côté : un coq ne pond pas d'œufs."
+    },
+    {
+      "id": "open-riddle-map",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a des villes sans maisons, des forêts sans arbres et des mers sans eau ?",
+      "expected": "Une carte."
+    },
+    {
+      "id": "open-riddle-bucket",
+      "type": "open",
+      "prompt": "Que peut-on mettre dans un seau pour le rendre plus léger ?",
+      "expected": "Un trou."
+    },
+    {
+      "id": "open-riddle-letter-n",
+      "type": "open",
+      "prompt": "Qu'est-ce qui se trouve au début de la nuit et à la fin du matin ?",
+      "expected": "La lettre N."
+    },
+    {
+      "id": "open-riddle-mushroom",
+      "type": "open",
+      "prompt": "Qu'est-ce qui porte un chapeau mais n'a pas de tête ?",
+      "expected": "Un champignon."
+    },
+    {
+      "id": "open-riddle-rain",
+      "type": "open",
+      "prompt": "Qu'est-ce qui tombe toujours sans jamais se faire mal ?",
+      "expected": "La pluie."
+    },
+    {
+      "id": "open-riddle-table",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a quatre pieds mais ne marche jamais ?",
+      "expected": "Une table."
+    },
+    {
+      "id": "open-riddle-shadow",
+      "type": "open",
+      "prompt": "Qu'est-ce qui te suit partout mais disparaît dans le noir ?",
+      "expected": "Ton ombre."
+    },
+    {
+      "id": "open-riddle-circle",
+      "type": "open",
+      "prompt": "Qu'est-ce qui n'a ni début, ni milieu, ni fin ?",
+      "expected": "Un cercle."
+    },
+    {
+      "id": "open-riddle-newspaper",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est noir et blanc et « lu » de partout ?",
+      "expected": "Un journal."
+    },
+    {
+      "id": "open-riddle-cold",
+      "type": "open",
+      "prompt": "Qu'est-ce que tu peux attraper mais pas lancer ?",
+      "expected": "Un rhume."
+    },
+    {
+      "id": "open-riddle-soap",
+      "type": "open",
+      "prompt": "Qu'est-ce qui rétrécit chaque fois qu'on s'en sert pour se laver ?",
+      "expected": "Un savon."
+    },
+    {
+      "id": "open-riddle-paris-letter",
+      "type": "open",
+      "prompt": "Qu'est-ce qui se trouve au milieu de Paris ?",
+      "expected": "La lettre R."
+    },
+    {
+      "id": "open-riddle-and",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est entre le ciel et la terre ?",
+      "expected": "Le mot « et »."
+    },
+    {
+      "id": "open-riddle-plane",
+      "type": "open",
+      "prompt": "Qu'est-ce qui a des ailes sans être un oiseau et traverse le ciel avec des passagers ?",
+      "expected": "Un avion."
+    },
+    {
+      "id": "open-riddle-emmental",
+      "type": "open",
+      "prompt": "Qu'est-ce qui est jaune, plein de trous et que les souris adorent ?",
+      "expected": "Le fromage (l'emmental)."
+    },
+    {
+      "id": "open-riddle-portrait",
+      "type": "open",
+      "prompt": "Un homme regarde un portrait et dit : « Je n'ai ni frère ni sœur, mais le père de cet homme est le fils de mon père. » Qui est sur le portrait ?",
+      "expected": "Son fils."
+    },
+    {
+      "id": "open-riddle-race",
+      "type": "open",
+      "prompt": "Pendant une course, tu dépasses la personne qui est deuxième. À quelle place te trouves-tu maintenant ?",
+      "expected": "Deuxième (tu as pris sa place)."
+    },
+    {
+      "id": "open-riddle-electrician",
+      "type": "open",
+      "prompt": "Quel est le comble pour un électricien ?",
+      "expected": "De ne pas être au courant."
+    },
+    {
+      "id": "open-riddle-gardener",
+      "type": "open",
+      "prompt": "Quel est le comble pour un jardinier ?",
+      "expected": "De raconter des salades."
     }
+ 
+
   ]
 }

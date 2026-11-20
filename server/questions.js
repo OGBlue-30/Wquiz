@@ -11,6 +11,8 @@ const path = require('node:path');
 
 const DATA_FILE = path.join(__dirname, '..', 'data', 'questions.json');
 const raw = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+const LYRICS_FILE = path.join(__dirname, '..', 'data', 'lyrics.json');
+const rawLyrics = JSON.parse(fs.readFileSync(LYRICS_FILE, 'utf8'));
 const PROJECT_DIR = path.join(__dirname, '..');
 const PUBLIC_DIR = path.join(PROJECT_DIR, 'public');
 const CELEBRITY_IMAGE_DIR = path.join(PUBLIC_DIR, 'assets', 'images', 'celebs');
@@ -58,6 +60,8 @@ const TYPE_LABELS = {
   petitbac: 'Petit Bac',
   image: 'Image mystère',
   rebus: 'Rébus',
+  lyrics: 'Paroles',
+  list: 'Citez-en 3',
 };
 
 const VALID_TYPES = new Set(Object.keys(TYPE_LABELS));
@@ -79,6 +83,28 @@ const petitBac = {
 };
 
 const questions = Array.isArray(raw.questions) ? [...raw.questions] : [];
+
+if (!Array.isArray(rawLyrics) || rawLyrics.length === 0) {
+  throw new Error('data/lyrics.json doit contenir au moins un extrait.');
+}
+
+const lyricsQuestions = rawLyrics.map((entry, index) => {
+  const where = `data/lyrics.json[${index}]`;
+  for (const field of ['artist', 'title', 'excerpt']) {
+    if (typeof entry?.[field] !== 'string' || !entry[field].trim()) {
+      throw new Error(`${where} : champ « ${field} » manquant.`);
+    }
+  }
+  return {
+    id: `lyrics-${index + 1}`,
+    type: 'lyrics',
+    artist: entry.artist.trim(),
+    title: entry.title.trim(),
+    excerpt: entry.excerpt.trim(),
+  };
+});
+
+questions.push(...lyricsQuestions);
 
 for (const [index, celebrity] of celebrities.entries()) {
   questions.push({
@@ -106,7 +132,9 @@ for (const [i, q] of questions.entries()) {
   if (!q.id || seenIds.has(q.id)) throw new Error(`${where} : id manquant ou dupliqué.`);
   seenIds.add(q.id);
   if (!VALID_TYPES.has(q.type)) throw new Error(`${where} : type inconnu « ${q.type} ».`);
-  if (typeof q.prompt !== 'string' || !q.prompt.trim()) throw new Error(`${where} : énoncé manquant.`);
+  if (q.type !== 'lyrics' && (typeof q.prompt !== 'string' || !q.prompt.trim())) {
+    throw new Error(`${where} : énoncé manquant.`);
+  }
 
   switch (q.type) {
     case 'mcq':
@@ -171,6 +199,22 @@ for (const [i, q] of questions.entries()) {
         throw new Error(`${where} : réponse attendue manquante.`);
       }
       break;
+    case 'lyrics':
+      for (const field of ['artist', 'title', 'excerpt']) {
+        if (typeof q[field] !== 'string' || !q[field].trim()) {
+          throw new Error(`${where} : champ « ${field} » manquant.`);
+        }
+      }
+      break;
+    case 'list':
+      if (
+        !Array.isArray(q.examples)
+        || q.examples.length !== 3
+        || q.examples.some((answer) => typeof answer !== 'string' || !answer.trim())
+      ) {
+        throw new Error(`${where} : une question « Citez-en 3 » doit avoir exactement 3 exemples de réponse.`);
+      }
+      break;
     default:
       if (!q.expected) throw new Error(`${where} : réponse attendue manquante.`);
   }
@@ -193,9 +237,26 @@ function pick(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
+function formatOf(question) {
+  return question.type === 'open'
+    && typeof question.id === 'string'
+    && question.id.startsWith('open-riddle-')
+    ? 'riddle'
+    : question.type;
+}
+
 /** Prépare une question jouable : slots, lettre tirée au sort, choix mélangés. */
 function prepare(rawQuestion) {
   const q = { ...rawQuestion };
+
+  if (q.type === 'lyrics') {
+    const target = Math.random() < 0.5 ? 'artist' : 'title';
+    const isArtist = target === 'artist';
+    q.prompt = isArtist ? 'Trouvez l’artiste de ce morceau.' : 'Trouvez le titre de ce morceau.';
+    q.slots = [{ key: 'answer', label: isArtist ? 'Artiste' : 'Titre' }];
+    q.expectedBySlot = { answer: q[target] };
+    return q;
+  }
 
   if (q.type === 'image' && Array.isArray(q.slots)) {
     const rawSlots = q.slots.map((slot) => ({
@@ -231,6 +292,14 @@ function prepare(rawQuestion) {
     return q;
   }
 
+  if (q.type === 'list') {
+    q.slots = q.examples.map((_, index) => ({
+      key: `answer${index + 1}`,
+      label: `Réponse ${index + 1}`,
+    }));
+    return q;
+  }
+
   q.slots = [{ key: 'answer', label: 'Réponse' }];
 
   if (q.type === 'mcq') {
@@ -246,25 +315,29 @@ function prepare(rawQuestion) {
 
 /**
  * Construit le deck d'une partie.
- * - mode « mixte » : au moins un exemplaire de chacun des formats disponibles
- *   (dès que la partie compte assez de questions)
+ * - mode « mixte » : garantit une énigme, puis prend un exemplaire de chaque
+ *   autre format disponible dès que la partie compte assez de questions
  * - mode « petitbac » : uniquement des grilles de Petit Bac
+ * - mode « list » : uniquement des questions « Citez-en 3 »
  * - tirage aléatoire sans répétition tant que la banque le permet
  * - au-delà de la taille de la banque, les questions sont réutilisées
  *   (nouvelle lettre / nouvel ordre des choix)
  */
 function buildDeck(count, options = {}) {
-  const onlyPetitBac = options.mode === 'petitbac';
-  const bank = onlyPetitBac ? questions.filter((q) => q.type === 'petitbac') : questions;
+  const onlyType = options.mode === 'petitbac' ? 'petitbac' : options.mode === 'list' ? 'list' : null;
+  const bank = onlyType ? questions.filter((q) => q.type === onlyType) : questions;
   if (bank.length === 0) throw new Error('Aucune question disponible pour ce mode de jeu.');
 
   const picked = [];
 
-  if (!onlyPetitBac) {
-    const types = shuffle([...new Set(bank.map((q) => q.type))]);
-    for (const type of types) {
+  if (!onlyType) {
+    const riddleQuestions = bank.filter((question) => formatOf(question) === 'riddle');
+    if (count > 0 && riddleQuestions.length > 0) picked.push(prepare(pick(riddleQuestions)));
+
+    const formats = shuffle([...new Set(bank.map(formatOf).filter((format) => format !== 'riddle'))]);
+    for (const format of formats) {
       if (picked.length >= count) break;
-      picked.push(prepare(pick(bank.filter((q) => q.type === type))));
+      picked.push(prepare(pick(bank.filter((q) => formatOf(q) === format))));
     }
   }
 
@@ -284,7 +357,7 @@ function publicQuestion(question, index) {
   const q = {
     index,
     type: question.type,
-    typeLabel: TYPE_LABELS[question.type],
+    typeLabel: formatOf(question) === 'riddle' ? 'Énigme' : TYPE_LABELS[question.type],
     prompt: question.prompt,
     slots: question.slots,
   };
@@ -303,6 +376,9 @@ function publicQuestion(question, index) {
       q.letter = question.letter;
       q.categories = question.categories;
       break;
+    case 'lyrics':
+      q.excerpt = question.excerpt;
+      break;
     default:
       break;
   }
@@ -314,6 +390,7 @@ function publicQuestion(question, index) {
 function reviewQuestion(question, index) {
   const q = publicQuestion(question, index);
   q.expectedBySlot = question.expectedBySlot;
+  if (question.type === 'list') q.examples = question.examples;
   q.accepted = question.accepted || null;
   q.acceptedBySlot = question.acceptedBySlot || null;
   q.hint = question.hint || null;

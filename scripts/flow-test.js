@@ -14,8 +14,9 @@ const rooms = require(path.join(__dirname, '..', 'server', 'rooms'));
 const questionService = require(path.join(__dirname, '..', 'server', 'questions'));
 
 const questionBank = require(path.join(__dirname, '..', 'data', 'questions.json'));
+const lyricsBank = require(path.join(__dirname, '..', 'data', 'lyrics.json'));
 const celebrityBank = require(path.join(__dirname, '..', 'celebrities.json'));
-const EXPECTED_QUESTIONS = questionBank.questions.length + celebrityBank.length;
+const EXPECTED_QUESTIONS = questionBank.questions.length + celebrityBank.length + lyricsBank.length;
 
 const PORT = Number(process.env.TEST_PORT) || 3111;
 const BASE = `http://127.0.0.1:${PORT}`;
@@ -163,6 +164,103 @@ async function main() {
         && celebrityNames.has(question.expectedBySlot.answer)
       )),
     'toutes les célébrités du JSON sont intégrées comme questions à une photo et une réponse',
+  );
+
+  const lyricsQuestions = allQuestions.filter((question) => question.type === 'lyrics');
+  ok(
+    lyricsQuestions.length === lyricsBank.length
+      && lyricsQuestions.every((question) => {
+        const source = lyricsBank[Number(question.id.slice('lyrics-'.length)) - 1];
+        return source
+          && question.excerpt === source.excerpt
+          && question.slots.length === 1
+          && question.slots[0].key === 'answer'
+          && (
+            (question.prompt.includes('l’artiste')
+              && question.slots[0].label === 'Artiste'
+              && question.expectedBySlot.answer === source.artist)
+            || (question.prompt.includes('le titre')
+              && question.slots[0].label === 'Titre'
+              && question.expectedBySlot.answer === source.title)
+          );
+      }),
+    'les extraits sont intégrés avec une cible aléatoire artiste ou titre',
+  );
+  const listQuestions = allQuestions.filter((question) => question.type === 'list');
+  ok(
+    listQuestions.length > 0
+      && listQuestions.every((question) => (
+        question.slots.length === 3
+        && question.slots.every((slot, index) => (
+          slot.key === `answer${index + 1}`
+          && slot.label === `Réponse ${index + 1}`
+        ))
+        && question.examples.length === 3
+        && !('examples' in questionService.publicQuestion(question, 0))
+        && questionService.reviewQuestion(question, 0).examples.join('|') === question.examples.join('|')
+      )),
+    'les exemples de « Citez-en 3 » sont diffusés uniquement pendant la correction',
+  );
+  const riddleQuestions = allQuestions.filter((question) => question.id.startsWith('open-riddle-'));
+  const riddleCount = questionBank.questions.filter((question) => question.id.startsWith('open-riddle-')).length;
+  ok(
+    riddleQuestions.length === riddleCount
+      && riddleQuestions.every((question) => (
+        question.type === 'open'
+        && question.expected
+        && !question.accepted
+        && questionService.publicQuestion(question, 0).typeLabel === 'Énigme'
+      )),
+    'les énigmes restent ouvertes et sont identifiées comme un format distinct',
+  );
+  const mixedDeck = questionService.buildDeck(3);
+  ok(
+    mixedDeck.some((question) => question.id.startsWith('open-riddle-')),
+    'même une partie mixte courte inclut au moins une énigme',
+  );
+  const listOnlyDeck = questionService.buildDeck(5, { mode: 'list' });
+  ok(
+    listOnlyDeck.length === 5 && listOnlyDeck.every((question) => question.type === 'list'),
+    'le mode dédié compose un deck uniquement de questions « Citez-en 3 »',
+  );
+  const listQuestion = listQuestions[0];
+  const listRoom = {
+    phase: 'playing',
+    currentIndex: 0,
+    endsAt: Date.now() + 10000,
+    questions: [listQuestion],
+    answers: {},
+    submitted: {},
+    players: [
+      { id: 'list-player', connected: true },
+      { id: 'other-player', connected: true },
+    ],
+  };
+  let partialListRejected = false;
+  try {
+    rooms.submitAnswer(listRoom, 'list-player', {
+      index: 0,
+      answers: { answer1: 'Un', answer2: 'Deux' },
+    });
+  } catch (error) {
+    partialListRejected = /trois réponses/.test(error.message);
+  }
+  ok(partialListRejected, 'le serveur refuse une validation « Citez-en 3 » incomplète');
+  rooms.submitAnswer(listRoom, 'list-player', {
+    index: 0,
+    answers: { answer1: 'Un', answer2: 'Deux', answer3: 'Trois' },
+  });
+  ok(
+    listRoom.submitted['list-player'] && Object.keys(listRoom.answers[0]['list-player']).length === 3,
+    'le serveur enregistre les trois réponses séparément',
+  );
+  const publicLyricsQuestion = questionService.publicQuestion(lyricsQuestions[0], 0);
+  ok(
+    publicLyricsQuestion.excerpt === lyricsQuestions[0].excerpt
+      && !('artist' in publicLyricsQuestion)
+      && !('title' in publicLyricsQuestion)
+      && !('expectedBySlot' in publicLyricsQuestion),
+    'la question publique montre l’extrait sans révéler la réponse',
   );
 
   const tieRoom = {
@@ -444,6 +542,18 @@ async function main() {
   ok(rejoin.ok === true, 'reconnexion avec le même identifiant acceptée');
   await waitUntil(() => bobAgain.state && bobAgain.state.me.id === bobId, 'état restauré après reconnexion');
   ok(true, 'le joueur retrouve son état après reconnexion');
+
+  const listModeConfig = await emitAck(host.socket, 'room:config', {
+    questionCount: 3,
+    answerTime: 5,
+    mode: 'list',
+  });
+  assert(listModeConfig.ok, 'mode Citez-en 3 refusé');
+  await waitUntil(
+    () => host.state.config.questionCount === 3 && host.state.config.mode === 'list',
+    'mode Citez-en 3 appliqué',
+  );
+  ok(true, 'l’hôte peut choisir le mode Citez-en 3 uniquement');
 
   // Partie courte : 3 questions, uniquement des grilles de Petit Bac
   const shortConfig = await emitAck(host.socket, 'room:config', {

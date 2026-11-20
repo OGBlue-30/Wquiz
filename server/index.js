@@ -6,6 +6,7 @@ const os = require('node:os');
 const express = require('express');
 const { Server } = require('socket.io');
 const rooms = require('./rooms');
+const questionService = require('./questions');
 
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';

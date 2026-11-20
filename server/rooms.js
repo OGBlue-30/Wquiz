@@ -22,7 +22,7 @@ const PETIT_BAC_TIME_MULTIPLIER = 2;
 
 const QUESTION_COUNTS = [3, 10, 15, 20, 30];
 const ANSWER_TIMES = [5, 10, 20, 30];
-const GAME_MODES = ['mixte', 'petitbac'];
+const GAME_MODES = ['mixte', 'petitbac', 'list'];
 const AVATAR_EMOJIS = ['😀', '😎', '🥳', '🐱', '🐶', '🦊', '🐼', '🐸', '🦄', '🐙', '🚀', '⭐'];
 
 const rooms = new Map();
@@ -318,7 +318,7 @@ function updateConfig(room, playerId, config) {
     fail('Temps par réponse invalide (5, 10, 20 ou 30 secondes).');
   }
   if (!GAME_MODES.includes(mode)) {
-    fail('Mode de jeu invalide (tous les formats ou Petit Bac uniquement).');
+    fail('Mode de jeu invalide (tous les formats, Petit Bac ou Citez-en 3 uniquement).');
   }
 
   room.config = { questionCount, answerTime, mode };
@@ -470,7 +470,11 @@ function submitAnswer(room, playerId, payload) {
   }
 
   room.answers[index] ||= {};
-  room.answers[index][playerId] = sanitizeAnswers(question, payload?.answers);
+  const answers = sanitizeAnswers(question, payload?.answers);
+  if (question.type === 'list' && question.slots.some((slot) => !answers[slot.key])) {
+    fail('Vous devez remplir les trois réponses.');
+  }
+  room.answers[index][playerId] = answers;
 
   room.submitted[playerId] = true;
 

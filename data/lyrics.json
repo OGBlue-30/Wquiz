@@ -1,0 +1,207 @@
+[
+  {
+    "artist": "The Weeknd",
+    "title": "Blinding Lights",
+    "excerpt": "I've been tryna call, I've been on my own for long enough. Maybe you can show me how to love, maybe. I'm going through withdrawals, you don't even have to do too much."
+  },
+  {
+    "artist": "Aya Nakamura",
+    "title": "Djadja",
+    "excerpt": "Hello papi, mais qué pasa ? J'entends des bails atroces sur moi. À c'qu'il paraît j'te cours après ? Mais ça va pas, mais t'es taré, oh ouais."
+  },
+  {
+    "artist": "Billie Eilish",
+    "title": "Bad Guy",
+    "excerpt": "White shirt now red, my bloody nose. Sleepin', you're on your tippy toes. Creepin' around like no one knows."
+  },
+  {
+    "artist": "Orelsan",
+    "title": "La Quête",
+    "excerpt": "J'balaye les feuilles mortes sur le terrain. Le froid m'fait des cloques sur les mains. J'ai dix ans, j'suis fan de basket. J'm'habille en p'tit américain"
+  },
+  {
+    "artist": "Miley Cyrus",
+    "title": "Flowers",
+    "excerpt": "We were good, we were gold, kinda dream that can't be sold. We were right 'til we weren't, built a home and watched it burn."
+  },
+  {
+    "artist": "Angèle",
+    "title": "Bruxelles je t'aime",
+    "excerpt": "Paris m'appelle quand je veux rentrer chez moi. Quand le ciel gris et la pluie me manquent, je vais mieux quand j'te vois."
+  },
+  {
+    "artist": "Dua Lipa",
+    "title": "Levitating",
+    "excerpt": "If you wanna run away with me, I know a galaxy and I can take you for a ride. I had a premonition that we fell into a rhythm where the music don't stop for life."
+  },
+  {
+    "artist": "Gims",
+    "title": "Sapés comme jamais",
+    "excerpt": "Passe avant minuit, je vais t'faire vivre un dream. Avance sur la piste, les yeux sont rivés sur toi. Les habits qui brillent tels Les Mille Et Une Nuits."
+  },
+  {
+    "artist": "Harry Styles",
+    "title": "As It Was",
+    "excerpt": "Holdin' me back, gravity's holdin' me back. I want you to hold out the palm of your hand, why don't we leave it at that?"
+  },
+  {
+    "artist": "Damso",
+    "title": "Macarena",
+    "excerpt": "Le monde est à nous, le monde est à toi et moi. Mais p't-être que sans moi le monde s'ra à toi. Et p't-être qu'avec lui le monde s'ra à vous."
+  },
+  {
+    "artist": "Stromae",
+    "title": "Papaoutai",
+    "excerpt": "Dites-moi d'où il vient, enfin je saurai où je vais. Maman dit que lorsqu'on cherche bien, on finit toujours par trouver."
+  },
+  {
+    "artist": "Ninho",
+    "title": "Jefe",
+    "excerpt": "J'ai toujours rêvé d'être dans l'top, sourd face à la jalousie. On fait du bénéf' pour le confort, y a que l'bon Dieu qui m'adoucit."
+  },
+  {
+    "artist": "Clara Luciani",
+    "title": "La Grenade",
+    "excerpt": "Hé toi, qu'est-ce que tu regardes ? T'as jamais vu une femme qui se bat ? Suis-moi dans la ville blafarde, et je te montrerai comme je mords, comme j'aboie."
+  },
+  {
+    "artist": "PNL",
+    "title": "Au DD",
+    "excerpt": "Pas plus de haine que d'amour, que j'largue entre mes tours. Moins d'humains après minuit, je sors casser mon tour sur un nuage de l'Enfer."
+  },
+  {
+    "artist": "Juliette Armanet",
+    "title": "Le Dernier Jour du Disco",
+    "excerpt": "C'est la fin, le tout dernier matin, le tout dernier jasmin, ne me lâche pas la main. C'est la fin, le soleil au lointain s'écroule seul dans son coin."
+  },
+  {
+    "artist": "Bigflo & Oli",
+    "title": "Dommage",
+    "excerpt": "Louis prend son bus, comme tous les matins. Il croisait cette même fille, avec son doux parfum. Qu'elle vienne lui parler, il espère tous les jours."
+  },
+  {
+    "artist": "Indochine",
+    "title": "L'Aventurier",
+    "excerpt": "Égaré dans la vallée infernale, le héros s'appelle Bob Morane. À la recherche de l'Ombre Jaune, le bandit s'appelle Mister Kali Jones."
+  },
+  {
+    "artist": "Vianney",
+    "title": "Pas là",
+    "excerpt": "Je suis une cruche percée de plus, j'ai la peau craquelée depuis toi, desséchée. Quand vient la lune et le vent frais, par habitude, j'te cherche sur le canapé."
+  },
+  {
+    "artist": "Soprano",
+    "title": "En feu",
+    "excerpt": "Je sens que je vais briller, ce soir je marche sur l'eau. J'ai l'impression de planer, regarder d'un hublot. Si tu me croises, fais un vœu."
+  },
+  {
+    "artist": "Louane",
+    "title": "Avenir",
+    "excerpt": "Partie loin derrière sans trop de raisons, tu m'as laissé hier la fin de la saison. Je n'veux plus savoir, on s'est éloignés."
+  },
+  {
+    "artist": "Jul",
+    "title": "Tchikita",
+    "excerpt": "Elle a passé toute la nuit à m'peloter, elle est pas dans l'même del que les filles d'à côté. J'la regarde dans les yeux en sirotant mon cocktail."
+  },
+  {
+    "artist": "Zaho de Sagazan",
+    "title": "La Symphonie des éclairs",
+    "excerpt": "Il fait toujours beau au-dessus des nuages. Mais moi, si j'étais un oiseau, j'irais danser sous l'orage. Je traverserais les nuages comme le fait la lumière"
+  },
+  {
+    "artist": "Kyo",
+    "title": "Dernière danse",
+    "excerpt": "J'ai longtemps parcouru son corps, effleuré cent fois son visage. J'ai trouvé de l'or et même quelques étoiles en essuyant ses larmes."
+  },
+  {
+    "artist": "Nekfeu",
+    "title": "On verra",
+    "excerpt": "On sèche les cours, la flemme marque le quotidien. Être en couple, ça fait mal que quand t'y tiens. Même si j'ai rien à prouver, j'me sens un peu seul."
+  },
+  {
+    "artist": "Céline Dion",
+    "title": "Pour que tu m'aimes encore",
+    "excerpt": "J'ai compris tous les mots, j'ai bien compris, merci. Raisonnable et nouveau, c'est ainsi par ici."
+  },
+  {
+    "artist": "Pierre Garnier",
+    "title": "Ceux qu'on était",
+    "excerpt": "Je sais c'que tu vas dire, que c'est pas à cause de moi. Mais t'es prête à partir et tout est rangé déjà, y a plus qu'des affaires à moi."
+  },
+  {
+    "artist": "Mika",
+    "title": "Elle me dit",
+    "excerpt": "Écris une chanson contente, pas une chanson déprimante, une chanson que tout le monde aime. Tu deviendras milliardaire, tu auras de quoi être fier."
+  },
+  {
+    "artist": "Booba",
+    "title": "Boulbi",
+    "excerpt": "Bordel, quand on rentre sur la piste, on est venus tiser, claquer du biff. Pas d'embrouilles, man, pas de litiges, sinon ça va saigner, est-ce que tu piges ?"
+  },
+  {
+    "artist": "France Gall",
+    "title": "Résiste",
+    "excerpt": "Si on t'organise une vie bien dirigée où tu t'oublieras vite. Si on te fait danser sur une musique sans âme comme un amour qu'on quitte."
+  },
+  {
+    "artist": "Lomepal",
+    "title": "Trop beau",
+    "excerpt": "J'avais jamais vu de nuit aussi calme, hey. J'la r'garde enchaîner les cigarettes, hey. Ses larmes coulent en silence, on entend toujours les cigales."
+  },
+  {
+    "artist": "Johnny Hallyday",
+    "title": "Allumer le feu",
+    "excerpt": "Tourner le temps à l'orage, revenir à l'état sauvage. Forcer les portes, les barrages, sortir le loup de sa cage."
+  },
+  {
+    "artist": "Slimane",
+    "title": "Mon amour",
+    "excerpt": "Je t'aime, j'sais pas pourquoi. Je rejoue la scène, mais c'est toujours la même fin qui recommence."
+  },
+  {
+    "artist": "Diam's",
+    "title": "La Boulette",
+    "excerpt": "Alors ouais, on déconne, ouais, ouais, on étonne, nan, nan. C'est pas l'école qui nous a dicté nos codes, nan, nan. Génération nan, nan."
+  },
+  {
+    "artist": "Francis Cabrel",
+    "title": "Je l'aime à mourir",
+    "excerpt": "Elle a dû faire toutes les guerres pour être si forte aujourd'hui. Elle a dû faire toutes les guerres de la vie, et l'amour aussi."
+  },
+  {
+    "artist": "Dadju",
+    "title": "Reine",
+    "excerpt": "Aujourd'hui, je suis fatigué, je t'ai regardé dormir. Et si ma voix peut t'apaiser, je chanterai pour toi toute la nuit."
+  },
+  {
+    "artist": "Mylène Farmer",
+    "title": "Libertine",
+    "excerpt": "Cendre de lune, petite bulle d'écume, poussée par le vent, je brûle et je m'enrhume. Entre mes dunes reposent mes infortunes."
+  },
+  {
+    "artist": "Pomme",
+    "title": "Anxiété",
+    "excerpt": "Je suis celle qu'on ne voit pas, je suis celle qu'on n'entend pas. Je suis cachée au bord des larmes, je suis la reine des drames."
+  },
+  {
+    "artist": "Sexion d'Assaut",
+    "title": "Désolé",
+    "excerpt": "La conseillère m'a clairement négligé. Et moi comme un teubé j'ai dit OK. Et tous les jours je pense à arrêter. Les gens veulent faire de moi une entité."
+  },
+  {
+    "artist": "Renaud",
+    "title": "Mistral gagnant",
+    "excerpt": "Et entendre ton rire qui lézarde les murs, qui sait surtout guérir mes blessures. Te raconter un peu comment j'étais, minot."
+  },
+  {
+    "artist": "Christophe Maé",
+    "title": "On s'attache",
+    "excerpt": "Dès le premier jour, on s'est reconnu. Sous le même toit, on s'est retenu, mais pourquoi ? L'histoire court toujours."
+  },
+  {
+    "artist": "Lomepal",
+    "title": "70",
+    "excerpt": "J'ai de l'or dans les couilles, il faut me sucer pour le croire."
+  }
+]

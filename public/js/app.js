@@ -412,7 +412,12 @@
 
     const isHost = snapshot.me.isHost;
     const mode = snapshot.config.mode || 'mixte';
-    const modeLabel = mode === 'petitbac' ? 'Petit Bac uniquement' : 'tous les formats';
+    const modeLabels = {
+      mixte: 'tous les formats',
+      petitbac: 'Petit Bac uniquement',
+      list: 'Citez-en 3 uniquement',
+    };
+    const modeLabel = modeLabels[mode] || modeLabels.mixte;
     els.hostSettings.hidden = !isHost;
     els.guestSettings.hidden = isHost;
     els.btnStart.hidden = !isHost;
@@ -529,6 +534,10 @@
       return wrap;
     }
 
+    if (question.type === 'lyrics') {
+      return buildLyricsExcerpt(question.excerpt);
+    }
+
     if (question.type === 'petitbac') {
       const row = el('div', 'letter-row');
       row.append(el('span', 'letter-hero', question.letter));
@@ -543,6 +552,10 @@
     }
 
     return null;
+  }
+
+  function buildLyricsExcerpt(excerpt) {
+    return el('blockquote', 'lyrics-excerpt', excerpt);
   }
 
   function buildInputs(question) {
@@ -662,6 +675,10 @@
         showToast('Écrivez les deux personnalités.', 'error');
         return;
       }
+      if (question.type === 'list' && filled < question.slots.length) {
+        showToast('Remplissez les trois réponses.', 'error');
+        return;
+      }
       if (filled === 0) {
         showToast('Écrivez au moins une réponse.', 'error');
         return;
@@ -717,15 +734,21 @@
     if (media) card.append(media);
 
     const expected = el('div', 'expected');
-    expected.append(el('p', 'expected-title', 'Réponse attendue par le jeu'));
+    if (question.type === 'list') {
+      expected.classList.add('expected-examples');
+      expected.append(el('p', 'expected-title', 'Exemples (non exhaustifs) :'));
+      expected.append(el('p', 'expected-note', question.examples.join(' · ')));
+    } else {
+      expected.append(el('p', 'expected-title', 'Réponse attendue par le jeu'));
 
-    for (const slot of question.slots) {
-      const row = el('div', 'expected-row');
-      if (question.slots.length > 1) {
-        row.append(el('span', '', `${slot.label} :`));
+      for (const slot of question.slots) {
+        const row = el('div', 'expected-row');
+        if (question.slots.length > 1) {
+          row.append(el('span', '', `${slot.label} :`));
+        }
+        row.append(el('strong', '', question.expectedBySlot?.[slot.key] ?? '—'));
+        expected.append(row);
       }
-      row.append(el('strong', '', question.expectedBySlot?.[slot.key] ?? '—'));
-      expected.append(row);
     }
 
     if (question.accepted && question.accepted.length > 1) {

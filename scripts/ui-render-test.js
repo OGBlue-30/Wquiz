@@ -119,10 +119,12 @@ try {
   ok(viewVisible('lobby'), 'écran lobby affiché');
   ok($('#room-code').textContent === '1234', 'code du salon affiché');
   ok($$('#players-list .player').length === 2, 'deux joueurs listés');
+  ok($('#btn-test-lyrics') === null && $('#btn-test-riddle') === null, 'les boutons de test ont été supprimés');
   ok($('#chips-count .chip[data-value="10"]').getAttribute('aria-pressed') === 'true', 'config 10 questions sélectionnée');
   ok($('#chips-count .chip[data-value="3"]') !== null, 'option 3 questions disponible');
   ok($('#chips-mode .chip[data-value="mixte"]').getAttribute('aria-pressed') === 'true', 'mode tous les formats sélectionné');
   ok($('#chips-mode .chip[data-value="petitbac"]') !== null, 'option Petit Bac uniquement disponible');
+  ok($('#chips-mode .chip[data-value="list"]') !== null, 'option Citez-en 3 uniquement disponible');
   ok($('#btn-start').hidden === false, 'bouton lancer visible pour l’hôte');
   ok($('#btn-test-celebrities') === null, 'le bouton de test de célébrités a été retiré');
   ok($$('#players-list .avatar-picker').length === 1, 'seul son propre joueur peut choisir un avatar');
@@ -148,6 +150,9 @@ try {
 
   $('#chips-count .chip[data-value="3"]').click();
   ok(lastEmit('room:config')?.payload?.questionCount === 3, 'le mode 3 questions émet room:config');
+
+  $('#chips-mode .chip[data-value="list"]').click();
+  ok(lastEmit('room:config')?.payload?.mode === 'list', 'le mode Citez-en 3 uniquement émet room:config');
 
   $('#chips-mode .chip[data-value="petitbac"]').click();
   ok(lastEmit('room:config')?.payload?.mode === 'petitbac', 'le mode Petit Bac uniquement émet room:config');
@@ -370,6 +375,81 @@ try {
     'la réponse texte est prise en compte à la fin du temps sans confirmation',
   );
 
+  /* --- Paroles --- */
+  pushState(
+    snapshot('playing', {
+      index: 4,
+      endsAt: Date.now() + 8000,
+      startedAt: Date.now(),
+      answerTime: 10,
+      question: {
+        index: 4,
+        type: 'lyrics',
+        typeLabel: 'Paroles',
+        prompt: 'Trouvez l’artiste de ce morceau.',
+        excerpt: 'Un extrait de chanson fourni pour le quiz.',
+        slots: [{ key: 'answer', label: 'Artiste' }],
+      },
+      myAnswers: {},
+      submitted: false,
+    }),
+  );
+  ok(
+    $('#question-card .lyrics-excerpt')?.textContent === 'Un extrait de chanson fourni pour le quiz.',
+    'l’extrait est affiché dans la question paroles',
+  );
+  ok(
+    $('#question-card label')?.textContent === 'Artiste' && $$('#question-card input').length === 1,
+    'la question paroles affiche un champ correspondant à sa cible',
+  );
+
+  /* --- Citez-en 3 --- */
+  pushState(
+    snapshot('playing', {
+      index: 5,
+      endsAt: Date.now() + 8000,
+      startedAt: Date.now(),
+      answerTime: 10,
+      question: {
+        index: 5,
+        type: 'list',
+        typeLabel: 'Citez-en 3',
+        prompt: 'Citez 3 objets dans une boîte à gants.',
+        slots: [
+          { key: 'answer1', label: 'Réponse 1' },
+          { key: 'answer2', label: 'Réponse 2' },
+          { key: 'answer3', label: 'Réponse 3' },
+        ],
+      },
+      myAnswers: {},
+      submitted: false,
+    }),
+  );
+  ok($$('#question-card input').length === 3, 'Citez-en 3 affiche trois champs de réponse');
+  ok(
+    $('#question-card .list-examples') === null
+      && !$('#question-card').textContent.includes('Un constat'),
+    'les exemples sont masqués pendant la question',
+  );
+  const answersBeforeList = emitted.filter((entry) => entry.event === 'game:answer').length;
+  $('#btn-answer').click();
+  ok(
+    emitted.filter((entry) => entry.event === 'game:answer').length === answersBeforeList
+      && $('#toast').textContent === 'Remplissez les trois réponses.',
+    'Citez-en 3 refuse la validation si une réponse manque',
+  );
+  $$('#question-card input').forEach((input, index) => {
+    input.value = `Réponse ${index + 1}`;
+    input.dispatchEvent(new window.Event('input', { bubbles: true }));
+  });
+  $('#btn-answer').click();
+  ok(
+    lastEmit('game:answer')?.payload?.answers?.answer1 === 'Réponse 1'
+      && lastEmit('game:answer')?.payload?.answers?.answer2 === 'Réponse 2'
+      && lastEmit('game:answer')?.payload?.answers?.answer3 === 'Réponse 3',
+    'les trois réponses sont envoyées dans des champs distincts',
+  );
+
   /* --- Correction --- */
   const reviewQuestion = {
     index: 0,
@@ -434,6 +514,39 @@ try {
     'l’avertissement indique qu’on ne peut pas voter pour sa propre réponse',
   );
   ok($$('.rv-row.empty').length === 1, 'la réponse vide est marquée sans réponse');
+
+  const listReviewQuestion = {
+    index: 0,
+    type: 'list',
+    typeLabel: 'Citez-en 3',
+    prompt: 'Citez 3 objets que l’on trouve dans une chambre.',
+    examples: ['Oreiller', 'Couette', 'Pyjama'],
+    slots: [
+      { key: 'answer1', label: 'Réponse 1' },
+      { key: 'answer2', label: 'Réponse 2' },
+      { key: 'answer3', label: 'Réponse 3' },
+    ],
+  };
+  pushState(
+    snapshot('review', {
+      review: {
+        index: 0,
+        total: 1,
+        question: listReviewQuestion,
+        items: [],
+        myVotes: {},
+        autoGraded: false,
+        allResolved: true,
+        voters: { voted: 0, total: 2 },
+      },
+    }),
+  );
+  ok(
+    $('#review-question .expected-title')?.textContent === 'Exemples (non exhaustifs) :'
+      && $('#review-question .expected-note')?.textContent === 'Oreiller · Couette · Pyjama'
+      && !$('#review-question').textContent.includes('Réponse 1 :'),
+    'la correction regroupe les exemples non exhaustifs',
+  );
 
   const acceptedReview = {
     index: 0,

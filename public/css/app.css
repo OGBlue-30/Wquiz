@@ -479,6 +479,17 @@ button {
   margin-top: 16px;
 }
 
+.lyrics-excerpt {
+  margin: 0 0 16px;
+  padding: 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: var(--surface-2);
+  font-size: 15px;
+  line-height: 1.65;
+  white-space: pre-line;
+}
+
 .feature-list {
   list-style: none;
   margin: 0;
@@ -738,6 +749,10 @@ button {
   background: #ffe9f1;
   color: #b3326a;
 }
+.qtype-lyrics {
+  background: #e8f4ff;
+  color: #23689b;
+}
 
 @media (prefers-color-scheme: dark) {
   .qtype-mcq {
@@ -755,6 +770,10 @@ button {
   .qtype-rebus {
     background: #351826;
     color: #ff9cc2;
+  }
+  .qtype-lyrics {
+    background: #14283a;
+    color: #8ecbff;
   }
 }
 
@@ -965,6 +984,21 @@ button {
   border-radius: 15px;
   background: var(--ok-soft);
   border: 1px solid color-mix(in srgb, var(--ok) 24%, transparent);
+}
+
+.expected-examples {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.expected-examples .expected-title {
+  color: var(--muted);
+}
+
+.expected-examples .expected-note {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 13px;
 }
 
 .expected-title {
